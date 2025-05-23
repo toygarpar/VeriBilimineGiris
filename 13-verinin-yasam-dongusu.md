@@ -9,7 +9,23 @@ Analiz olmadan karar yoktur.
 Veriler bir süreçten geçer:  
 **Üretilir → Toplanır → İşlenir → Saklanır → Yönetilir → Analiz edilir → Görselleştirilir → Yorumlanır**
 
-Veri bir yolculuğa çıkar. Doğar, toplanır, işlenir, saklanır, analiz edilir. Sonra anlam kazanır.
+Verinin doğuşundan kullanımına kadar geçirdiği aşamaları tanımlar:
+
+1. **Üretim**: Ham verinin oluşturulması
+    
+2. **Toplama**: Verilerin bir araya getirilmesi
+    
+3. **İşleme**: Verilerin kullanılabilir hale getirilmesi
+    
+4. **Depolama**: Verilerin saklanması
+    
+5. **Yönetim**: Veri organizasyonu ve bakımı
+    
+6. **Analiz**: Verilerden bilgi çıkarımı
+    
+7. **Görselleştirme**: Verilerin anlaşılır şekilde sunulması
+    
+8. **Yorumlama**: Sonuçların değerlendirilmesi
 
 Bu sürece **veri yaşam döngüsü** denir.  
 Her adımı farklıdır.  
