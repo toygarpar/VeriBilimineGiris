@@ -6,9 +6,32 @@ Veri Bilimi, verileri toplayıp analiz ederek anlam çıkarmayı amaçlayan bir 
 Amacı basittir: geçmişte olanlardan öğrenip geleceğe dair tahminler yapmak.  
 İnsanların kararlarını bu tahminlere göre daha iyi hale getirmek.  
 
+Veri, dijital dünyanın hammaddesidir. Sayılar, kelimeler, hareketler, seçimler... Hepsi birer iz bırakır. Bu izleri anlamlandırmak, içlerinden bilgi çıkarmak, geleceği tahmin etmek artık bir meslek: Veri Bilimi.
+
 Veri Bilimi tek bir şey değildir. İstatistik, matematik, bilgisayar bilimi ve sektör bilgisi ile buluşur.  
 Bu alanlar bir araya geldiğinde verilerdeki örüntüleri görebiliriz.  
 Bu örüntüler bize gelecekte neler olabileceğini söyleyebilir.
+
+## Veri Biliminin Temeli
+
+Veri Bilimi birçok alanın kesişiminde doğar:
+
+- **İstatistik:** Ne kadar doğru yorumlarsan, o kadar yaklaşsın gerçeğe.
+    
+- **Matematik:** Sayıların diliyle düşünmek.
+    
+- **Bilgisayar Bilimi:** Bilgiyi işlemenin ve saklamanın yolu.
+    
+- **Alan Bilgisi:** Veriyi bağlama oturtmak. Hangi sektördeysen, o alanı anlamadan veri de seni anlamaz.
+
+Veri Bilimi; veriyi toplamak, düzenlemek, incelemek ve bundan anlamlı sonuçlar çıkarmak demektir. Ama sadece bu da değil. Aynı zamanda karar vermek, sorun çözmek ve sistem kurmak demektir.
+
+---
+# Veri Bilimi Neyi Hedefler?
+Amaç, verilerdeki gizli desenleri bulmak.
+Eğilimleri görmek.
+Öngörüler yapmak.
+Ve en önemlisi: Daha iyi kararlar almak.
 
 ---
 
