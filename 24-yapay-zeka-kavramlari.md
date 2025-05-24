@@ -25,6 +25,19 @@ AMA hepsi aynı hedefe yürür:
 ## 1. ANI – Dar Yapay Zeka  
 Artificial Narrow Intelligence  
 
+==ANI - Stage 1 - Machine Learning==
+Artificial Narrow Intelligence - Dar Yapay Zeka, sadece bir task veya görevi yerine getirmek için.
+Belirli bir görev veya problem üzerinde ustalaşmış yapay zekadır.
+Tek bir spesifik alanda insan benzeri performans gösterebilir ancak genel anlamda insan yeteneklerinin tamamını taklit edemez.
+
+ex: siri ve alexa -  sanal asistanlar, sesli komutlara cevap verir, hava durumu bilgisi sağlar, müzik çalar ve diğer belirli görevleri yerine getirir.
+
+öneri sistemleri: netflix ve ya youtube gibi platformlarda, kullanıcların izleme geçmişine dayalı olarak içerik önerili sunar.
+
+görüntü tanıma: apple photos ve fb'nin yüz tanıma özellikleri, gotolardaki kişileri tanır ve etiketler.
+
+
+
 - **Özellikler**:
   - Tek bir görevde uzmanlaşmış
   - Sınırlı yetenek alanı
@@ -58,6 +71,15 @@ Her görev ayrı bir zekadır.
 ## 2. AGI – Genel Yapay Zeka  
 Artificial General Intelligence  
 
+==AGI - Stage 2 - Machine Intelligence==
+Artificial General Intelligence - Genel Yapay Zeka
+
+İnsan seviyesinde genel zeka ve yeteneklere sahip bir yapay zekadır.
+
+Çeşitli görevlere ve problemlere, insan benzeri bir esneklik ve adaptasyon yeteneği ile yaklaşabilir. Şu anda AGI, teorik bir konsepttir ve henüz tam anlamıyla gerçekleştirilmemiştir.
+
+İnsan benzeri bir öğrenme yeteneğine ve çok çeşitli görevleri yerine getirme becerisine sahip olursa, bu bir AGI örneği olabilir. Ancak mevcut tech bu düzeyde bir AGI oluşturmuş değildir.
+
 - **Tanım**: İnsan seviyesinde çoklu görev yeteneği
 - **Mevcut Durum**: Teorik düzeyde, pratikte sınırlı örnekler
 - **Potansiyel Özellikler**:
@@ -87,6 +109,22 @@ Merkezde "AI", çevresinde "Matematik", "Dil", "Analiz", "Problem Çözme" gibi 
 
 ## 3. ASI – Süper Yapay Zeka  
 Artificial Super Intelligence  
+
+==ASI - Stage 3 - Machine Consciousness==
+Artificial Super Intelligence - Süper Yapay Zeka
+
+İnsan zekasının ötesinde, tüm bilişsel görevlerde insanlardan çok daha üstün olan yapay zekadır.
+
+Hem problem çözme hemde yaratıcılık gibi konularda insanlardan çok daha yetenekli olacaktır. ASI, teorik olarak insanlık için büyük fırsatlar ve büyük fırsatlar barındırır.
+
+
+ANI, AGI, ASI??  Hangisi?
+
+Otonom Araçlar: Çevrelerini algılayarak ve kararlar alarak sürücüye ihtiyaç duymadan hareket edebilen araçlardır.   - ANI
+
+Satranç oynayan bilgisayarlar - ANI
+
+GPT modelleri - ANI ve AGI arası bir yerde
 
 - **Tanım**: İnsan zekasını tüm alanlarda aşan sistemler
 - **Potansiyel Özellikler**:
@@ -167,6 +205,9 @@ Ve hayatımızı değiştirmeye başladı.
 ## Üretken Yapay Zekanın Bileşenleri
 
 ### 1. Veri  
+
+Veri: Üretken yapay zekanın öğrenme ve içerik üretme yeteneği, büyük miktarda ve çeşitli veri ile beslenmesine bağlıdır.
+
 Veri olmadan yapay zeka sessiz kalır.  
 Çok veri gerekir.  
 Yapılandırılmış ve yapılandırılmamış.  
@@ -174,22 +215,35 @@ Metin, resim, video, tablo…
 Veri çeşitliliği önemlidir.
 
 ### 2. Model  
+
+Model: Üretken yapay zekanın eğitim süreci, modelin verileri analiz ederek öğrenmesini sağlar. Bu süreç, modelin verilerden özellikleri çıkarıp yeni içerikler üretmesini mümkün kılar.
+
 Model, verideki desenleri çeker.  
 Ve yeni içerik üretir.  
 GAN, VAE, Transformer gibi modeller kullanılır.
 
 ### 3. Sinir Ağları  
+
+Yapay Sinir Ağları: Üretken yapay zekanın çalışma prensipleri, çeşitli yapay sinir ağları ve model türlerine dayanır. Bu modeller, verilerden öğrenir ve yeni içerikler üretir. GANs, VAEs, Transformer
+
 Üretken yapay zeka, sinir ağlarıyla çalışır.  
 CNN, GAN, VAE, Transformer  
 her biri farklı görevler için uygun.
 
 ### 4. Vektör Veritabanları  
+
+Vektör Veritabanları: Yüksek boyutlu veri vektörlerini depolamak ve yönetmek için kullanılan özel veritabanlarıdır.
+
+
 Veriler vektörler haline getirilir.  
 Ve bu vektörler özel veritabanlarında saklanır.  
 Bu sayede hızlı arama yapılır.  
 Benzer içerikler bulunur.
 
 ### 5. NLP – Doğal Dil İşleme  
+
+NLP: Metin verilerini işlemek ve analiz etmek için kullanılan teknolojidir. Üretken yapay zekanın metin oluşturma ve dil anlama kapasitelerini geliştirmek için kullanılır.
+
 Metinleri anlama,  
 yazma,  
 çeviri yapma,  
@@ -202,27 +256,43 @@ insan gibi yazıyor.
 Ve insan gibi konuşuyor.
 
 ### 6. Görüntü Üretimi  
+
+Görüntü Üretimi: Metin açıklamalarına dayalı olarak yüksek kaliteli görüntüler oluşturabilir.
+
 Metinden görsel üretmek mümkündür.  
 Ex:  
 “Bir deniz manzarasıyla modern ev” →  
 ve yapay zeka buna göre görsel üretir.
 
 ### 7. Metin Yazarlığı  
+
+Metin Yazarlığı : Üretken Yapay Zeka, otomatik olarak metin oluşturabilir. Örneğin, makaleler, blog yazıları, sosyal medya gönderileri ve reklam metinleri yazmak için kullanılır.
+
 Blog yazısı, reklam metni, sosyal medya gönderisi  
 hepsi yapay zekayla yazılabilir.  
 AMA doğru yönlendirme ile.
 
 ### 8. Müzik Besteleme  
+
+Müzik Besteleme: Yapay Zeka, müzik besteleme ve kompozisyon yapma yeteneğine sahiptir.
+
 Yapay zeka melodiler oluşturabilir.  
 Notaları sıralayabilir.  
 Ve yeni müzik besteler.
 
-### 9. Mimari ve Tasarım  
+### 9. Mimari ve Tasarım 
+
+Mimari ve Tasarım: Mimari tasarım ve planlar oluşturabilir. Bu, özellikle hızlı prototipleme ve yaratıcı fikirlerin keşfi için kullanılır.
+
+
 Bir binanın dış görünümünü ya da iç planını  
 yapay zeka otomatik olarak üretebilir.  
 Yaratıcılığı destekler.
 
 ### 10. Ses Değişimi ve Dublaj  
+
+Ses Değişimi / Dublaj: Gerçek sesleri taklit edebilen yapay sesler oluşturabilir. Bu özellikle seslendirme ve dublaj süreçlerinde kullanılır.
+
 Gerçek bir ses kaydı taklit edilebilir.  
 Ve bu sesler yeni videolar için kullanılabilir.  
 Dublaj süreci hızlanır.
@@ -230,6 +300,10 @@ Dublaj süreci hızlanır.
 > Grafik Açıklaması:  
 Veri → Model → Yeni içerik diyagramı  
 NLP, görüntü, ses gibi dallar gösterilir.
+
+### 11. Chatbot
+
+Chatbot: Kullanıcıların yazılı veya sesi sorunlarını anlayabilir ve anlamlı yanıtlar verebilir. NLP tech, dilin bağlamını anlamak ve doğru cevaplar üretmek için kullanılır. 
 
 
 ### Uygulama Alanları
