@@ -71,6 +71,8 @@ Her nöron bir aktivasyon fonksiyonuna sahiptir.
 
 ## 2. Evrişimli Sinir Ağları (CNN) – Convolutional Neural Networks
 
+Ses Değişimi / Dublaj: Gerçek sesleri taklit edebilen yapay sesler oluşturabilir. Bu özellikle seslendirme ve dublaj süreçlerinde kullanılır.
+
 - **Öne Çıkan Özellik**:
   - Konvolüsyon katmanlarıyla uzamsal özellik çıkarımı
   - Pooling katmanlarıyla boyut indirgeme
@@ -102,6 +104,8 @@ Resim → Konvolüsyon → Max Pooling → Sınıflandırma
 
 ## 3. Tekrarlayan Sinir Ağları (RNN) – Recurrent Neural Networks
 
+Veri dizilerindeki sıralı bağımlılıkları öğrenmek için kullanılır ve önceki adımlardan gelen bilgileri hatırlayabilir.
+
  **Temel Mantık**: Zaman serisi verilerinde sıralı bağımlılıkları yakalama
 - **Sınırlamalar**:
   - Uzun vadeli bağımlılıkları öğrenmede zorluk
@@ -120,6 +124,8 @@ Bu yüzden LSTM geliştirilmiştir.
 ---
 
 ## 4. Uzun Kısa Süreli Hafıza (LSTM) – Long Short-Term Memory
+
+RNN'lerin geliştirilmiş versiyonu ve uzun süreli bağımlılıkları öğrenmek  ve hatırlamak için tasarlanmıştır.
 
 - **RNN'ye Göre Avantajları**:
   - Özel "bellek hücreleri" ile uzun vadeli bağımlılıkları koruma
@@ -149,6 +155,8 @@ Memory hücreleri ile geçmiş bilgiler saklanır.
 ---
 
 ## 5. Dönüştürücüler (Transformers)
+
+Dikkat(attention) mekanizmaları kullanarak veriler arasındaki uzun vadeli ilişkileri öğrenir. BERT ve GPT modelleri bu yapının örneklerindendir.
 
 - **Devrimsel Özellik**:
   - Self-attention mekanizması
