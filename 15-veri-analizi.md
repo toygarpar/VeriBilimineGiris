@@ -1,5 +1,7 @@
 # Veri Analizi
 
+Ön işlemeden geçmiş verileri inceleyerek anlamlı bilgi ve iç görüler elde etme sürecidir.
+
 ## Sayıların Anlattığı Hikâyeyi Dinlemek
 
 Veri gelir.  

@@ -69,7 +69,7 @@ Bu bilgi ileriye dönük stratejilerin temelidir.
 
 ## Veri Bilimi Süreci
 
-Veri Bilimi bir süreçtir. Her adım bir sonrakini besler. Bu süreci "data pipeline" olarak adlandırırız.
+Veri Bilimi bir süreçtir. Her adım bir sonrakini besler. Verinin toplanmasından anlamlı bilgilere dönüştürülmesine kadar olan adımları kapsar. Bu süreci "data pipeline" olarak adlandırırız.
 
 ### 1. Veri Toplama  
 Veri her zaman hazır değildir.  

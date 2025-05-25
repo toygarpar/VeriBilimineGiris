@@ -17,6 +17,11 @@ Bir şeyin ne kadar mümkün olduğunu gösterir.
 
 ## OLASILIK TEORİSİ
 Bir olayın olup olmayacağını önceden bilemeyiz. Ama ne kadar olası olduğunu hesaplayabiliriz. Olasılık teorisi, işte bu belirsizliği anlamamıza yardım eder.
+
+Belirli bir olayın gerçekleşme olasılığını hesaplamak ve bu olayın topluluğa dair genel kuralları belirlemek amacıyla kullanılır.
+
+Olasılık teorisi, rastgele olayların ve belirsizliğin matematiksel olarak incelenmesidir. 
+
 Bir olayın olasılığı 0 ile 1 arasındadır.
 
 0: Olmaz.

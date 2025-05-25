@@ -1,5 +1,11 @@
 # Veri Görselleştirme
 
+Verileri grafiksel formatta sunarak, kullanıcıların bu verileri daha hızlı ve etkili bir şekilde anlamalarını sağlar.
+
+Anormal bir durumu görme, trendi takip etme veri ile ilgili daha fazla bilgi elde etme şansımız yükselir.
+
+Büyük veri kümelerini anlamlandırmak zor olabilir. Görselleştirmeler, verileri anlamlı ve erişebilir hale getirir, bu da daha iyi kararlar almamıza yardımcı olur.
+
 ## Sayıların Anlatmak İstediği Hikâyeyi Görün
 
 Veriler her zaman kolay anlaşılır değildir.  

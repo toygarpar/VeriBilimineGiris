@@ -1,5 +1,7 @@
 # Veri Bilimi ve Temel İstatistik İlişkisi
 
+Tüm veri bilimi süreçlerinin temelinde yatan kavramlar ve araçlar genellikle istatistikten gelir.
+
 ## Sayıların Anlamını Çözmek İçin Yolculuk
 
 Veri bilimi…
@@ -31,8 +33,12 @@ Her modelde, her analizde, her tahminde bir izi vardır.
 
 ## İstatistik Nedir?
 
+Verileri toplama, analiz etme, yorumlama ve sunma bilimidir.
+
 İstatistik, veriyi alıp anlamlı hale getirme işidir.
-Kuru sayıları alır, sorulara dönüşür:
+Bir veriyi anlamlandırmak, sonuçları genellemek ve tahminler yapmak için kullanılan yöntemlerin çoğu istatistiksel kavramlara dayanır.
+
+Raw veriyi alınır, sorulara dönüşür:
 Bu artış ne anlama geliyor?
 Bunun nedeni ne olabilir?
 Yarın ne olabilir?

@@ -1,5 +1,11 @@
 # Veri Bilimi Proje Akışı
 
+**Problem Tanımlama** - bir problemi veya bir hedefi sürecin en başında tanımlamamız gerekiyor
+
+Projeye başlamadan önce hangi sorunun çözülmesi gerektiği net bir şekilde tanımlanmalıdır.
+
+İş hedefleriyle uyumlu ve çözülmesi gereken spesifik bir problemi anlamayı içerir.
+
 ## Problemi Anlamak
 Her şey bir soruyla başlar. Ne çözmek istiyoruz? Neyi daha iyi hale getirmek istiyoruz?
 Bu soruya net cevap veremiyorsak, yola çıkmamalıyız.
@@ -80,6 +86,8 @@ Hazırlık yapılmadan ileriye geçmek zordur.
 ---
 
 ## 4. Veri Analizi
+
+Hangi problem için  hangi verileri kullanacağız, verilerle ilgili kullanım için bir senaryo var mı? 
 
 Sonunda elimizde düzgün bir veri seti var. Ama bu verinin içinde ne var?
 Şimdi sıra geldi veriyi anlamaya.  

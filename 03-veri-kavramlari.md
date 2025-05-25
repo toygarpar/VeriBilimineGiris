@@ -2,6 +2,17 @@
 
 ## Veri ve Bilginin Anlamı
 
+### Veri / Data
+
+Üzerinde işlem yapılmamış ham veri/ Raw Data parçacığına verilen isimdir. 
+
+Data kelimesi, Latince "datum" kelimesinden türemiştir ve bir şeyin verildiği ve kaydedildiği anlamına gelir.
+
+Veriler tek başına bir anlam ifade edemezler ve bir işlevleri yoktur.
+
+İlk önce veriler toplanır ve gruplanır daha sonra sıralanır, özetlenir ve ardından bilgisayar ya da elle işlenip enformasyona dönüştükten sonra anlam kazanırlar.
+
+
 ### Veri Nedir?
 
 Veri, işlenmemiş ham gerçektir.

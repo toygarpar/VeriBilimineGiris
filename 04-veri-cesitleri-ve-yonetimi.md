@@ -97,7 +97,7 @@ bilgiye ulaşmak için gereklidir.
 ---
 
 ## Veri Yönetiminde Aşamalar
-
+[text](obsidian://open?vault%3Ddatascience%26file%3DVeri%20Bilimine%20Giri%C5%9F%2FVeri%20Okuryazarl%C4%B1%C4%9F%C4%B1)
 Veri yönetimi, yalnızca bir iş değil, bir sistemdir.
 
 Veri Yönetimi on bir ana alan içerir.  

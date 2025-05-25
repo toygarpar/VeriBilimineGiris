@@ -16,7 +16,7 @@ print("Standart Sapma:", np.std(veriler))
 
 ```
 
-Bir veri kümesinin ne kadar yayıldığını gösteren sayılardır. Yani, veriler birbirine yakın mı, yoksa uzak mı? İşte bunu anlamamıza yardım eder.
+Bir veri kümesinin nasıl yayıldığını veya dağıldığını anlamak için kullanılan istatistiksel göstergelerdir. Yani, veriler birbirine yakın mı, yoksa uzak mı? Verilerin ne kadar çeşitlilik gösterdiğini veya ne kadar homojen olduğunu anlamaya yardımcı olur.
 
 
 ## Sayıların Ne Kadar Yayıldığını Öğrenmek
