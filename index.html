@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Bilimine Giriş</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    <!-- Fixed Tailwind CSS CDN -->
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827; /* dark gray */
+            color: #f9fafb; /* light text */
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <h1 class='text-4xl font-bold mb-2'>Veri Bilimine Giriş</h1>
+        <p class='text-lg text-gray-300 mb-6'>Veri Bilimine Giriş</p>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" placeholder="Konu ismiyle ara..." class="w-full p-2 mb-4 rounded bg-gray-800 text-white border border-gray-600">
+
+        <h2 class='text-2xl font-semibold mb-4'>Eğitim - Konu Listesi</h2>
+        <div class='space-y-6' id="surahList">
+
+        <div class='border-b pb-4' id='surah-0'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Bilimine Giriş</h3>
+            <p class='text-sm text-gray-400'>2025-06-01</p>
+            <p class='mb-2'>Veri biliminin tanımı, kapsamı ve diğer alanlarla farkları.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri bilimi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>giriş</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>temel kavramlar</span>
+            <a href='posts/01-veri-bilimine-giris.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-1'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Bilimi Proje Akışı</h3>
+            <p class='text-sm text-gray-400'>2025-06-02</p>
+            <p class='mb-2'>Veri bilimi projelerinin aşamaları ve iş akışı nasıl olur?</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>proje akışı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri bilimi süreci</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>aşamalar</span>
+            <a href='posts/02-veri-bilimi-proje-akisi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-2'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Kavramları</h3>
+            <p class='text-sm text-gray-400'>2025-06-03</p>
+            <p class='mb-2'>Veri nedir? Gözlem birimi, değişken ve ölçek türleri nelerdir?</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>gözlem</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>değişken</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ölçek</span>
+            <a href='posts/03-veri-kavramlari.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-3'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Çeşitleri ve Yönetimi</h3>
+            <p class='text-sm text-gray-400'>2025-06-04</p>
+            <p class='mb-2'>Veri tipleri ve veri yaşam döngüsüne göre yönetimi.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri çeşitleri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri yönetimi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri yapısı</span>
+            <a href='posts/04-veri-cesitleri-ve-yonetimi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-4'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Okuryazarlığı Nedir?</h3>
+            <p class='text-sm text-gray-400'>2025-06-05</p>
+            <p class='mb-2'>Verileri okuma, anlama ve yorumlama becerisi olan veri okuryazarlığına giriş.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri okuryazarlığı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>anlam çıkarma</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>bilgi</span>
+            <a href='posts/05-veri-okuryazarligi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-5'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Görselleştirme</h3>
+            <p class='text-sm text-gray-400'>2025-06-06</p>
+            <p class='mb-2'>Sayıları görselleştirmek: Neden önemli ve nasıl yapılır?</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>görselleştirme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>grafik</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>matplotlib</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>seaborn</span>
+            <a href='posts/06-veri-gorsellestirme.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-6'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Bilimi ve Temel İstatistik İlişkisi</h3>
+            <p class='text-sm text-gray-400'>2025-06-07</p>
+            <p class='mb-2'>İstatistiğin veri bilimindeki rolü ve hangi adımlarda kullanıldığı.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri bilimi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>istatistiksel yöntemler</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>modelleme</span>
+            <a href='posts/07-veri-bilimi-ve-temel-istatistik-iliskisi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-7'>
+            <h3 class='text-xl font-semibold surah-title'>Temel İstatistik Kavramları</h3>
+            <p class='text-sm text-gray-400'>2025-06-08</p>
+            <p class='mb-2'>Ortalama, medyan, mod gibi temel istatistik ölçüleri.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ortalama</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>medyan</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>mod</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ölçüm</span>
+            <a href='posts/08-temel-istatistik-kavramlari.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-8'>
+            <h3 class='text-xl font-semibold surah-title'>Merkezi Eğilim Ölçüleri</h3>
+            <p class='text-sm text-gray-400'>2025-06-09</p>
+            <p class='mb-2'>Verinin merkezini bulmak için kullanılan ortalama, medyan, mod gibi ölçüler.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ortalama</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>medyan</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>mod</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>eğilim</span>
+            <a href='posts/09-merkezi-egilim-olcumleri.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-9'>
+            <h3 class='text-xl font-semibold surah-title'>Dağılım Ölçüleri</h3>
+            <p class='text-sm text-gray-400'>2025-06-10</p>
+            <p class='mb-2'>Varyans, standart sapma, ranj gibi yayılım ölçüleri.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>varyans</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>standart sapma</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ranj</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>yayılım</span>
+            <a href='posts/10-dagilim-olculeri.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-10'>
+            <h3 class='text-xl font-semibold surah-title'>Olasılık Teorisi</h3>
+            <p class='text-sm text-gray-400'>2025-06-11</p>
+            <p class='mb-2'>Belirsizlik altında karar vermek için olasılık teorisine giriş.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>olasılık</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>deney</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>koşullu olasılık</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Bayes</span>
+            <a href='posts/11-olasilik-teorisi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-11'>
+            <h3 class='text-xl font-semibold surah-title'>Hipotez Testleri</h3>
+            <p class='text-sm text-gray-400'>2025-06-12</p>
+            <p class='mb-2'>İddiaları sayılarla sınamak: Hipotez testi nedir ve nasıl uygulanır?</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>hipotez</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>H₀</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>H₁</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>p-değeri</span>
+            <a href='posts/12-hipotez-testleri.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-12'>
+            <h3 class='text-xl font-semibold surah-title'>Verinin Yaşam Döngüsü</h3>
+            <p class='text-sm text-gray-400'>2025-06-13</p>
+            <p class='mb-2'>Verinin toplanması, saklanması, dönüştürülmesi ve analizi süreci.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri yaşam döngüsü</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>data pipeline</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ETL</span>
+            <a href='posts/13-verinin-yasam-dongusu.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-13'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Ön İşleme ve Depolama</h3>
+            <p class='text-sm text-gray-400'>2025-06-14</p>
+            <p class='mb-2'>Veri temizliği, eksik değerler, aykırı değerler ve veri depolama teknikleri.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ön işleme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>eksik veri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>aykırı değer</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri kalitesi</span>
+            <a href='posts/14-veri-on-isleme-ve-depolama.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-14'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Analizi Nedir?</h3>
+            <p class='text-sm text-gray-400'>2025-06-15</p>
+            <p class='mb-2'>Veri analizi süreçleri, amaçları ve türleri.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri analizi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>tahmin</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>kesifsel analiz</span>
+            <a href='posts/15-veri-analizi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-15'>
+            <h3 class='text-xl font-semibold surah-title'>Keşifsel Veri Analizi</h3>
+            <p class='text-sm text-gray-400'>2025-06-16</p>
+            <p class='mb-2'>Veriye ilk bakışta ne ararsın? Keşifsel veri analizi süreci.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>EDA</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>betimsel istatistik</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>görselleştirme</span>
+            <a href='posts/16-kesifsel-veri-analizi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-16'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Bilimi ve Popüler Teknolojiler</h3>
+            <p class='text-sm text-gray-400'>2025-06-17</p>
+            <p class='mb-2'>Veri biliminde kullanılan araçlar ve teknolojiler.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Python</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>R</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>SQL</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Jupyter</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>toolset</span>
+            <a href='posts/17-veri-bilimi-ve-populer-teknolojiler.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-17'>
+            <h3 class='text-xl font-semibold surah-title'>Büyük Veri Teknolojileri</h3>
+            <p class='text-sm text-gray-400'>2025-06-18</p>
+            <p class='mb-2'>Büyük veri ortamlarında kullanılan teknolojiler.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Big Data</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Spark</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Hadoop</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Databricks</span>
+            <a href='posts/18-buyuk-veri-teknolojileri.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-18'>
+            <h3 class='text-xl font-semibold surah-title'>Gerçek Zamanlı Veri Analizi</h3>
+            <p class='text-sm text-gray-400'>2025-06-19</p>
+            <p class='mb-2'>Zaman serileri, straming data ve gerçek zamanlı analiz yöntemleri.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>real-time</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>streaming</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>analiz</span>
+            <a href='posts/19-gercek-zamanli-veri-analizi.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-19'>
+            <h3 class='text-xl font-semibold surah-title'>Makine Öğrenmesi Bileşenleri ve Yöntemleri</h3>
+            <p class='text-sm text-gray-400'>2025-06-20</p>
+            <p class='mb-2'>Makine öğrenmesi nedir? Hangi bileşenler vardır?</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>makine öğrenmesi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>supervised</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>unsupervised</span>
+            <a href='posts/20-makine-ogrenmesi-ve-bilesenleri-ve-yontemleri.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-20'>
+            <h3 class='text-xl font-semibold surah-title'>Makine Öğrenmesi Algoritmaları</h3>
+            <p class='text-sm text-gray-400'>2025-06-21</p>
+            <p class='mb-2'>En popüler makine öğrenmesi algoritmaları ve kullanım alanları.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>regresyon</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>karar ağacı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>sınıflandırma</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>clustering</span>
+            <a href='posts/21-makine-ogrenmesi-algoritmalari.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-21'>
+            <h3 class='text-xl font-semibold surah-title'>MLOps Kavramı</h3>
+            <p class='text-sm text-gray-400'>2025-06-22</p>
+            <p class='mb-2'>Model üretim ortamına alınırken karşılaşılan zorluklar ve MLOps çözümleri.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>MLOps</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>CI/CD</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>model deploy</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>monitoring</span>
+            <a href='posts/22-mlops-kavrami.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-22'>
+            <h3 class='text-xl font-semibold surah-title'>Derin Öğrenme Teknolojileri ve Algoritmaları</h3>
+            <p class='text-sm text-gray-400'>2025-06-23</p>
+            <p class='mb-2'>Derin öğrenmeye giriş, CNN, RNN, GAN gibi temel teknolojiler.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>derin öğrenme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>CNN</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>RNN</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>GAN</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>neural networks</span>
+            <a href='posts/23-derin-ogrenme-teknolojileri-ve-algoritmalari.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-23'>
+            <h3 class='text-xl font-semibold surah-title'>Yapay Zeka Kavramları</h3>
+            <p class='text-sm text-gray-400'>2025-06-24</p>
+            <p class='mb-2'>Yapay zeka, makine öğrenmesi ve derin öğrenme arasındaki farklar.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>AI</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Yapay Zeka</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>otomasyon</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>etik</span>
+            <a href='posts/24-yapay-zeka-kavramlari.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-24'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Bilimi Araçları</h3>
+            <p class='text-sm text-gray-400'>2025-06-25</p>
+            <p class='mb-2'>Veri bilimcilerin kullandığı en popüler araçlar ve kütüphaneler.</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Pandas</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>NumPy</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Scikit-learn</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>TensorFlow</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>araçlar</span>
+            <a href='posts/25-veri-bilimi-araclari.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        <div class='border-b pb-4' id='surah-25'>
+            <h3 class='text-xl font-semibold surah-title'>Veri Biliminde Kariyer Yolculuğu</h3>
+            <p class='text-sm text-gray-400'>2025-06-26</p>
+            <p class='mb-2'>Veri bilimi yolunda hangi pozisyonlar var? Nasıl başlarsın?</p>
+            <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>kariyer</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri bilimi işleri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>beceriler</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>eğitim</span>
+            <a href='posts/26-veri-biliminde-kariyer.html' class='block mt-1'>Eğitime Git →</a>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Search Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const surahCards = document.querySelectorAll('#surahList .border-b');
+
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+
+                surahCards.forEach(card => {
+                    const title = card.querySelector('.surah-title').textContent.toLowerCase();
+                    if (title.includes(query)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

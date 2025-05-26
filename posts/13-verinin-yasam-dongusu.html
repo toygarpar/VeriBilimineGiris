@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Verinin Yaşam Döngüsü</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Verinin Yaşam Döngüsü</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-13</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri yaşam döngüsü</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>data pipeline</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ETL</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Yaşam Döngüsü</h1>
+<h2>Veri Nereden Geliyor?</h2>
+<p>Veri bilimi, veriyle başlar.<br />
+Veri olmadan analiz yoktur.<br />
+Analiz olmadan karar yoktur.  </p>
+<p>Veriler bir süreçten geçer:<br />
+<strong>Üretilir → Toplanır → İşlenir → Saklanır → Yönetilir → Analiz edilir → Görselleştirilir → Yorumlanır</strong></p>
+<p>Verinin doğuşundan kullanımına kadar geçirdiği aşamaları tanımlar:</p>
+<ol>
+<li>
+<p><strong>Üretim</strong>: Ham verinin oluşturulması</p>
+</li>
+<li>
+<p><strong>Toplama</strong>: Verilerin bir araya getirilmesi</p>
+</li>
+<li>
+<p><strong>İşleme</strong>: Verilerin kullanılabilir hale getirilmesi</p>
+</li>
+<li>
+<p><strong>Depolama</strong>: Verilerin saklanması</p>
+</li>
+<li>
+<p><strong>Yönetim</strong>: Veri organizasyonu ve bakımı</p>
+</li>
+<li>
+<p><strong>Analiz</strong>: Verilerden bilgi çıkarımı</p>
+</li>
+<li>
+<p><strong>Görselleştirme</strong>: Verilerin anlaşılır şekilde sunulması</p>
+</li>
+<li>
+<p><strong>Yorumlama</strong>: Sonuçların değerlendirilmesi</p>
+</li>
+</ol>
+<p>Bu sürece <strong>veri yaşam döngüsü</strong> denir.<br />
+Her adımı farklıdır.<br />
+Her adımı önemlidir.</p>
+<hr />
+<h2>1. Veri Üretimi</h2>
+<p>Veri üretimi, ham verilerin yani işlenmemiş bilgilerin ilk ortaya çıkışıdır.<br />
+Sensörler, internet siteleri, uygulamalar, makineler ve insanlar sürekli veri üretir.</p>
+<p>İlk adım budur: verinin oluşturulması.<br />
+Ham veri doğar.<br />
+Henüz işlenmemiştir.<br />
+Sayılar, metinler, resimler, sesler ortaya çıkar.</p>
+<h3>Nerede Üretilir?</h3>
+<ul>
+<li>Sosyal medya: paylaşımlar, yorumlar, beğeni sayısı  </li>
+<li>IoT cihazları: sensörler, araçlardan gelen veriler  </li>
+<li>Log kayıtları: kullanıcı etkinlikleri, sistem olayları  </li>
+</ul>
+<h3>Üç Türü Vardır:</h3>
+<h4>Yapılandırılmış Veri</h4>
+<p>Hazır formatlıdır.<br />
+Tablolarda saklanır.<br />
+Excel, SQL veritabanları gibi yerlerde bulunur.</p>
+<h4>Yarı Yapılandırılmış Veri</h4>
+<p>Bazı kuralları vardır.<br />
+XML veya JSON dosyalarında saklanır.<br />
+Tam tablo değil, ama tamamen düzensiz de değil.</p>
+<h4>Yapılandırılmamış Veri</h4>
+<p>Belirli bir yapısı yoktur.<br />
+Resimler, videolar, e-postalar bu kategoriye girer.<br />
+İşlenmesi daha zordur.<br />
+Ama anlam çıkarmak için değerlidir.</p>
+<h3>Sentetik Veri Nedir?</h3>
+<p>Gerçek dünyada oluşmayan, yapay olarak üretilen veridir.<br />
+Test amaçlı kullanılır.<br />
+Özellikle model geliştirme aşamasında işe yarar.</p>
+<p>Ex:<br />
+- <a href="https://mockaroo.com">mockaroo.com</a><br />
+- <a href="https://rndgen.com">rndgen.com</a><br />
+- <a href="https://sqldatagenerator.com">sqldatagenerator.com</a></p>
+<h3>Makine Kaynaklı Veri</h3>
+<p>Cihazlar üretir.<br />
+Makineler yazar.<br />
+Sensörler gönderir.<br />
+IoT cihazları, sunucular, ağ trafiği gibi kaynaklardan gelir.</p>
+<hr />
+<h2>2. Veri Toplama</h2>
+<p>Veri üretildi mi?<br />
+Şimdi toplama zamanı geldi.<br />
+Nasıl toplanacağına şimdiden karar verilmelidir.</p>
+<p>Veri toplama sürecinde şu sorulara cevap aranır:<br />
+- Hangi kaynaktan toplanacak?<br />
+- Nasıl alınacak?<br />
+- Kim tarafından yönetilecek?</p>
+<h3>Veri Toplama Yöntemleri</h3>
+<h4>1. Veritabanlarından</h4>
+<p>SQL ya da NoSQL veritabanları en yaygın kaynaklardır.<br />
+Sorgularla veri çekilir.<br />
+Yapılandırılmıştır.<br />
+Çok hızlı çalışır.</p>
+<h4>2. Dosyalardan</h4>
+<p>CSV, Excel gibi dosyalar yaygındır.<br />
+Kolay paylaşılır.<br />
+Basitçe işlenebilir.</p>
+<h4>3. Web Scraping</h4>
+<p>Web sitelerinden veri çekmek için yapılır.<br />
+Python’da BeautifulSoup, Scrapy gibi araçlar kullanılır.<br />
+Dikkatli yapılmalı çünkü bazı siteler izin vermez.</p>
+<h4>4. API ile</h4>
+<p>API’ler programlar arası iletişim sağlar.<br />
+Gerçek zamanlı veri almak için kullanılır.<br />
+Twitter, hava durumu, borsa gibi alanlarda yaygındır.</p>
+<h4>5. Açık Veri Portalları</h4>
+<p>Dünyanın her yerinden veri alınabilir.<br />
+Ex:<br />
+- <a href="https://data.gov">data.gov</a><br />
+- <a href="https://data.worldbank.org">data.worldbank.org</a><br />
+- <a href="https://openweathermap.org">openweathermap.org</a><br />
+- <a href="https://kaggle.com/datasets">kaggle.com/datasets</a><br />
+- <a href="https://registry.opendata.aws">registry.opendata.aws</a></p>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri yaşam döngüsünde her adım ayrı bir rol oynar.<br />
+İlk adım veri üretimdir.<br />
+Sonraki adım veri toplamadır.  </p>
+<p>Veri üretmeden başlayamazsın.<br />
+Toplamadan ilerleyemezsin.<br />
+Her iki adımı da doğru yaparsan,<br />
+analiz, görselleştirme ve yorumlama çok daha kolay olur.</p>
+<p>Veri bilimi;<br />
+doğru veriyi,<br />
+doğru şekilde,<br />
+doğru zamanda<br />
+bulmaktan ibarettir.</p>
+<p>Ve bu yolculuk,<br />
+veri üretiminden başlar.<br />
+veri toplama ile devam eder.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

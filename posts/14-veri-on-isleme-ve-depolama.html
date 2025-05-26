@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Ön İşleme ve Depolama</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Ön İşleme ve Depolama</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-14</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ön işleme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>eksik veri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>aykırı değer</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri kalitesi</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Ön İşleme ve Veri Depolama</h1>
+<h2>Ham Veriyi Anlamlı Hale Getirmek</h2>
+<p>Veri bilimcilerin zamanının %95’i ön işleme, analiz ve EDA (keşifsel veri analizi) ile geçer.<br />
+Ham veri gelir.<br />
+Ama bu veri işlenmeden model kurulmaz.<br />
+Analiz yapılamaz.<br />
+Karar alınamaz.</p>
+<p>Veri ön işlemesi, veriyi anlamlı hale getirir.<br />
+Temizler.<br />
+Düzenler.<br />
+Zenginleştirir.<br />
+Azaltır.<br />
+Standartlaştırır.  </p>
+<p>Ve sonunda veri, analiz için hazır olur.</p>
+<hr />
+<h2>1. Veri Temizleme</h2>
+<p>Ham veri her zaman temiz değildir.<br />
+Eksik satırlar olabilir.<br />
+Yanlış değerler olabilir.<br />
+Gürültülü veriler olabilir.</p>
+<p>Eksik veriler: Boş hücrelerin doldurulması veya uygun şekilde işaretlenmesi</p>
+<p>Hatalı veriler: Yanlış girilmiş değerlerin düzeltilmesi</p>
+<p>Aykırı değerler: Normal dağılımdan uzak veri noktalarının tespiti</p>
+<p>Gürültülü veri: Ölçüm hatalarının ve tutarsızlıkların giderilmesi</p>
+<p>Bu yüzden ilk adım budur: <strong>veri temizliği</strong>.</p>
+<h3>Yapılacaklar:</h3>
+<ul>
+<li><strong>Eksik verileri bulmak:</strong> Kimi hücre boş kalmış olabilir. Neden? Bilinmez. Ama bunları ya doldururuz, ya sileriz.</li>
+<li><strong>Yanlış verileri düzeltmek:</strong> Bir kişinin yaşı 200 yazılmışsa, bu hatalıdır. Düzeltilmelidir.</li>
+<li><strong>Gereksiz verileri çıkarmak:</strong> Gerekmediğini düşündüğün sütun varsa, ondan kurtul.</li>
+</ul>
+<p>Veri temizliği, veriye saygı göstermektir.<br />
+Çünkü kirli veriyle doğru karar alınamaz.</p>
+<hr />
+<h2>2. Veri Standardizasyonu</h2>
+<p>Farklı kaynaklardan gelen veriler farklı biçimde olabilir.<br />
+Bazılarında &ldquo;Erkek&rdquo;, bazılarında &ldquo;E&rdquo;, bazılarında &ldquo;Male&rdquo;.<br />
+Bazılarında fiyat TL cinsinden, bazılarında USD.</p>
+<p>Bu nedenle veri standardize edilir.<br />
+Tüm veri tek bir formatta olur.<br />
+Herkes aynı dilde konuşur.</p>
+<h3>Ne Yapılır?</h3>
+<ul>
+<li>Tarih formatları eşitlenir.  </li>
+<li>Fiyat birimleri düzenlenir.  </li>
+<li>Sütun isimleri sabitlenir.  </li>
+<li>Sayısal veriler normalize edilir.  </li>
+</ul>
+<p>Standardizasyon, verinin tutarlılığını sağlar.<br />
+Analiz etmek kolaylaşır.</p>
+<p>Birim uyumluluğu: Tüm verilerin aynı ölçü birimlerine dönüştürülmesi</p>
+<p>Format standartizasyonu: Tarih, saat gibi verilerin ortak formata getirilmesi</p>
+<p>Normalizasyon: Sayısal değerlerin belirli aralıklara (örn. 0-1) ölçeklenmesi</p>
+<hr />
+<h2>3. Veri Zenginleştirme</h2>
+<p>Veri azsa ne yaparsın?<br />
+Başka veriyle zenginlet.<br />
+Kaynaklar farklıysa bile, verileri birleştir.  </p>
+<p>Örneğin:<br />
+Müşteri verisiyle satış verisini birleştirebilirsin.<br />
+Ya da dışarıdan hava durumu verisi ekleyebilirsin.<br />
+Çünkü tüm bu veriler, daha iyi tahminler için gerekli olabilir.</p>
+<p>Veri birleştirme: Farklı kaynaklardan gelen verilerin entegrasyonu</p>
+<p>Özellik mühendisliği: Mevcut verilerden yeni anlamlı sütunlar türetme</p>
+<p>Referans veri ekleme: Harici veri kaynaklarıyla zenginleştirme</p>
+<h3>Nasıl Yapılır?</h3>
+<ul>
+<li><strong>Join işlemleri:</strong> İki tabloyu ortak anahtarla birleştirirsin.  </li>
+<li><strong>Merge işlemleri:</strong> Birden fazla veri kümesini tek bir veri haline getirirsin.  </li>
+</ul>
+<p>Zengin veri, güçlü analiz demektir.</p>
+<hr />
+<h2>4. Veri Azaltma</h2>
+<p>Veri çok büyükse işlenebilirlik zorlaşır.<br />
+Büyük veri yavaş çalışır.<br />
+İşlem gücü tüketir.</p>
+<p>Bu yüzden veri azaltılır.<br />
+Gereksiz sütunlar çıkarılır.<br />
+Önemsiz özellikler atılır.<br />
+Boyut indirgenir.</p>
+<h3>Hangi Yöntemler Kullanılır?</h3>
+<ul>
+<li><strong>Feature Selection:</strong> En önemli,bilgilendirici sütunlar seçilir.  </li>
+<li><strong>PCA (Principal Component Analysis):</strong> Çok boyutlu veriler azaltılır.  </li>
+<li><strong>Sampling (Örnekleme):</strong> Büyük veriden küçük örnek alınır, veri setlerinden temsili alt kümeler oluşturulur.  </li>
+</ul>
+<p>Az veri, hızlı sonuç demektir.<br />
+Ama bilgi kaybı minimum olmalıdır.</p>
+<hr />
+<h2>5. Veri Kalitesi</h2>
+<p>Veri kalitesi olmadan hiçbir şey işe yaramaz.<br />
+Kaliteli veri, doğru karar demektir.<br />
+Kalitesiz veri ise yanlış yöne götürür.</p>
+<h3>Veri Kalitesinin Beş Kuralı:</h3>
+<p>Doğruluk: Verilerin gerçek değerleri yansıtması</p>
+<p>Tamlık: Gerekli tüm alanların dolu olması</p>
+<p>Tutarlılık: Farklı kaynaklar arasında uyum</p>
+<p>Zamanlılık: Verilerin güncelliği</p>
+<p>Geçerlilik: Standartlara ve kurallara uygunluk</p>
+<h4>1. Doğruluk – Accuracy</h4>
+<p>Veri gerçeği yansıtmalıdır. Yanlış veri kullanılmamalıdır.</p>
+<h4>2. Tamlık – Completeness</h4>
+<p>Tüm gerekli veriler mevcut olmalıdır. Eksik olmamalıdır.</p>
+<h4>3. Tutarlılık – Consistency</h4>
+<p>Farklı sistemler arasındaki veri çelişmemelidir.</p>
+<h4>4. Zamanlılık – Timeliness</h4>
+<p>Veri güncel olmalıdır. Eski veri geçmişte kalır.<br />
+Geçmişten gelecek karar, bugünü yanıltabilir.</p>
+<h4>5. Geçerlilik – Validity</h4>
+<p>Veriler belirlenen kurallara uygun olmalıdır.<br />
+Geçersiz veri sistemi bozar.</p>
+<hr />
+<h2>6. Veri Depolama</h2>
+<p>Veri işlendi mi?<br />
+Şimdi sıra geldi saklanmasına.<br />
+Veri yaşam döngüsünde depolama kritik adımdır.<br />
+Hem ham veri hem işlenmiş veri saklanmalıdır.</p>
+<p>Veri güvenli olmalı.<br />
+Erişilebilir olmalı.<br />
+Uygun teknolojide saklanmalı.</p>
+<h3>Depolama Yaklaşımları</h3>
+<p>Ham veri deposu: İşlenmemiş orijinal veriler</p>
+<p>İşlenmiş veri deposu: Temizlenmiş ve dönüştürülmüş veriler</p>
+<p>Yedekleme stratejileri: Düzenli arşivleme ve felaket kurtarma planları</p>
+<h3>Üç Ana Aşaması Vardır:</h3>
+<h4>1. Veri Saklama</h4>
+<p>Veriler fiziksel sunucularda veya bulutta saklanır.<br />
+SQL ya da NoSQL veritabanlarında yer alır.</p>
+<h4>2. Veri Yönetimi</h4>
+<p>Depolanan veriler düzenlenir.<br />
+Yeni gelen veriler yönetilir.<br />
+Veri yaşam döngüsü planlanır.</p>
+<h4>3. Veri Yedekleme</h4>
+<p>Veri kaybolursa ne olur?<br />
+Hiçbir şey kalmaz.<br />
+Bu yüzden yedekleme yapılır.<br />
+Belirli aralıklarla yedek alınır.<br />
+Veri korunur.<br />
+Veri güvende olur.</p>
+<hr />
+<h2>Veri Tabanları</h2>
+<p>Verilerin saklandığı yerdir.<br />
+Ama her veri aynı yapıda değildir.<br />
+Bu yüzden farklı veritabanları vardır.</p>
+<h3>1. İlişkisel Veritabanları (RDBMS)</h3>
+<p>Veriler tablolarda saklanır.<br />
+Tablolar arasında ilişki vardır.<br />
+SQL ile sorgulanır.</p>
+<p>Tablo yapısı, SQL sorgulama, ACID uyumluluğu</p>
+<p>Ex:<br />
+- MySQL<br />
+- PostgreSQL<br />
+- Oracle</p>
+<h3>2. NoSQL Veritabanları</h3>
+<p>Veriler yapılandırılmamış olabilir.<br />
+Esnek yapıya sahiptir.<br />
+JSON gibi çalışır.</p>
+<p>Türleri:</p>
+<p>Belge tabanlı: MongoDB (JSON benzeri yapılar)</p>
+<p>Sütun tabanlı: Cassandra (büyük ölçekli veriler)</p>
+<p>Anahtar-değer: Redis (yüksek performanslı önbellekleme)</p>
+<p>Graf tabanlı: Neo4j (ilişkisel veri modelleri)</p>
+<p>Ex:<br />
+- MongoDB<br />
+- Cassandra<br />
+- Redis</p>
+<hr />
+<h2>Depolama Altyapıları</h2>
+<p>Şirket içi çözümler: Yerel sunucular ve depolama sistemleri</p>
+<p>Bulut depolama:</p>
+<p>AWS (S3, RDS, DynamoDB)</p>
+<p>Google Cloud (BigQuery, Cloud SQL)</p>
+<p>Azure (Blob Storage, Cosmos DB)</p>
+<p>Hibrit çözümler: Bulut ve şirket içi sistemlerin kombinasyonu</p>
+<h2>Son Söz</h2>
+<p>Veri bilimi, temiz veriyle başlar.<br />
+Bozuk veriyle ileri gidilemez.<br />
+Bu yüzden veri önceden hazırlanmalıdır.</p>
+<p>Veri temizlenir.<br />
+Standardize edilir.<br />
+Zenginleştirilir.<br />
+Azaltılır.<br />
+Kalitesi kontrol edilir.<br />
+Sonra saklanır.</p>
+<p>Bu adımlar atlanamaz.<br />
+Atlanırsa, veri değil, kaos oluşur.</p>
+<p>Veri bilimciler, veriyle dans eder.<br />
+Ama önce veriyle tanışır.<br />
+Sonra onu anlamaya çalışır.<br />
+Ve en sonunda onunla konuşur.</p>
+<p>Veri ön işleme ve depolama stratejileri, veri miktarına, proje gereksinimlerine ve kurumsal altyapıya göre özelleştirilmelidir. Doğru yaklaşım, veri yönetimi maliyetlerini düşürürken analiz kalitesini artıracaktır.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Hipotez Testleri</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Hipotez Testleri</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-12</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>hipotez</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>H₀</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>H₁</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>p-değeri</span>
+        <div class='prose max-w-none mt-4'><h1>Hipotez Testleri</h1>
+<p>Bir konuda fikriniz varsa ve bunu veriyle sınamak istiyorsanız, hipotez kurarsınız.</p>
+<p>Hipotez nedir?<br />
+Bir tahmin. Bir iddia.<br />
+Doğru olabilir. Yanlış da.<br />
+Ama önemli olan, bunu kanıtlamaya çalışmaktır.</p>
+<h2>Gerçek mi, Yoksa Rastgelelik mi?</h2>
+<p>Bazen bir iddia duyarız.<br />
+“Türkiye’deki erkeklerin ortalama boyu 172 cm’dir.”<br />
+Ama bu doğru mudur?<br />
+Gerçek midir?<br />
+Yoksa sadece bir tahmin mi?</p>
+<p>İşte bu sorulara cevap veren yönteme <strong>hipotez testi</strong> denir.<br />
+Sayılarla iddiaları sınar.<br />
+Verilerle karar veririz.</p>
+<hr />
+<h2>Hipotez Nedir?</h2>
+<p>Hipotez, belirli bir konuda yapılan bir tahmindir.<br />
+Doğru da olabilir, yanlış da.<br />
+Ama önemli olan: test edilebilmesidir.</p>
+<p>Bilimsel araştırmalarda hipotez, verilerle sınanır.<br />
+Ve sonunda karar verilir:<br />
+Kabul mu? Red mi?</p>
+<h2>HİPOTEZ TESTİ NEDİR?</h2>
+<p>Hipotezin doğru mu, değil mi diye sorgulanmasıdır.<br />
+Veri toplanır. İncelenir. Sonuç çıkarılır.</p>
+<p>Bu işte iki taraf vardır:</p>
+<p>H0 (Sıfır Hipotezi): “Bir fark yoktur.” der.</p>
+<p>H1 (Alternatif Hipotez): “Fark vardır.” diye karşı çıkar.</p>
+<hr />
+<h2>İki Tür Hipotez Var</h2>
+<p>Örnek: Türkiye’de Erkeklerin Boy Ortalaması<br />
+Diyelim ki birisi iddia etti:</p>
+<p>&ldquo;Türkiye’deki erkeklerin boy ortalaması 1.72 metredir.&rdquo;</p>
+<p>Bunu test etmek isteriz.</p>
+<p>H0: Ortalama = 1.72</p>
+<p>H1: Ortalama ≠ 1.72</p>
+<h3>1. Sıfır Hipotezi – H₀</h3>
+<p>Varsayılan durumdur.<br />
+Şu anki durumu temsil eder.<br />
+Değişim yoktur.<br />
+Eski yöntem işe yarar.  </p>
+<p>Ex: “Erkeklerin ortalama boyu 172 cm’dir.”</p>
+<h3>2. Alternatif Hipotez – H₁ veya Hₐ</h3>
+<p>Yeni iddiadır.<br />
+Değişimin olduğunu göstermeye çalışır.<br />
+Yeni bir şey önerir.  </p>
+<p>Ex: “Erkeklerin ortalama boyu 172 cm değildir.”</p>
+<hr />
+<h2>Hangi Testi Kullanacağız?</h2>
+<p>Test iki ana faktöre bağlıdır:<br />
+- Örneklem büyüklüğü<br />
+- Bilinen bilgiler (varyans, standart sapma)</p>
+<h3>T-Testi</h3>
+<p>Küçük örneklemlerde kullanılır.<br />
+Genellikle örneklem sayısı 30’dan küçükse tercih edilir.</p>
+<h3>Z-Testi</h3>
+<p>Büyük örneklemlerde kullanılır.<br />
+Genellikle 30’dan büyükse tercih edilir.<br />
+Standart sapma biliniyorsa da Z-testi yapılır.</p>
+<hr />
+<h2>Bir Örnek Üzerinden Gidelim</h2>
+<h3>İddia:</h3>
+<p>Türkiye’deki erkeklerin ortalama boyu 172 cm’dir.</p>
+<h3>Hipotezler:</h3>
+<ul>
+<li>H₀ = Ortalama boy = 172 cm  </li>
+<li>H₁ ≠ 172 cm (Ortalama farklı mı?)</li>
+</ul>
+<p>40 milyon erkeğin boyunu ölçmek mümkün değil.<br />
+Bu yüzden rastgele 100 kişi seçiyoruz.</p>
+<p>Sonuçlar:<br />
+- Ortalama (mean) = 174 cm<br />
+- Standart Sapma (std) = 5 cm<br />
+- Örneklem sayısı (n) = 100  </p>
+<p>Z-Testi yapacağız çünkü örneklem büyük.</p>
+<h3>Formül:</h3>
+<div class="codehilite"><pre><span></span><code>Z = (Örneklem Ortalaması - H₀ Değeri) / (Standart Sapma / √n)
+</code></pre></div>
+
+<h3>Hesaplama:</h3>
+<div class="codehilite"><pre><span></span><code>Z = (174 - 172) / (5 / √100) = 2 / 0.5 = 4
+</code></pre></div>
+
+<hr />
+<h2>Anlamlılık Düzeyi ve P-Değeri</h2>
+<p>İstatistikte hata payı belirleriz.<br />
+Bu genelde %5’tir. Yani alfa = 0.05 deriz.</p>
+<p>Eğer hesapladığımız p-değeri, bu 0.05’ten küçükse, H0 hipotezini reddederiz.</p>
+<p>Z değerimiz = 4 olduğunda, z-tablosuna göre:<br />
+P-değeri = 0.000063</p>
+<p>Bu, alfadan çok daha küçük.</p>
+<p>Sonuç: H0 reddedilir.<br />
+Yani: “Türkiye’deki erkeklerin boy ortalaması gerçekten 1.72 değil.”</p>
+<h3>Anlamlılık Düzeyi – α</h3>
+<p>Ne kadar hata kabul edilebilir?<br />
+Genelde %5 alınır.<br />
+Yani α = 0.05  </p>
+<h3>P-Değeri</h3>
+<p>Z değerine karşılık gelen olasılıktır.<br />
+Bizim örneğimizde p-value = 0.000063</p>
+<h3>Karar Kuralı:</h3>
+<ul>
+<li>Eğer p-value &lt; α → H₀ reddedilir.  </li>
+<li>Eğer p-value ≥ α → H₀ reddedilemez.</li>
+</ul>
+<p>Burada p-value çok küçük.<br />
+α = 0.05’ten çok daha düşük.<br />
+Yani iddia geçersiz.<br />
+Türkiye’deki erkeklerin ortalama boyu 172 cm değildir.</p>
+<hr />
+<h2>Tek Yönlü mü, İki Yönlü mü?</h2>
+<h3>İki Yönlü Test</h3>
+<p>Eğer hem artış hem azalış düşünülüyorsa: İki Yönlü Test</p>
+<p>Alternatif hipotez &ldquo;farklıdır&rdquo; der.<br />
+Boy ortalaması hem daha büyük hem de daha küçük olabilir.<br />
+Dolayısıyla her iki yöne bakılır.</p>
+<h3>Tek Yönlü Test</h3>
+<p>Eğer sadece artış ya da azalış test edilecekse: Tek Yönlü Test</p>
+<p>Alternatif hipotez tek yönde olur.<br />
+Ex: “Boy ortalaması 172 cm’den büyüktür.”<br />
+Ya da “Boy ortalaması 172 cm’den küçüktür.”<br />
+Sadece bir yöne bakılır.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>Hipotez testi, sayıların gerçeği söylemesini sağlar.<br />
+Veri biliminde, tıpta, sosyal bilimlerde, mühendislikte<br />
+sayısız alanda kullanılır.</p>
+<p>Bir iddia duyarsınız.<br />
+Veriyi toplarsınız.<br />
+Test yaparsınız.<br />
+Ve karar verirsiniz.</p>
+<p>Gerçek mi?<br />
+Yoksa sadece şans mı?</p>
+<p>Hipotez testi,<br />
+bu sorulara yanıt bulmak içindir.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

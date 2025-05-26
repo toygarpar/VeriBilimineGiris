@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Temel İstatistik Kavramları</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Temel İstatistik Kavramları</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-08</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ortalama</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>medyan</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>mod</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ölçüm</span>
+        <div class='prose max-w-none mt-4'><h1>İstatistik Bölümleri: Betimleyici ve Çıkarımcı İstatistik</h1>
+<h2>Sayıların Hikâyesini Anlatmak İçin İki Yol - 📊 İSTATİSTİĞİN TEMEL BÖLÜMLERİ</h2>
+<p>İstatistikte iki ana yol vardır.<br />
+Biri verileri anlatır.<br />
+Diğeri ise onlardan yola çıkıp genel sonuçlar çıkarır.</p>
+<p>Bunlar:<br />
+<strong>Betimleyici (Tanımlayıcı) İstatistik</strong><br />
+ve<br />
+<strong>Çıkarımcı (Inferential) İstatistik</strong></p>
+<p>Her ikisi de önemli.<br />
+Her ikisi de farklı iş yapar.</p>
+<hr />
+<h2>1. Betimleyici İstatistik</h2>
+<p>Tanımlayıcı istatistik, verilerin özetlenmesi, düzenlenmesi ve sunulmasıyla ilgilenir. Temel amacı, ham verileri daha anlaşılır, yorumlanabilir ve kullanışlı hâle getirmektir.</p>
+<p>Veriyi tanıtmakla görevlidir.<br />
+Sayıları özetler.<br />
+Düzenler.<br />
+Anlaşılır hale getirir.</p>
+<h3>Merkezi Eğilim Ölçüleri</h3>
+<p>Verilerin nerede toplandığını gösterir.  </p>
+<ul>
+<li><strong>Ortalama (Mean):</strong> Tüm sayıları topla, kaç tane varsa böl. Genelin ortalaması budur.  </li>
+<li><strong>Medyan:</strong> Sayıları sırala, tam ortadaki sayıyı bul. Aşırı büyük ya da küçük değerlerden daha az etkilenir.  </li>
+<li><strong>Mod:</strong> En çok tekrar eden sayıdır. Kategorik verilerde kullanışlıdır.</li>
+</ul>
+<h3>Dağılım Ölçüleri</h3>
+<p>Verilerin nasıl yayıldığını gösterir.  </p>
+<ul>
+<li><strong>Aralık (Range):</strong> En büyük sayıdan en küçük sayıyı çıkar. Verinin ne kadar geniş yayıldığını gösterir.  </li>
+<li><strong>Varyans &amp; Standart Sapma:</strong> Ortalama etrafındaki sapmayı ölçer. Sayılar ne kadar değişkense bu değer o kadar yüksektir.</li>
+</ul>
+<h3>Görselleştirme Araçları</h3>
+<p>Veriyi şekillere dönüştürür.<br />
+Gözle görülebilir hale gelir.</p>
+<ul>
+<li><strong>Histogram:</strong> Sayıların dağılımını gösterir.  </li>
+<li><strong>Çubuk Grafik:</strong> Kategoriler arası karşılaştırmalar için kullanılır.  </li>
+<li><strong>Pasta Grafiği:</strong> Bütünün parçalarını gösterir.</li>
+</ul>
+<p>Betimleyici istatistik, verileri sadece özetler.<br />
+Genellemeler yapmaz.<br />
+Gelecek hakkında tahminde bulunmaz.<br />
+Yalnızca “ne var” sorusuna cevap verir.</p>
+<hr />
+<h2>2. Çıkarımcı İstatistik</h2>
+<p>Çıkarımsal istatistik, bir örneklemden elde edilen bilgilerle, popülasyon hakkında tahminlerde bulunmayı amaçlar. Başka bir deyişle, eldeki veriden yola çıkarak genellemeler yapılır.</p>
+<p>Burada işler biraz daha derinleşir.<br />
+Verilerden yola çıkarak genellemeler yapılır.<br />
+Tahminler yapılır.<br />
+Kararlar alınır.</p>
+<h3>Örneklem ve Popülasyon</h3>
+<p>Örneklem: Analiz edilen küçük grup<br />
+Popülasyon: Genellenmek istenen büyük grup</p>
+<p>Tamamını incelemek her zaman mümkün değildir.<br />
+Bu yüzden örneklem alınır.<br />
+Örneklem üzerinden popülasyon hakkında bilgi elde edilir.</p>
+<p>Örneğin:<br />
+Türkiye’deki tüm üniversite öğrencileri popülasyondur.<br />
+Ancak 1000 öğrenciyle yapılan analiz, tüm popülasyon hakkında fikir verir.</p>
+<h3>Hipotez Testi</h3>
+<p>Bir varsayımın (hipotezin) doğruluğunu test etmek için kullanılır.<br />
+Genellikle p-değeri ve istatistiksel anlamlılık temel alınır.</p>
+<p>Bir iddiayı test ederiz.<br />
+Doğru mu? Yanlış mı?</p>
+<p>Örneğin:<br />
+“Yeni bir reklam kampanyası satışları artırdı.”<br />
+Bu doğru mudur?<br />
+Hipotez testi ile bunu kontrol ederiz.</p>
+<p>Test sonucunda çıkan p-value değeri bize karar verme imkanı sunar.<br />
+Eğer bu değer çok küçükse, iddia geçersizdir.</p>
+<h3>Tahmin ve Güven Aralığı</h3>
+<p>Popülasyon parametrelerini tahmin etmek için kullanılır.<br />
+Örnek: Ortalama, oran, regresyon katsayısı tahminleri</p>
+<p>Sayılar üzerinden tahmin yapılır.<br />
+Ve bu tahminlerin güven sınırları belirlenir.</p>
+<p>Örneğin:<br />
+Müşteri memnuniyeti ortalamasını hesapladınız.<br />
+Ama bu sadece örneklemden geldi.<br />
+Gerçek ortalamanın hangi aralıkta olabileceğini güven aralığı ile gösterirsiniz.</p>
+<hr />
+<h2>Betimleyici mi, Çıkarımcı mı?</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Betimleyici İstatistik</th>
+<th>Çıkarımcı İstatistik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amaç</strong></td>
+<td>Veriyi özetlemek, tanımlamak</td>
+<td>Örneklemle popülasyon hakkında karar vermek</td>
+</tr>
+<tr>
+<td><strong>Kapsam</strong></td>
+<td>Sadece mevcut veri</td>
+<td>Genel popülasyon</td>
+</tr>
+<tr>
+<td><strong>Yöntem</strong></td>
+<td>Ortalama, medyan, standart sapma</td>
+<td>Hipotez testi, güven aralığı, regresyon</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Son Söz</h2>
+<p>İstatistikte başarılı olmanın yolu, bu iki temel alanın işlevini ve birbirinden nasıl ayrıldığını iyi anlamaktan geçer.</p>
+<p>Betimleyici istatistik, verileri anlatır.<br />
+Çıkarımcı istatistik, verilerden yola çıkıp karar verir.</p>
+<p>Biri başlangıçtır.<br />
+Diğeri sonuçtur.</p>
+<p>Veri Bilimi’nde her ikisi de gereklidir.<br />
+Birinden anlam çıkmazsa, diğerine geçemezsin.</p>
+<p>Sayılar sessiz kalmasın.<br />
+Onlar konuşsun.<br />
+Ve ne diyorlar dinleyin.<br />
+Sonrada karar verin.</p></div>
+    </div>
+</body>
+</html>

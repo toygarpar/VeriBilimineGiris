@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Olasılık Teorisi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Olasılık Teorisi</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-11</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>olasılık</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>deney</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>koşullu olasılık</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Bayes</span>
+        <div class='prose max-w-none mt-4'><h1>Çıkarımcı İstatistik: Olasılık Teorisi ve Dağılımlar</h1>
+<p>Çıkarımcı istatistik, küçük bir örnek grubundan yola çıkarak, büyük topluluklar hakkında tahminde bulunma işidir. Elimizdeki birkaç veriye bakar, tüm resim hakkında bir fikir yürütürüz.</p>
+<h2>Sayılardan Tahmine Yolculuk</h2>
+<p>Veri bilimi tahmin etmektir.<br />
+Geleceği, bilinmeyeni, olası olanı tahmin etmek.  </p>
+<p>Ve bu tahminlerin temelinde <strong>olasılık teorisi</strong> vardır.</p>
+<p>Çıkarımcı istatistik, bir örneklem üzerinden popülasyon hakkında yorum yapmamızı sağlar.<br />
+Yani az veriyle çok şey anlayabilmemizi sağlar.</p>
+<p>Olasılık ise bize o anın belirsizliğini ölçer.<br />
+Bir şeyin ne kadar mümkün olduğunu gösterir.</p>
+<h2>OLASILIK TEORİSİ</h2>
+<p>Bir olayın olup olmayacağını önceden bilemeyiz. Ama ne kadar olası olduğunu hesaplayabiliriz. Olasılık teorisi, işte bu belirsizliği anlamamıza yardım eder.</p>
+<p>Belirli bir olayın gerçekleşme olasılığını hesaplamak ve bu olayın topluluğa dair genel kuralları belirlemek amacıyla kullanılır.</p>
+<p>Olasılık teorisi, rastgele olayların ve belirsizliğin matematiksel olarak incelenmesidir. </p>
+<p>Bir olayın olasılığı 0 ile 1 arasındadır.</p>
+<p>0: Olmaz.</p>
+<p>1: Kesin olur.</p>
+<p>Gündelik hayatın diliyle: &ldquo;Belki&rdquo;, &ldquo;ihtimal&rdquo;, &ldquo;şansı var&rdquo; dediğimiz şeylerin matematiksel karşılığıdır.</p>
+<hr />
+<h2>Olasılık Nedir?</h2>
+<p>Olasılık, bir olayın ne kadar muhtemel olduğunu gösteren sayıdır.<br />
+0 ile 1 arasında değişir.<br />
+0 = imkansız.<br />
+1 = kesin.<br />
+0.5 = iki eşit şans.</p>
+<h3>Temel Kavramlar</h3>
+<h3>Rastgele Olay (Deney)</h3>
+<p>Sonucu önceden bilinemeyen olaylardır.<br />
+Zar atmak, para fırlatmak, hava durumu tahmini gibi.</p>
+<h3>Örneklem Uzayı (Ω)</h3>
+<p>Tüm olası sonuçların bulunduğu kümedir.<br />
+Örneğin bir zar atışı için Ω = {1, 2, 3, 4, 5, 6}</p>
+<h3>Olay (A)</h3>
+<p>Örneklem uzayının bir alt kümesidir.<br />
+Zar atışında &ldquo;çift gelme&rdquo; A = {2, 4, 6} olur.</p>
+<h3>Olasılık (P(A))</h3>
+<p>Bir olayın gerçekleşme ihtimalidir.<br />
+Sayısal olarak ifade edilir.<br />
+Formülü:  </p>
+<div class="codehilite"><pre><span></span><code>P(A) = Başarı sayısı / Toplam deney sayısı
+</code></pre></div>
+
+<hr />
+<h2>Olasılık Teorisinin Kuralları</h2>
+<h3>1. Olasılık Aralığı</h3>
+<p>Herhangi bir A olayı için:<br />
+<strong>0 ≤ P(A) ≤ 1</strong></p>
+<h3>2. Kesin Olay</h3>
+<p>Tüm örneklem uzayının olasılığı her zaman 1&rsquo;dir.<br />
+<strong>P(Ω) = 1</strong></p>
+<h3>3. Karşılıklı Dışlayan Olaylar</h3>
+<p>İki olay aynı anda gerçekleşemiyorsa, birleşimleri toplamlarına eşittir.<br />
+<strong>P(A ∪ B) = P(A) + P(B)</strong></p>
+<h3>4. Koşullu Olasılık</h3>
+<p>Bir olayın başka bir olayın gerçekleştiği bilindiğinde ne kadar muhtemel olduğunu gösterir.<br />
+<strong>P(A|B) = P(A ∩ B) / P(B)</strong></p>
+<h3>5. Bağımsız Olaylar</h3>
+<p>Bir olayın sonucu diğerini etkilemiyorsa, bu olaylar bağımsızdır.<br />
+<strong>P(A ∩ B) = P(A) × P(B)</strong></p>
+<hr />
+<h2>Veri Bilimi ve Olasılık</h2>
+<p>Veri Bilimi tahmin üzerine kuruludur.<br />
+Ve tahminin kalbi olasılıktır.</p>
+<p>Makine öğrenmesi algoritmaları,<br />
+NLP modelleri,<br />
+veri madenciliği yöntemleri<br />
+hepsi olasılık teorisine dayanır.</p>
+<p>Örneğin:<br />
+- Bir spam filtrenin nasıl çalıştığını bilir misin?<br />
+Spam kelime olasılıklarını hesaplar.<br />
+- Ya bir öneri sistemi?<br />
+Kullanıcının hangi ürünleri beğeneceğini olasılıkla tahmin eder.</p>
+<p>Olasılık olmadan veri bilimi sessiz kalır.<br />
+Olasılık onun dilidir.</p>
+<hr />
+<h2>Olasılık Dağılımları</h2>
+<p>Sayılar bir desen izler.<br />
+Bu desenleri dağılımlarla anlarız.<br />
+Dağılım, bir rastgele değişkenin değerlerinin nasıl yayıldığını gösterir.</p>
+<h3>Rastgele Değişken Nedir?</h3>
+<p>Rastgele bir deneyin sonucunu sayıya dönüştüren fonksiyondur.<br />
+Zar atma → sayısal değer<br />
+Para fırlatma → yazı mı tura mı<br />
+Kişinin boyu → gerçek sayı</p>
+<p>İki türevi vardır:<br />
+<strong>Kesikli</strong> ve <strong>Sürekli</strong></p>
+<hr />
+<h2>1. Kesikli Rastgele Değişkenler</h2>
+<p>Başarı – başarısızlık gibi ikili sonuçları sayar.<br />
+Belirli ve ayrık değerler alır.<br />
+Zar atışı gibi.<br />
+Ya 1, ya 2, ya 3… ama 2.5 yoktur.</p>
+<h3>Binom Dağılımı</h3>
+<p>Bağımsız deneylerde başarı sayısını modellemek için kullanılır.<br />
+Ex: 10 kez zar atıldığında kaç defa 6 geldi?</p>
+<h3>Poisson Dağılımı</h3>
+<p>Belirli bir sürede veya alanda olay sayısını modellemek için kullanılır.<br />
+Ex: Bir hastaneye gelen hasta sayısı</p>
+<hr />
+<h2>2. Sürekli Rastgele Değişkenler</h2>
+<p>Bir aralıkta her değeri alabilir.<br />
+Boyunuzun 170 cm mi 170.1 cm mi olduğunu bilebilirsiniz.</p>
+<h3>Normal Dağılım</h3>
+<p>Çoğu doğal fenomen bu dağılıma uyar.<br />
+Sınav notları, gelir dağılımı, ağırlıklar genellikle normal dağılır.<br />
+Grafiği çan eğrisi şeklindedir.</p>
+<h3>Üstel Dağılım</h3>
+<p>Olaylar arasındaki süreyi modellemek için kullanılır.<br />
+Ex: Bir makinenin arızalanma süresi</p>
+<hr />
+<h2>Dağılım Nedir?</h2>
+<p>Dağılım, bir veri kümesindeki değerlerin nasıl yayıldığını gösterir.<br />
+Hangi değerler daha sık görülüyor?<br />
+Ortalama etrafında nasıl dağılmışlar?<br />
+Uç değerler var mı?</p>
+<p>Dağılım, bir rassal değişkenin alabileceği tüm değerleri ve bu değerlerin olasılıklarını tanımlar.</p>
+<p>Ex:<br />
+Bir sınıftaki sınav notlarının dağılımı, öğrencilerin başarısı hakkında ipucu verir.<br />
+Dağılım genişse, notlar çok değişken demektir.<br />
+Dar bir dağılım homojenliği gösterir.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>Olasılık teorisi,<br />
+verilerin içindeki belirsizliği ölçmenin yolu.<br />
+Dağılımlar ise<br />
+bu verilerin düzenini anlamamızı sağlar.</p>
+<p>Çıkarımcı istatistikte küçük bir örneklemden başlayıp<br />
+büyük bir popülasyon hakkında karar veriyoruz.<br />
+Ve bu kararlar olasılık ve dağılımlarla destekleniyor.</p>
+<p>Sayılar sadece sayı değildir.<br />
+Onlar tahmindir.<br />
+Onlar bilgiyi taşıyan seslerdir.</p>
+<p>Ve biz,<br />
+veri bilimciler olarak,<br />
+bu sesleri duymaya çalışıyoruz.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

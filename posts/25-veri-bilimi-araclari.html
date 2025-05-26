@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Bilimi Araçları</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Bilimi Araçları</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-25</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Pandas</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>NumPy</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Scikit-learn</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>TensorFlow</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>araçlar</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Bilimi Araçları</h1>
+<h2>Sayılarla Çalışmak İçin Gerekli Araçlar</h2>
+<p>Veri bilimi sadece kuramdan ibaret değildir.<br />
+Gerçek hayatta sayılarla çalışır.<br />
+Bunun için doğru araçlara ihtiyaç vardır.</p>
+<p>Her işte olduğu gibi,<br />
+veri biliminde de doğru aletle iş daha kolay olur.</p>
+<p>Python, R, SAS, RapidMiner…<br />
+Bütün bu araçlar veriyi anlamak için kullanılır.</p>
+<p>AMA her biri farklıdır.<br />
+Her biri özel bir iş yapar.</p>
+<hr />
+<h2>1. Python – Veri Biliminin En Güçlü Dili</h2>
+<h2>Python&rsquo;un Veri Bilimindeki Yeri</h2>
+<p>Python, veri bilimciler için en popüler programlama dili olarak öne çıkıyor. Bunun temel nedenleri:</p>
+<ul>
+<li><strong>Zengin ekosistem</strong>: 200.000&rsquo;den fazla kütüphane</li>
+<li><strong>Öğrenme kolaylığı</strong>: Sade ve okunabilir sözdizimi</li>
+<li><strong>Topluluk desteği</strong>: Aktif geliştirici topluluğu</li>
+<li><strong>Çok yönlülük</strong>: Veri analizinden web geliştirmeye geniş kullanım alanı</li>
+</ul>
+<p>Python, veri bilimcilerin en çok kullandığı programlama dilidir.<br />
+Okunabilirliği vardır.<br />
+Basit sözdizimi vardır.<br />
+Ve güçlü kütüphaneleri vardır.</p>
+<h3>Neden Python?</h3>
+<ul>
+<li>Öğrenmesi kolaydır.  </li>
+<li>Büyük topluluk desteği vardır.  </li>
+<li>Hem küçük projelerde hem büyük veri analizlerinde çalışır.  </li>
+<li>Makine öğrenmesi, görselleştirme, web scraping, veri madenciliği için uygun.</li>
+</ul>
+<hr />
+<h2>Python ile Veri Bilimi: Ana Kategoriler</h2>
+<h3>🔹 Veri Toplama</h3>
+<p>Veriyi almanın yolları vardır.<br />
+Web sitelerinden, veritabanlarından, API’lerden alınır.</p>
+<h4>Kullanılan Kütüphaneler:</h4>
+<ul>
+<li><code>requests</code>: Web sayfalarından veri çeker.  </li>
+<li><code>BeautifulSoup</code>: HTML’i inceler.  </li>
+<li><code>Scrapy</code>: Web scraping için güçlü bir çerçeve.  </li>
+<li><code>SQLAlchemy</code>, <code>psycopg2</code>, <code>pymongo</code>: SQL ve NoSQL veritabanlarıyla iletişim kurar.</li>
+</ul>
+<blockquote>
+<p><strong>Örnek Kod:</strong></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;toygarpar.com.tr&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+
+<ul>
+<li><strong>BeautifulSoup</strong>: Web scraping için<br />
+<code>python
+  from bs4 import BeautifulSoup
+  soup = BeautifulSoup(response.text, 'html.parser')</code></li>
+<li><strong>Veritabanı Bağlantıları</strong>:</li>
+<li>PostgreSQL: <code>psycopg2</code></li>
+<li>MongoDB: <code>pymongo</code></li>
+<li>Oracle: <code>cx_Oracle</code></li>
+</ul>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+API → Python kodu → JSON / HTML verisi → Temizleniyor → Analiz ediliyor  </p>
+</blockquote>
+<hr />
+<h3>🔹 Veri Ön İşleme</h3>
+<p>Veri gelir ama hemen kullanılmaz.<br />
+Temizlenir. Düzenlenir. Hazırlanır.</p>
+<h4>Kullanılan Kütüphaneler:</h4>
+<ul>
+<li><code>pandas</code>: Veriyi düzenlemek için ana araçtır.  </li>
+<li><code>numpy</code>: Sayısal işlemler için temeldir.  </li>
+<li><code>scipy</code>: İleri düzey hesaplamalar için.  </li>
+<li><code>scikit-learn</code>: ML süreci öncesi hazırlıklar için.  </li>
+<li><code>dask</code>: Büyük veri işleme için.  </li>
+</ul>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Ham veri → Pandas ile temizleniyor → Gözlem yapılıyor → ML modeline hazırlanıyor  </p>
+</blockquote>
+<ul>
+<li><strong>Pandas</strong>: Veri manipülasyonunun iskeleti<br />
+<code>python
+  import pandas as pd
+  df = pd.read_csv('veri.csv')
+  df.head()</code></li>
+<li><strong>NumPy</strong>: Bilimsel hesaplamalar<br />
+<code>python
+  import numpy as np
+  array = np.array([1, 2, 3])</code></li>
+<li><strong>Dask</strong>: Büyük veri setleri için paralel işlem</li>
+</ul>
+<hr />
+<h3>🔹 Veri Görselleştirme</h3>
+<p>Sayılar bazen sessiz kalır.<br />
+Görseller konuşur.<br />
+Verinin hikâyesini anlatır.</p>
+<h4>Kullanılan Kütüphaneler:</h4>
+<ul>
+<li><code>matplotlib</code>: Temel grafik çizimi.  </li>
+<li><code>seaborn</code>: Daha güzel görünümlü grafikler.  </li>
+<li><code>plotly</code>: Etkileşimli görselleştirme.  </li>
+<li><code>bokeh</code>: Dinamik veri görselleştirmeleri.  </li>
+<li><code>altair</code>: Basit ve akıcı görseller.  </li>
+<li><code>pyplot3d</code>: Üç boyutlu görselleştirme.  </li>
+</ul>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Histogram, dağılım grafiği, çizgi grafiği örnekleri  </p>
+</blockquote>
+<ul>
+<li><strong>Matplotlib</strong>: Temel çizimler<br />
+<code>python
+  import matplotlib.pyplot as plt
+  plt.plot([1, 2, 3])
+  plt.show()</code></li>
+<li><strong>Seaborn</strong>: İstatistiksel görselleştirme</li>
+<li><strong>Plotly</strong>: Etkileşimli grafikler</li>
+</ul>
+<hr />
+<h3>🔹 Makine Öğrenmesi ve Derin Öğrenme</h3>
+<p>Model kurmak için gerekli araçlar burada yer alır.</p>
+<h4>Kullanılan Kütüphaneler:</h4>
+<ul>
+<li><code>scikit-learn</code>: Temel ML modelleri.  </li>
+<li><code>tensorflow</code>, <code>keras</code>, <code>pytorch</code>: Derin öğrenme için.  </li>
+<li><code>h2o</code>: Otomatik makine öğrenimi.  </li>
+</ul>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Veri → Model eğitimi → Tahmin çıktısı diyagramı  </p>
+</blockquote>
+<ul>
+<li><strong>Scikit-learn</strong>: Klasik ML algoritmaları<br />
+<code>python
+  from sklearn.linear_model import LinearRegression
+  model = LinearRegression()
+  model.fit(X_train, y_train)</code></li>
+<li><strong>TensorFlow/PyTorch</strong>: Derin öğrenme çerçeveleri</li>
+</ul>
+<h2>Python ile Veri Analizi Örneği</h2>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Veri yükleme ve temel analiz</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># CSV dosyasını yükle</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;satislar.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># İlk 5 satırı göster</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Temel istatistikler</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="c1"># Eksik veri kontrolü</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># Sütun veri tipleri</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h3>🔹 Gerçek Zamanlı ve Büyük Veri</h3>
+<p>Python, sadece küçük verilerle çalışmaz.<br />
+Büyük verilerle, gerçek zamanlı sistemlerle de çalışır.</p>
+<h4>Kullanılan Araçlar:</h4>
+<ul>
+<li><code>pyspark.streaming</code>: Akış verisini işler.  </li>
+<li><code>apache.flink</code>: Yüksek performanslı analiz.  </li>
+<li><code>pyspark</code>, <code>dask</code>, <code>vaex</code>, <code>modin</code>: Büyük veri için.  </li>
+</ul>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Datalake → Spark ile işlem → Gerçek zamanlı çıktı  </p>
+</blockquote>
+<h2>Büyük Veri için Python Araçları</h2>
+<ol>
+<li>
+<p><strong>PySpark</strong>:<br />
+   - Dağıtık veri işleme<br />
+   - SQL benzeri sorgulama yetenekleri</p>
+</li>
+<li>
+<p><strong>Vaex</strong>:<br />
+   - Milyarlarca satırlık veri setleri<br />
+   - Bellek verimliliği</p>
+</li>
+<li>
+<p><strong>Modin</strong>:<br />
+   - Pandas API&rsquo;siyle uyumlu<br />
+   - Çok çekirdekli işlem</p>
+</li>
+</ol>
+<hr />
+<h2>Diğer Programlama Dilleri ve Araçlar</h2>
+<h3>1. <strong>R Programlama</strong></h3>
+<p>Veri analizi için özel olarak geliştirildi.<br />
+İstatistiksel analizlerde güçlüdür.<br />
+AMA büyük veride yavaş kalır.</p>
+<p>Ex:<br />
+Regresyon, hipotez testi, istatistiksel raporlama için idealdir.</p>
+<hr />
+<h3>2. <strong>Matlab ve Octave</strong></h3>
+<p>Mühendislik ve matematiksel hesaplamalarda kullanılır.<br />
+AMA lisans maliyeti yüksektir.<br />
+Octave, Matlab’a benzer ama ücretsizdir.</p>
+<p>Ex:<br />
+Sinyal işleme, görüntü analizi, optimizasyon  </p>
+<hr />
+<h3>3. <strong>SAS (Statistical Analysis System)</strong></h3>
+<p>Finans ve sağlık sektöründe yaygın kullanılır.<br />
+Lisanslıdır.<br />
+AMA güvenilir sonuçlar verir.</p>
+<p>Ex:<br />
+Risk analizi, kredi skorlaması  </p>
+<hr />
+<h3>4. <strong>Julia</strong></h3>
+<p>Yeni nesil dildir.<br />
+Hızlı çalışır.<br />
+AMA henüz çok yaygın değildir.</p>
+<p>Ex:<br />
+Sayısal hesaplamalar, simülasyonlar  </p>
+<hr />
+<h3>5. <strong>RapidMiner &amp; KNIME</strong></h3>
+<p>GUI tabanlı veri bilimi platformlarıdır.<br />
+Kod yazmadan model kurulabilir.<br />
+AMA esneklik azdır.</p>
+<p>Ex:<br />
+Akademik araştırmalar, hızlı prototipleme  </p>
+<hr />
+<h2>Karşılaştırmalı Tablo: Veri Bilimi Araçları</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Python</strong></th>
+<th><strong>R</strong></th>
+<th><strong>SAS</strong></th>
+<th><strong>MATLAB/Octave</strong></th>
+<th><strong>Julia</strong></th>
+<th><strong>RapidMiner / KNIME</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Veri Toplama</strong></td>
+<td>Var</td>
+<td>Sınırlı</td>
+<td>Var</td>
+<td>Yok</td>
+<td>Az</td>
+<td>Yok</td>
+</tr>
+<tr>
+<td><strong>Veri Ön İşleme</strong></td>
+<td>Çok güçlü</td>
+<td>Güçlü</td>
+<td>Orta</td>
+<td>Orta</td>
+<td>Hızlı</td>
+<td>Kolay</td>
+</tr>
+<tr>
+<td><strong>Görselleştirme</strong></td>
+<td>Seaborn, Plotly</td>
+<td>ggplot2</td>
+<td>Enterprise</td>
+<td>MATLAB plot</td>
+<td>Yüksek performans</td>
+<td>GUI üzerinden</td>
+</tr>
+<tr>
+<td><strong>ML/DL</strong></td>
+<td>TensorFlow, PyTorch</td>
+<td>Caret, randomForest</td>
+<td>Enterprise Tools</td>
+<td>Yok</td>
+<td>Flux.jl</td>
+<td>Arayüzle model kurma</td>
+</tr>
+<tr>
+<td><strong>Kodlama Gereksinimi</strong></td>
+<td>Var</td>
+<td>Var</td>
+<td>Var</td>
+<td>Var</td>
+<td>Var</td>
+<td>Yok</td>
+</tr>
+<tr>
+<td><strong>Kullanım Kolaylığı</strong></td>
+<td>Kolay</td>
+<td>Orta</td>
+<td>Zor</td>
+<td>Orta</td>
+<td>Orta</td>
+<td>Çok kolay</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Hangi Araç Ne Zaman?</h2>
+<table>
+<thead>
+<tr>
+<th>Problem Türü</th>
+<th>Uygun Araç</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Küçük veri analizi</td>
+<td>Python, R</td>
+</tr>
+<tr>
+<td>Büyük veri analizi</td>
+<td>Python (PySpark, Dask)</td>
+</tr>
+<tr>
+<td>İstatistiksel analiz</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Finansal risk analizi</td>
+<td>SAS</td>
+</tr>
+<tr>
+<td>Mühendislik hesaplamaları</td>
+<td>MATLAB, Julia</td>
+</tr>
+<tr>
+<td>Kod yazmadan model kurmak</td>
+<td>RapidMiner, KNIME</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Jupyter Notebook ile Çalışma</h2>
+<p>Veri bilimciler için vazgeçilmez bir araç:<br />
+- Hücre tabanlı yürütme<br />
+- Markdown desteği<br />
+- Görselleştirme entegrasyonu</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Kurulum</span>
+pip<span class="w"> </span>install<span class="w"> </span>jupyterlab
+
+<span class="c1"># Başlatma</span>
+jupyter<span class="w"> </span>notebook
+</code></pre></div>
+
+<p>Python, veri bilimi projelerinin tüm aşamalarında - veri toplamadan model dağıtımına kadar - kapsamlı bir çözüm sunar. Doğru araçların seçimi ve etkili kullanımıyla, karmaşık veri problemlerine elegant çözümler geliştirilebilir.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri bilimi, doğru araç olmadan yürümeyen bir yoldur.<br />
+Python ile yürümek en hızlı yoldur.<br />
+AMA diğer araçlar da unutulmamalıdır.</p>
+<p>Her aracın güçlü bir yönü vardır.<br />
+AMA hepsi aynı şey değildir.</p>
+<p>Bazıları kodla çalışır.<br />
+Bazıları arayüzle çalışır.<br />
+Bazıları ise sadece belirli alanlarda uygundur.</p>
+<p>Sen hangi aracı seçersen seç,<br />
+veriyi anlamak hep ön planda olmalı.<br />
+Çünkü veri bilimi;<br />
+sayılardan anlam çıkarmaktır.<br />
+Araçlar ise bunun anahtarıdır.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

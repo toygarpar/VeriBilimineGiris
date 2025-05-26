@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Makine Öğrenmesi Algoritmaları</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Makine Öğrenmesi Algoritmaları</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-21</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>regresyon</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>karar ağacı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>sınıflandırma</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>clustering</span>
+        <div class='prose max-w-none mt-4'><h1>Makine Öğrenmesi Algoritmaları</h1>
+<h2>Bilgisayarlar Veriden Nasıl Karar Verir?</h2>
+<p>Bilgisayarlar verileri kullanarak öğrenir.<br />
+Veriden desenleri çeker.<br />
+Sayıların arasına girer.<br />
+Ve tahmin yapar.</p>
+<p>Makine Öğrenmesi, bu süreci yönetir.<br />
+Algoritmalar farklıdır.<br />
+AMA tümü aynı amaca hizmet eder:<br />
+<strong>Geleceği tahmin etmek. Karar vermek. Anlam çıkarmak.</strong></p>
+<p>Üç ana kategori vardır:<br />
+<strong>Gözetimli Öğrenme</strong> – Doğru cevap varsa<br />
+<strong>Gözetimsiz Öğrenme</strong> – Doğru cevap yoksa<br />
+<strong>Pekiştirmeli Öğrenme</strong> – Deneme yanılma ile öğreniyorsa</p>
+<hr />
+<h2>1. Gözetimli Öğrenme (Supervised Learning)</h2>
+<p>Burada bilgisayar bir öğretmenle çalışır.<br />
+Her örnek veride bir girdi ve bir çıktı vardır.<br />
+Model, bu ilişkiyi öğrenebilir.</p>
+<h3>Kullanım Alanları:</h3>
+<ul>
+<li>Fiyat tahmini  </li>
+<li>Spam tespiti  </li>
+<li>Hastalık teşhisi  </li>
+</ul>
+<h3>İki Türü Vardır:</h3>
+<h4>a) Sınıflandırma (Classification)</h4>
+<p>Çıkışlar sınıflardır.<br />
+Evet / Hayır<br />
+Spam / Spam değil<br />
+Satın alma / Satın alma  </p>
+<p>Ex: Müşterinin sipariş vereceğini tahmin etmek.</p>
+<h4>b) Regresyon (Regression)</h4>
+<p>Çıkışlar sayısal değerlerdir.<br />
+Fiyat, yaş, gelir gibi.</p>
+<p>Ex: Bir evin fiyatını tahmin etmek.</p>
+<hr />
+<h3>Yaygın Gözetimli Öğrenme Algoritmaları</h3>
+<h4>🔹 KNN – K En Yakın Komşu (k-Nearest Neighbors)</h4>
+<ul>
+<li><strong>Mantık</strong>: &ldquo;Bana arkadaşlarını söyle, sana kim olduğunu söyleyeyim&rdquo; </li>
+<li><strong>Çalışma Şekli</strong>: Yeni veri noktasını en yakın K komşusunun çoğunluk sınıfına atar</li>
+<li><strong>Kullanım Alanları</strong>: </li>
+<li>El yazısı tanıma</li>
+<li>Ürün öneri sistemleri</li>
+<li>Tıbbi teşhis</li>
+</ul>
+<p>Bir veri noktası alınır.<br />
+Ona en yakın olan K komşuya bakılır.<br />
+En çok hangi sınıf varsa, o sınıf seçilir.</p>
+<p>Ex: Yeni bir müşteri geldi.<br />
+Onunla benzer alışveriş yapan müşteriler kimler?<br />
+Bu komşulara göre yeni müşteriyi sınıflandırırız.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Noktalar renklere göre gruplandırılmıştır.<br />
+Yeni nokta geldiğinde en yakın K noktaya bakılır.<br />
+Renkler neyse ona göre karar verilir.</p>
+</blockquote>
+<hr />
+<h4>🔹 Naive Bayes</h4>
+<ul>
+<li><strong>Temel Prensip</strong>: Bayes Teoremi&rsquo;ne dayanır</li>
+<li><strong>Formül</strong>: P(A|B) = [P(B|A) * P(A)] / P(B)</li>
+<li><strong>Avantajlar</strong>:</li>
+<li>Hızlı eğitim süresi</li>
+<li>Yüksek boyutlu verilerde etkili</li>
+<li><strong>Uygulamalar</strong>:</li>
+<li>Spam e-posta filtresi</li>
+<li>Duygu analizi</li>
+<li>Belge sınıflandırma</li>
+</ul>
+<p>Olasılığa dayalı çalışır.<br />
+Bir şeyin olasılığını, başka bir şeyin bilgisiyle hesaplar.</p>
+<p>Formülü basittir:  </p>
+<div class="codehilite"><pre><span></span><code>P(A|B) = [P(B|A) × P(A)] / P(B)
+</code></pre></div>
+
+<p>Ex: E-posta spam mı değil mi?<br />
+“Kazan” kelimesi geçiyorsa, spam olma ihtimali artar.<br />
+Bu kelimeye göre karar verilir.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Kelime sıklığına göre spam / non-spam oranları gösterilir.</p>
+</blockquote>
+<hr />
+<h4>🔹 Decision Tree (Karar Ağacı)</h4>
+<ul>
+<li><strong>Yapı</strong>: If-else kurallarından oluşan hiyerarşik yapı</li>
+<li><strong>Güçlü Yönleri</strong>:</li>
+<li>Yorumlanabilirlik</li>
+<li>Kategorik ve sayısal verilerle çalışabilme</li>
+<li><strong>Örnekler</strong>:</li>
+<li>Kredi risk değerlendirme</li>
+<li>Müşteri kaybı tahmini</li>
+</ul>
+<p>Veriyi dallara ayırır.<br />
+Her dal bir sorudur.<br />
+Her yaprak bir sonuçtur.</p>
+<p>Ex: Müşteri sipariş verecek mi?<br />
+Yaşı 35’in altında mı?<br />
+Müşteri gelir durumu nedir?<br />
+Bu sorularla karar verilir.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Ağaç yapısıyla “Evet / Hayır” dalları gösterilir.</p>
+</blockquote>
+<hr />
+<h4>🔹 Linear Regression (Doğrusal Regresyon)</h4>
+<ul>
+<li><strong>Temel Fikir</strong>: Bağımlı ve bağımsız değişkenler arasındaki doğrusal ilişki</li>
+<li><strong>Denklem</strong>: y = b0 + b1<em>x1 + b2</em>x2 + &hellip; + bn*xn</li>
+<li><strong>Kullanım Senaryoları</strong>:</li>
+<li>Ev fiyat tahmini</li>
+<li>Satış projeksiyonları</li>
+<li>Hisse senedi analizi</li>
+</ul>
+<p>İki değişken arasında doğrusal bir ilişki kurar.<br />
+Biri artarken diğeri nasıl değişiyor?</p>
+<p>Ex: Reklam harcaması arttıkça satışlar nasıl değişiyor?<br />
+Bunu bir çizgiyle ifade edebiliriz.<br />
+Bu çizgi sayesinde gelecek ayki satış tahmini yapılır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+X ekseni: reklam harcamaları<br />
+Y ekseni: satışlar<br />
+Noktalar: geçmiş veriler<br />
+Çizgi: regresyon modeli  </p>
+</blockquote>
+<hr />
+<h4>🔹 Logistic Regression (Lojistik Regresyon)</h4>
+<p>Regresyon ama çıkış iki sınıftan oluşur.<br />
+0 ya da 1<br />
+Evet ya da Hayır<br />
+Spam ya da Spam Değil  </p>
+<p>Ex: Müşteri sipariş verecek mi?<br />
+Verilen özelliklerle “evet” ya da “hayır” tahmini yapılır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Olasılık eğrisi çizilir.<br />
+Belirli eşikten sonra “sipariş verecek” kararı verilir.</p>
+</blockquote>
+<hr />
+<h4>🔹 Ridge ve Lasso Regresyon</h4>
+<ul>
+<li><strong>Fark</strong>: Regularizasyon teknikleriyle aşırı uydurmayı önleme</li>
+<li><strong>Karşılaştırma</strong>:</li>
+<li>Ridge: Katsayıları küçültür</li>
+<li>Lasso: Bazı katsayıları sıfıra indirir (özellik seçimi)</li>
+</ul>
+<h4>🔹 Support Vector Machine (Destek Vektör Makinesi)</h4>
+<p>Veriler arasındaki sınırı çizer.<br />
+Bu sınır, sınıfları en iyi şekilde ayırır.</p>
+<p>Ex: İnsan mı robot mu?<br />
+Bu iki gruba göre veriler ayrılır.<br />
+Sınır çizilir.<br />
+Yeni veri bu sınırlarla sınıflandırılır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+İki sınıfa ait noktalar yer alır.<br />
+Araya bir sınır çizilir.<br />
+Yeni nokta bu sınıra göre sınıflandırılır.</p>
+</blockquote>
+<hr />
+<h4>🔹 Random Forest (Rastgele Orman)</h4>
+<p>Birden fazla karar ağacının ortak çalışmasıdır.<br />
+Her ağacın kararı toplanır.<br />
+En çok oy alan karar alınır.</p>
+<p>Ex: Hasta kanser mi değil mi?<br />
+Her karar ağacı farklı özelliklere bakar.<br />
+Toplamda en çok desteklenen karar alınır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Birden fazla karar ağacı çizilir.<br />
+Sonuç, hepsinin ortalaması veya çoğunlukla alınır.</p>
+</blockquote>
+<hr />
+<h4>🔹 XGBoost (Extreme Gradient Boosting)</h4>
+<p>Güçlü bir sınıflandırıcıdır.<br />
+Yarışmalarda sıkça kullanılır.<br />
+Karar ağaçlarını ardışık olarak eğitir.<br />
+Her seferinde hataları düzeltilir.</p>
+<p>Ex: Kredi başvurusuna kabul verilsin mi?<br />
+Her adım önceki hatayı düzeltir.<br />
+En sonunda güçlü bir model çıkar.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Her adımda hata azalır.<br />
+Modelin doğruluğu artar.</p>
+</blockquote>
+<hr />
+<h2>2. Gözetimsiz Öğrenme (Unsupervised Learning)</h2>
+<p>Burada doğru cevap yoktur.<br />
+Sadece giriş verisi vardır.<br />
+Model kendi başına kalıpları bulmaya çalışır.</p>
+<h3>Kullanım Alanları:</h3>
+<ul>
+<li>Müşteri segmentasyonu  </li>
+<li>Anomali tespiti  </li>
+<li>Boyut indirgeme  </li>
+</ul>
+<hr />
+<h3>Yaygın Gözetimsiz Öğrenme Algoritmaları</h3>
+<h4>🔹 K-Means Clustering</h4>
+<p><strong>K-Means</strong><br />
+- <strong>Adımlar</strong>:<br />
+  1. K sayıda merkez nokta rastgele seç<br />
+  2. Her veri noktasını en yakın merkeze ata<br />
+  3. Merkezleri yeniden hesapla<br />
+  4. Merkezler sabitlenene kadar tekrarla<br />
+- <strong>Uygulamalar</strong>:<br />
+  - Müşteri segmentasyonu<br />
+  - Görüntü sıkıştırma<br />
+  - Anomali tespiti</p>
+<p>Verileri gruplara ayırır.<br />
+Benzer olanlar aynı gruba girer.<br />
+Her grubun merkezi vardır.<br />
+Yeni veri, en yakın merkeze atanır.</p>
+<p>Ex: Müşteriler satın alma alışkanlıklarına göre gruplandırılır.<br />
+Hangi müşteri daha sadık?<br />
+Hangi müşteri riskli?</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Her nokta bir müşteridir.<br />
+Gruplar farklı renklerde gösterilir.<br />
+Merkezler belirlenir.  </p>
+</blockquote>
+<hr />
+<h4>🔹 Principal Component Analysis (PCA)</h4>
+<ul>
+<li><strong>Amacı</strong>: Yüksek boyutlu veriyi daha az boyuta indirgerken varyansı koruma</li>
+<li><strong>Kullanım Alanları</strong>:</li>
+<li>Görüntü tanıma</li>
+<li>Veri görselleştirme</li>
+<li>Gürültü azaltma</li>
+</ul>
+<p>Boyut indirgemek için kullanılır.<br />
+Çok fazla sütun varsa, bunları azaltır.<br />
+Veri kaybı olmadan anlamlı özellikleri korur.</p>
+<p>Ex: 100 sütun var.<br />
+AMA sadece 10 tanesi önemli.<br />
+PCA ile boyut düşer.<br />
+Model hızlanır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Veri, yüksek boyuttan düşük boyuta indirgenir.<br />
+Esas yapı bozulmadan görselleştirilir.</p>
+</blockquote>
+<hr />
+<h4>🔹 Association Rule Learning (Birliktelik Kuralları - Apriori)</h4>
+<p>Veriler arasındaki ilişkileri bulur.<br />
+Bir ürün alındığında başka hangi ürünün alınacağını gösterir.</p>
+<p>Ex: Bebek bezi alanlar genellikle bira da alır.<br />
+Bu ilişki bulunur.<br />
+Market raflarına yerleştirilir.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Ürünler arası bağlantılar çizilir.<br />
+En sık birlikte alınan ürünler gösterilir.</p>
+</blockquote>
+<hr />
+<h2>3. Pekiştirmeli Öğrenme (Reinforcement Learning)</h2>
+<p><strong>Temel Kavramlar</strong><br />
+- <strong>Ajan (Agent)</strong>: Öğrenen sistem<br />
+- <strong>Ortam (Environment)</strong>: Etkileşim kurulan dünya<br />
+- <strong>Ödül (Reward)</strong>: İstenen davranış için pozitif geri bildirim<br />
+- <strong>Politika (Policy)</strong>: Durumlara karşı alınacak aksiyonların haritası</p>
+<p><strong>Uygulama Örnekleri</strong><br />
+1. Oyun AI&rsquo;ları (AlphaGo)<br />
+2. Otonom sürüş sistemleri<br />
+3. Robotik kontrol<br />
+4. Reklam teklif optimizasyonu</p>
+<p>Burada bilgisayar deneyerek öğrenir.<br />
+Her karar için ödül veya ceza alır.<br />
+Zamanla en çok ödülü veren strateji öğrenilir.</p>
+<p>Ex: Otonom araç sürüyor.<br />
+Sağa dönünce çarpıyor → ceza<br />
+Düz gitmeyi öğreniyor → ödül  </p>
+<hr />
+<h3>Yaygın Pekiştirmeli Öğrenme Algoritmaları</h3>
+<p><strong>Popüler Algoritmalar</strong><br />
+- Q-Learning<br />
+- Deep Q Network (DQN)<br />
+- Policy Gradient Methods</p>
+<h4>🔹 Q-Learning</h4>
+<p>Ödül tablosu oluşturur.<br />
+Her eylem için bir ödül değeri saklanır.<br />
+En yüksek ödül veren yol tercih edilir.</p>
+<p>Ex: Robot süpürge, en kısa yoldan temizlemeyi öğrenir.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Robotun izlediği yollar gösterilir.<br />
+Ödüllü yollar yeşil, cezalı yollar kırmızı olabilir.</p>
+</blockquote>
+<hr />
+<h4>🔹 Deep Q Network (DQN)</h4>
+<p>Q-learning&rsquo;e derin öğrenme katılır.<br />
+Daha karmaşık sistemlerde çalışır.<br />
+CNN gibi görüntü işlemeyle beraber çalışır.</p>
+<p>Ex: Atari oyunlarında en yüksek skoru yapan AI.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Oyun ekranı + AI&rsquo;nın aldığı kararlar<br />
+Her karar ödül/ceza ile değerlendirilir.</p>
+</blockquote>
+<hr />
+<h2>Karşılaştırmalı Tablo: ML Yöntemleri</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Gözetimli</strong></th>
+<th><strong>Gözetimsiz</strong></th>
+<th><strong>Pekiştirmeli</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Veri Tipi</strong></td>
+<td>Girdi + Çıktı</td>
+<td>Sadece girdi</td>
+<td>Eylem + Ödül/Ceza</td>
+</tr>
+<tr>
+<td><strong>Amacı</strong></td>
+<td>Tahmin veya sınıflandırma</td>
+<td>Gruplama veya desen bulma</td>
+<td>Optimize edilmiş karar almak</td>
+</tr>
+<tr>
+<td><strong>Kullanım Alanı</strong></td>
+<td>Fiyat tahmini, spam tespiti</td>
+<td>Müşteri segmentasyonu</td>
+<td>Otonom araçlar</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Hangi Algoritma Ne Zaman?</h2>
+<h3>Algoritma Seçim Kılavuzu</h3>
+<table>
+<thead>
+<tr>
+<th>Problem Türü</th>
+<th>Önerilen Algoritmalar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sınıflandırma</td>
+<td>Logistic Regression, Random Forest, SVM</td>
+</tr>
+<tr>
+<td>Regresyon</td>
+<td>Linear Regression, Decision Trees, XGBoost</td>
+</tr>
+<tr>
+<td>Kümeleme</td>
+<td>K-Means, DBSCAN, Hierarchical</td>
+</tr>
+<tr>
+<td>Boyut İndirgeme</td>
+<td>PCA, t-SNE, UMAP</td>
+</tr>
+<tr>
+<td>Sıralı Karar Verme</td>
+<td>Q-Learning, DDPG, PPO</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Problem Türü</th>
+<th>Uygun Algoritma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ev fiyat tahmini</td>
+<td>Linear Regression</td>
+</tr>
+<tr>
+<td>Spam tespiti</td>
+<td>Logistic Regression, Naive Bayes</td>
+</tr>
+<tr>
+<td>Müşteri segmentasyonu</td>
+<td>K-Means Clustering</td>
+</tr>
+<tr>
+<td>Ürün önerisi</td>
+<td>Association Rules</td>
+</tr>
+<tr>
+<td>Otonom karar verme</td>
+<td>Reinforcement Learning</td>
+</tr>
+<tr>
+<td>Yüksek boyutlu veri</td>
+<td>PCA</td>
+</tr>
+<tr>
+<td>Riskli müşteri tespiti</td>
+<td>Random Forest, XGBoost</td>
+</tr>
+</tbody>
+</table>
+<p>Hiçbir algoritma tüm problemler için en iyisi değildir. Model seçimi veri yapısına, problem gereksinimlerine ve performans ölçütlerine göre yapılmalıdır.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>Makine Öğrenmesi algoritmaları,<br />
+sayılardan anlamlı bilgi çıkaran araçlardır.</p>
+<p>Bazıları veriyle öğrenir.<br />
+Bazıları verisiz öğrenir.<br />
+Bazıları deneyerek öğrenir.</p>
+<p>Veri bilimi projelerinde<br />
+her problem farklıdır.<br />
+Her çözüm özel hazırlanmalıdır.</p>
+<p>Çünkü makine öğrenmesi;<br />
+veriden bilgiye ulaşmanın<br />
+en güçlü yollarından biridir.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

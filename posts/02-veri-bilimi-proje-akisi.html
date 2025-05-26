@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Bilimi Proje Akışı</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Bilimi Proje Akışı</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-02</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>proje akışı</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri bilimi süreci</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>aşamalar</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Bilimi Proje Akışı</h1>
+<p><strong>Problem Tanımlama</strong> - bir problemi veya bir hedefi sürecin en başında tanımlamamız gerekiyor</p>
+<p>Projeye başlamadan önce hangi sorunun çözülmesi gerektiği net bir şekilde tanımlanmalıdır.</p>
+<p>İş hedefleriyle uyumlu ve çözülmesi gereken spesifik bir problemi anlamayı içerir.</p>
+<h2>Problemi Anlamak</h2>
+<p>Her şey bir soruyla başlar. Ne çözmek istiyoruz? Neyi daha iyi hale getirmek istiyoruz?<br />
+Bu soruya net cevap veremiyorsak, yola çıkmamalıyız.</p>
+<p>Amacınız müşteri memnuniyetini artırmak olabilir. Belki de satışları tahmin eden bir sistem kurmak istiyorsunuz.<br />
+Hedef net olmalı. Çünkü yanlış soruya doğru cevap yoktur.</p>
+<h2>1. Problem Tanımlama</h2>
+<p>Her projede ilk adım budur: neyi çözmek istediğimizi net bilmek.<br />
+Problem açık değilse, çözüm de olmaz.  </p>
+<p>Örneğin:<br />
+Müşteri memnuniyetini artırmak mı istiyoruz?<br />
+Yoksa bir satış tahmin modeli mi kurmak istiyoruz?  </p>
+<p>İş hedefleriyle uyumlu olmalı.<br />
+Çözülmesi gereken sorun tek bir cümleyle anlatılabilir olmalı.  </p>
+<p>Başarılı bir proje, doğru tanımlanan bir problemle başlar.</p>
+<hr />
+<h2>Veri Nerede?</h2>
+<p>Doğru veriye ulaşmadan, doğru sonuç beklemek boşunadır.<br />
+İhtiyacımız olan verileri belirlemekle başlarız. Sonra da bu veriler nerede saklı, nasıl erişilir, onu araştırırız.</p>
+<p>Bu veriler dosyalarda, veri tabanlarında, API’lerde, şirketin kendi sistemlerinde veya başka yerlerde olabilir.<br />
+Toplanması sabır ve dikkat ister.</p>
+<h2>2. Veri Toplama</h2>
+<p>Hangi verilere ihtiyacımız var?<br />
+Bu veriler nerede saklı?<br />
+Nasıl toplayacağız?</p>
+<p>Veri kaynakları farklı olabilir: dosyalar, veritabanları, API’ler, dış sağlayıcılar veya şirket içi sistemler.  </p>
+<p>Bazı veriler hazır bulunur.<br />
+Bazıları özel yazılımlarla çekilir.<br />
+Bazıları için izin alınır.  </p>
+<p>Veri toplamak, bilgi toplamaktır.<br />
+Ve bu bilgi olmadan hiçbir model çalışmaz.</p>
+<hr />
+<h2>3. Veri Hazırlama</h2>
+<p>Elimize ulaşan ham veri genelde dağınıktır. Eksik bilgiler, hatalı girişler, uyumsuz formatlar&hellip;<br />
+Temizlenmeden işe yaramaz.</p>
+<p>Önce düzenlenir. Eksikler tamamlanır. Hatalar düzeltilir.<br />
+Veri anlaşılır ve kullanılabilir hale getirilir.<br />
+Gerekirse bazı yeni bilgiler de mevcut verilerden türetilir. Bu işin adı &ldquo;özellik mühendisliği&rsquo;dir/feature engineering&rdquo;.</p>
+<p>Toplanan veri her zaman düzgün değildir.<br />
+Eksik satırlar olabilir.<br />
+Yanlış değerler olabilir.<br />
+Farklı biçimlerde saklanmış veriler olabilir.  </p>
+<p>Bu yüzden veriyi temizlemek gerekir.<br />
+Düzenlenir.<br />
+Standart hale getirilir.<br />
+Kayıp veriler tamamlanır.  </p>
+<p>Bu adımda yapılan işlemler şunlardır:<br />
+- Normalizasyon<br />
+- Özellik mühendisliği (feature engineering)<br />
+- Hatalı verilerin düzeltilmesi  </p>
+<p>Hazırlanan veri, analiz edilebilir veridir.<br />
+Hazırlık yapılmadan ileriye geçmek zordur.</p>
+<hr />
+<h2>4. Veri Analizi</h2>
+<p>Hangi problem için  hangi verileri kullanacağız, verilerle ilgili kullanım için bir senaryo var mı? </p>
+<p>Sonunda elimizde düzgün bir veri seti var. Ama bu verinin içinde ne var?<br />
+Şimdi sıra geldi veriyi anlamaya.<br />
+Keşfe çıkarız. Rakamların ardında ne saklı, anlamaya çalışırız.<br />
+Dağılımlar, ortalamalar, uç değerler, ilişkiler&hellip;<br />
+Ne tür veriler var?<br />
+Sayılar arasında bir ilişki var mı?<br />
+Dağılımları nasıl?  </p>
+<p>Bu aşamada keşifsel analiz yapılır.<br />
+İstatistik kullanılır.<br />
+Veri bilgisi ile problem bilgisi birleştirilir.  </p>
+<p>Örneğin:<br />
+Müşteri memnuniyetini artırmak istiyorsanız, anket sonuçları ve şikayet verileri incelenir.<br />
+Buradan eğilimler çıkarılır.  </p>
+<p>Analiz, verinin içinde saklı olan gerçekleri ortaya çıkarır.</p>
+<p>Veriyle hikâyeyi kurmak bu aşamada başlar.</p>
+<hr />
+<h2>5. Veri Görselleştirme</h2>
+<p>Sayılar bazen kuru kalır.<br />
+Görsellerle anlam kazanırlar.  </p>
+<p>Bazen bir tablo, sayfalarca açıklamadan daha etkilidir.<br />
+Grafikler, diyagramlar, ısı haritaları… Rakamları gözle görünür hale getiririz.</p>
+<p>Bu yüzden bulgular grafikler, tablolar, haritalar ile gösterilir.<br />
+Amacı basittir: bilgiyi daha kolay anlaşılır hale getirmek.  </p>
+<p>Bir tabloya bakıp anlamak zaman alabilir.<br />
+Bir grafiğe bakıp fark etmek birkaç saniye sürer.  </p>
+<p>Görselleştirme, hem analiz aşamasında hem de raporlamada kullanılır.<br />
+Veri bilimcilerin en güçlü araçlarından biridir.</p>
+<p>Böylece analiz sonuçları sadece anlaşılır değil, paylaşılır da olur.<br />
+Veri herkesin görebileceği bir dile çevrilir.</p>
+<hr />
+<h2>6. Model Oluşturma</h2>
+<p>Veri hazırlandı.<br />
+Analiz edildi.<br />
+Görselleştirildi.  </p>
+<p>Artık geleceğe bakmak istiyoruz.<br />
+Elimizdeki verilerden öğrenen bir model kurarız.</p>
+<p>Şimdi sıra geldi geleceği tahmin edecek modelleri oluşturmaya.<br />
+Bu modeller makine öğrenmesi (ML), derin öğrenme (DL) gibi tekniklerle geliştirilir.  </p>
+<p>Tahmin yapar, sınıflandırır.<br />
+Hangi müşteriler ayrılabilir, hangi ürün tutar, satışlar nasıl gider…<br />
+Makine öğrenmesi ve derin öğrenme bu işte bizim araçlarımızdır.</p>
+<p>Sınıflandırma modelleri:<br />
+Hangi müşteri sipariş verecek?<br />
+Hangi e-posta spam?</p>
+<p>Tahmin modelleri:<br />
+Gelecek ay kaç ürün satılır?<br />
+Bir hastalığın risk seviyesi nedir?</p>
+<p>Model, verideki örüntüleri öğrendikten sonra yeni veriler üzerinde karar verir.<br />
+Doğru model, doğru karar demektir.</p>
+<hr />
+<h2>7. İzleme ve Bakım</h2>
+<p>Hayat değişir. Veriler değişir. Sistemler değişir.</p>
+<p>Proje bitmez model kurulunca.<br />
+Zamanla veriler değişebilir.<br />
+İş süreçleri değişebilir.<br />
+Modelin performansı düşebilir.  </p>
+<p>Bu yüzden modeller izlenmelidir. <br />
+Kurulan modelin performansı düzenli olarak izlenir.<br />
+İşe yarıyor mu? Hâlâ doğru tahminler yapıyor mu? <br />
+Hata oranları kontrol edilmelidir.<br />
+Değişime göre yeniden eğitilmelidir.  </p>
+<p>Bakım yapılmalıdır.<br />
+Yeni verilere göre güncellenmelidir.  </p>
+<p>İyi bir model, sadece iyi çalışmayla değil,<br />
+sürekli bakım ve izlemeyle uzun süre işlevsel kalır.<br />
+Gerekirse yeniden eğitilir, güncellenir, iyileştirilir.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri bilimi, sadece veriye bakmak değil; onunla düşünmek, anlamak, karar vermek demektir.<br />
+Her aşama, birbirine bağlı bir zincirdir.<br />
+Veri Bilimi, tek bir adımla değil,<br />
+bir dizi adımla çalışan bir süreçtir.  </p>
+<p>Her adım bir sonrakini besler.<br />
+Hiçbiri atlanamaz.<br />
+Hiçbiri önemsiz değildir.  </p>
+<p>Problem tanımlanarak başlar.<br />
+Verilerle desteklenir.<br />
+Analiz edilir.<br />
+Görselleştirilir.<br />
+Modelleme ile geleceğe dair fikir verir.<br />
+Sonunda sürekli izlenerek iyileştirilir.  </p>
+<p>Bu akış, veri biliminin gücünü gösterir.<br />
+Ve bu akış sayesinde, veri bilimi gerçek hayatta işe yarar.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Makine Öğrenmesi Bileşenleri ve Yöntemleri</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Makine Öğrenmesi Bileşenleri ve Yöntemleri</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-20</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>makine öğrenmesi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>supervised</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>unsupervised</span>
+        <div class='prose max-w-none mt-4'><h1>Makine Öğrenmesi</h1>
+<h2>Tanım ve Tarihçe</h2>
+<p>Makine öğrenmesi, bilgisayarların açıkça programlanmadan verilerden öğrenme ve karar verme yeteneğidir. Yapay zekânın en hızlı büyüyen alanlarından biridir.</p>
+<p><strong>Tarihsel Gelişim:</strong><br />
+- 1950&rsquo;ler: Temel kavramların ortaya çıkışı<br />
+- 1980&rsquo;ler: İstatistiksel öğrenme yöntemleri<br />
+- 2010&rsquo;lar: Derin öğrenme devrimi<br />
+- Günümüz: Endüstriyel uygulamaların yaygınlaşması</p>
+<h2>Bilgisayarların Kendi Kendine Öğrenmesi</h2>
+<p>Makine Öğrenmesi, bilgisayarlara veri vererek<br />
+onların kendi kendilerine öğrenmelerini sağlar.<br />
+Hiçbir özel programlama gerekmez.<br />
+Yalnızca veri gerekir.</p>
+<p>Veri gelir.<br />
+Model öğrenir.<br />
+Gelecekteki sorulara yanıt verir.</p>
+<p>Ex: Evin fiyatı nasıl tahmin edilir?<br />
+Alanı, oda sayısı, mahalle gibi verilerle<br />
+bilgisayar bu ilişkiyi kendi kendine öğrenir.</p>
+<hr />
+<h2>Temel Bileşenler</h2>
+<h3>1. Veri</h3>
+<p>Her şey veriyle başlar.<br />
+Büyük veri mi? Küçük veri mi?<br />
+Veri, modelin besinidir.</p>
+<p>Veri seti ikiye ayrılır:</p>
+<ul>
+<li><strong>Eğitim (Training)</strong> → Model öğrenir</li>
+<li><strong>Test (Testing)</strong> → Model ne kadar iyi öğrendiğini gösterir</li>
+</ul>
+<p>Veri içinde iki tür bilgi vardır:</p>
+<ul>
+<li><strong>Giriş (Features):</strong> Evde kaç oda var? Kaç metrekare?</li>
+<li><strong>Çıkış (Labels):</strong> Fiyat nedir?</li>
+</ul>
+<p>Model, giriş ile çıkış arasındaki bağlantıyı bulur.<br />
+Ve yeni verilerde bu bağlantıya göre tahmin yapar.</p>
+<p>Veri Yönetimi<br />
+- <strong>Eğitim Verisi</strong>: Modelin öğrendiği temel bilgi kaynağı<br />
+- <strong>Test Verisi</strong>: Model performansını ölçmek için kullanılır<br />
+- <strong>Özellikler (Features)</strong>: Girdi değişkenleri (örn: evin metrekaresi)<br />
+- <strong>Etiketler (Labels)</strong>: Tahmin edilecek çıktı (örn: ev fiyatı)</p>
+<hr />
+<h3>2. Model</h3>
+<p>Model, veriyle kurulan ilişkidir.<br />
+Sayılar arasında bir fonksiyondur.<br />
+Öğrenilmiş bir denklemdir.</p>
+<p>Model, eğitim verisindeki örüntüleri öğrenir.<br />
+Sonra test verisinde ya da yeni veride kullanılır.<br />
+Doğru tahmin edebilmek için genelleme yapması gerekir.</p>
+<p>Modeller farklı biçimlerde saklanır:<br />
+<code>.h5</code>, <code>.pt</code>, <code>.pth</code>, <code>SavedModel</code> gibi formatlarla.</p>
+<p>Modeller<br />
+- Matematiksel fonksiyonlar olarak düşünülebilir<br />
+- Eğitim sonucu oluşan tahmin kuralları</p>
+<hr />
+<h3>3. Algoritma</h3>
+<p>Algoritma, modeli oluşturan yöntemdir.<br />
+Hangi yöntemi kullanacağımız,<br />
+verinin yapısına ve amacımıza bağlıdır.</p>
+<p>Ex:<br />
+Fiyat tahmini için → Linear Regression<br />
+Sınıflandırma için → Decision Tree veya SVM<br />
+Gruplama için → K-Means</p>
+<p>Her algoritmada farklı bir yol izlenir.<br />
+AMA hedef aynıdır:<br />
+<strong>Veriden anlam çıkarmak.</strong></p>
+<p>Algoritmalar<br />
+- Problem türüne göre seçim yapılır<br />
+- Hiperparametre ayarları kritik önem taşır<br />
+- &ldquo;En iyi algoritma&rdquo; yoktur, probleme göre değişir</p>
+<hr />
+<h3>4. Hedef Fonksiyonu</h3>
+<p>Ne tahmin etmek istiyoruz?<br />
+Ne sınıflandırmak istiyoruz?</p>
+<p>Bu sorunun cevabı, hedef fonksiyonudur.<br />
+Modelin nereye gitmesi gerektiğini söyler.</p>
+<p>Ex:<br />
+“Bu evin fiyatı kaçtır?” → Regresyon<br />
+“Bu mail spam mı değil mi?” → Sınıflandırma</p>
+<hr />
+<h3>5. Öğrenme Süreci</h3>
+<p>İşte burada büyüler olur.<br />
+Model veriyle tanışır.<br />
+Aradaki ilişkiyi çözmeye çalışır.</p>
+<p>İlk aşamada model bilmez.<br />
+Ama her iterasyonda daha iyi hale gelir.<br />
+Yanlışları düzeltilir.<br />
+Doğrular pekiştirilir.</p>
+<p>Bu süreç bittiğinde model artık hazırdır.<br />
+Yeni verilerle karşılaşınca karar verebilir.</p>
+<p>Öğrenme Süreci<br />
+- Modelin verilerle etkileşimi<br />
+- Kayıp fonksiyonlarının optimizasyonu<br />
+- Aşırı uydurma (overfitting) riskinin yönetimi</p>
+<hr />
+<h2>Makine Öğrenmesi Yöntemleri</h2>
+<p>Makine öğrenmesi üç ana gruba ayrılır:<br />
+<strong>Gözetimli/Denetimli</strong> ,<br />
+<strong>Gözetimsiz/Denetimsiz</strong> ,<br />
+<strong>Pekiştirmeli</strong></p>
+<p>Her biri farklı iş yapar.<br />
+Her biri farklı bir dünyadır.</p>
+<hr />
+<h2>1. Gözetimli Öğrenme (Supervised Learning)</h2>
+<ul>
+<li><strong>Tanım</strong>: Etiketli verilerle çalışır</li>
+<li><strong>Alt Kategoriler</strong>:</li>
+<li>Sınıflandırma (Classification)</li>
+<li>Regresyon (Regression)</li>
+<li><strong>Örnekler</strong>: Spam tespiti, ev fiyat tahmini</li>
+</ul>
+<p>Burada veriye yön verilir.<br />
+Label (etiket) vardır.<br />
+Model “ne doğru” olduğunu bilir.<br />
+Yanlış yaptığında düzeltilebilir.</p>
+<h3>Kullanım Alanları:</h3>
+<ul>
+<li>Fiyat tahmini</li>
+<li>Spam tespiti</li>
+<li>Hastalık teşhisi</li>
+</ul>
+<h3>İki Ana Türü Vardır:</h3>
+<h4>a) Regresyon</h4>
+<p>Sayısal tahminler yapmak içindir.<br />
+Ex: Bir ürünün fiyatı</p>
+<h4>b) Sınıflandırma</h4>
+<p>Etiketlemek içindir.<br />
+Ex: Bu mail spam mı değil mi?</p>
+<hr />
+<h2>2. Gözetimsiz Öğrenme (Unsupervised Learning)</h2>
+<ul>
+<li><strong>Tanım</strong>: Etiketsiz verilerde yapı keşfi</li>
+<li><strong>Alt Kategoriler</strong>:</li>
+<li>Kümeleme (Clustering)</li>
+<li>Boyut indirgeme (Dimensionality Reduction)</li>
+<li><strong>Örnekler</strong>: Müşteri segmentasyonu, anomali tespiti</li>
+</ul>
+<p>Burada label yoktur.<br />
+Model kendi başına çalışır.<br />
+Verideki desenleri kendi keşfeder.</p>
+<h3>Kullanım Alanları:</h3>
+<ul>
+<li>Müşteri segmentasyonu</li>
+<li>Anomali tespiti</li>
+<li>Benzerlik analizi</li>
+</ul>
+<h3>En Çok Kullanılan Teknik:</h3>
+<ul>
+<li>Kümeleme (Clustering)</li>
+<li>Boyut indirgeme (Dimensionality Reduction)</li>
+</ul>
+<p>Ex:<br />
+Müşteriler alışveriş alışkanlıklarına göre gruplandırılır.<br />
+Kimse onlara nasıl ayrılacağını söylemez.<br />
+Model kendisi çözer.</p>
+<hr />
+<h2>3. Pekiştirmeli Öğrenme (Reinforcement Learning)</h2>
+<p><strong>Tanım</strong>: Ödül mekanizmasıyla öğrenme<br />
+- <strong>Uygulamalar</strong>:<br />
+  - Otonom sistemler<br />
+  - Oyun AI&rsquo;ları<br />
+  - Robot kontrolü</p>
+<p>Burada model, deneme-yanılma yoluyla öğrenir.<br />
+Her doğru adım ödüllendirilir.<br />
+Her yanlış adım cezalandırılır.</p>
+<h3>Kullanım Alanları:</h3>
+<ul>
+<li>Oyun AI’ları</li>
+<li>Robot hareket kontrolü</li>
+<li>Otonom araç sistemleri</li>
+</ul>
+<p>Ex:<br />
+Robot süpürge, hangi rotayı izleyeceğini<br />
+deneyerek öğrenir. Her başarılı temizlik ödüldür.</p>
+<hr />
+<h2>Karşılaştırmalı Tablo: ML Yöntemleri</h2>
+<h3>Gözetimli - Gözetimsiz - Pekiştirmeli</h3>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Gözetimli</strong></th>
+<th><strong>Gözetimsiz</strong></th>
+<th><strong>Pekiştirmeli</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Etiket (Label)</strong></td>
+<td>Var</td>
+<td>Yok</td>
+<td>Hayır ama ödül/ceza var</td>
+</tr>
+<tr>
+<td><strong>Amacı</strong></td>
+<td>Tahmin veya sınıflandırma</td>
+<td>Gruplama veya yapı bulma</td>
+<td>En iyi kararı verme</td>
+</tr>
+<tr>
+<td><strong>Kullanım Alanı</strong></td>
+<td>Satış tahmini, spam tespiti</td>
+<td>Müşteri segmentasyonu</td>
+<td>Otonom araç, robotlar</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Yaygın Makine Öğrenmesi Algoritmaları</h2>
+<table>
+<thead>
+<tr>
+<th>Algoritma</th>
+<th>Türü</th>
+<th>Kullanım Amacı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Linear Regression</strong></td>
+<td>Gözetimli</td>
+<td>Sayısal tahmin</td>
+</tr>
+<tr>
+<td><strong>Logistic Regression</strong></td>
+<td>Gözetimli</td>
+<td>Sınıflandırma</td>
+</tr>
+<tr>
+<td><strong>Decision Tree</strong></td>
+<td>Gözetimli</td>
+<td>Karar verme ağacı</td>
+</tr>
+<tr>
+<td><strong>Support Vector Machine (SVM)</strong></td>
+<td>Gözetimli</td>
+<td>Sınırları belirleme</td>
+</tr>
+<tr>
+<td><strong>Naive Bayes</strong></td>
+<td>Gözetimli</td>
+<td>Olasılık tabanlı sınıflandırma</td>
+</tr>
+<tr>
+<td><strong>KNN (k-En Yakın Komşu)</strong></td>
+<td>Gözetimli</td>
+<td>Benzerliğe göre tahmin</td>
+</tr>
+<tr>
+<td><strong>Random Forest</strong></td>
+<td>Gözetimli</td>
+<td>Birden fazla karar ağacı</td>
+</tr>
+<tr>
+<td><strong>XGBoost</strong></td>
+<td>Gözetimli</td>
+<td>Yüksek performanslı sınıflandırma</td>
+</tr>
+<tr>
+<td><strong>K-Means</strong></td>
+<td>Gözetimsiz</td>
+<td>Kümeleme</td>
+</tr>
+<tr>
+<td><strong>PCA (Principal Component Analysis)</strong></td>
+<td>Gözetimsiz</td>
+<td>Boyut indirgeme</td>
+</tr>
+</tbody>
+</table>
+<h2>Yaygın ML Algoritmaları  Ne Zaman Kullanılır?</h2>
+<table>
+<thead>
+<tr>
+<th>Algoritma</th>
+<th>Problem Türü</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Linear Regression</strong></td>
+<td>Regresyon</td>
+<td>Doğrusal ilişki arar. Fiyat tahmini için kullanılır.</td>
+</tr>
+<tr>
+<td><strong>Logistic Regression</strong></td>
+<td>Sınıflandırma</td>
+<td>İkili sınıflar arasında karar verir. Spam olup olmadığını tahmin eder.</td>
+</tr>
+<tr>
+<td><strong>Decision Tree</strong></td>
+<td>Sınıflandırma &amp; Regresyon</td>
+<td>Karar ağacı şeklinde çalışır. Kolay anlaşılır.</td>
+</tr>
+<tr>
+<td><strong>SVM (Support Vector Machine)</strong></td>
+<td>Sınıflandırma</td>
+<td>Yüksek boyutlu verilerde sınırları çizer.</td>
+</tr>
+<tr>
+<td><strong>Naive Bayes</strong></td>
+<td>Sınıflandırma</td>
+<td>Olasılığa dayanır. Metin analizinde sık kullanılır.</td>
+</tr>
+<tr>
+<td><strong>KNN (k-Nearest Neighbors)</strong></td>
+<td>Sınıflandırma &amp; Regresyon</td>
+<td>En yakın komşulara bakarak karar verir.</td>
+</tr>
+<tr>
+<td><strong>Random Forest</strong></td>
+<td>Sınıflandırma &amp; Regresyon</td>
+<td>Birden fazla karar ağacının ortak çalışmasıdır. Daha güçlüdür.</td>
+</tr>
+<tr>
+<td><strong>XGBoost</strong></td>
+<td>Sınıflandırma &amp; Regresyon</td>
+<td>En güçlü sınıflandırıcılar arasındadır. Yarışmalarda yaygın kullanılır.</td>
+</tr>
+<tr>
+<td><strong>K-Means</strong></td>
+<td>Kümeleme</td>
+<td>Benzer olanları gruplamak için kullanılır.</td>
+</tr>
+<tr>
+<td><strong>PCA (Principal Component Analysis)</strong></td>
+<td>Boyut Azaltma</td>
+<td>Çok sayıda değişkeni azaltır. Veriyi basitleştirir.</td>
+</tr>
+</tbody>
+</table>
+<h2>Gerçek Hayatta Nerede Kullanılır?</h2>
+<table>
+<thead>
+<tr>
+<th>Uygulama</th>
+<th>Yöntem</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ev Fiyat Tahmini</strong></td>
+<td>Supervised – Regresyon</td>
+<td>Evin özellikleri girilir. Fiyat tahmini yapılır.</td>
+</tr>
+<tr>
+<td><strong>Spam Tespiti</strong></td>
+<td>Supervised – Sınıflandırma</td>
+<td>Mail içeriği analiz edilir. Spam mı değil mi?</td>
+</tr>
+<tr>
+<td><strong>Müşteri Segmentasyonu</strong></td>
+<td>Unsupervised – Kümeleme</td>
+<td>Müşteriler satın alma alışkanlıklarına göre gruplandırılır.</td>
+</tr>
+<tr>
+<td><strong>Otomatik Araba Kontrolü</strong></td>
+<td>Reinforcement</td>
+<td>Aracı, ödül/ceza sistemine göre yönlendirir.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2><strong>Uygulama Adımları</strong></h2>
+<ol>
+<li><strong>Problem Tanımı</strong>: Çözülmek istenen sorunun netleştirilmesi</li>
+<li><strong>Veri Toplama</strong>: Kaliteli ve temsili veri setinin oluşturulması</li>
+<li><strong>Veri Ön İşleme</strong>: Eksik veri, aykırı değer yönetimi</li>
+<li><strong>Model Seçimi</strong>: Problem türüne uygun algoritma seçimi</li>
+<li><strong>Eğitim</strong>: Modelin veriyle öğrenme süreci</li>
+<li><strong>Değerlendirme</strong>: Test verisi üzerinde performans ölçümü</li>
+<li><strong>Dağıtım</strong>: Modelin üretim ortamına alınması</li>
+<li><strong>İzleme</strong>: Performansın sürekli takibi</li>
+</ol>
+<hr />
+<h2>Son Söz</h2>
+<p>Makine Öğrenmesi, veriden anlamlı bilgi çıkarmanın sanatıdır.<br />
+Üç yolu vardır:<br />
+Gözetimli,<br />
+Gözetimsiz,<br />
+ve Pekiştirmeli.</p>
+<p>Her model, veriyle konuşmayı öğrenir.<br />
+Her algoritma, farklı bir dil konuşur.</p>
+<p>Ve en önemlisi:<br />
+<strong>Veri olmadan model yoktur.</strong><br />
+Model olmadan tahmin yoktur.<br />
+Tahmin olmadan karar yoktur.</p>
+<p>Makine öğrenmesi, doğru uygulandığında iş süreçlerinde devrim yaratabilir. Ancak başarı için titiz bir veri hazırlığı, uygun algoritma seçimi ve sürekli iyileştirme gereklidir.</p></div>
+    </div>
+</body>
+</html>

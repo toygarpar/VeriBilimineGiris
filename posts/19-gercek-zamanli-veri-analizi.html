@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Gerçek Zamanlı Veri Analizi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Gerçek Zamanlı Veri Analizi</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-19</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>real-time</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>streaming</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>analiz</span>
+        <div class='prose max-w-none mt-4'><h1>Gerçek Zamanlı Veri ve Analizi: Anlık İçgörüler Dünyası</h1>
+<p>Gerçek zamanlı veri analizi, verilerin oluştuğu anda işlenerek anlamlı bilgiye dönüştürülmesi sürecidir. Bu yaklaşım, geleneksel toplu (batch) işleme yöntemlerinden farklı olarak verileri akış halinde analiz eder.</p>
+<h2>Anlık Kararlar İçin Sayıların Hızla İşlenmesi</h2>
+<p>Bazı veriler bekleyebilir.<br />
+Bazıları ise beklemek istemez.<br />
+Çünkü bazı kararlar anında verilmelidir.  </p>
+<p>İşte bu yüzden gerçek zamanlı veri analizi vardır.<br />
+Veriler oluştuğu anda toplanır,<br />
+işlenir,<br />
+ve sonuçlar kullanıcıya hemen iletilir.</p>
+<p>Sayılar yavaş hareket ederse,<br />
+karar geç kalır.<br />
+Ve fırsat kaybolur.</p>
+<hr />
+<h2>Batch Veri Analizi – Toplu İşleme</h2>
+<p>Batch analizde veriler birikir.<br />
+Belli bir miktar olunca işlenir.<br />
+Ya da belli bir saatte işlenir.</p>
+<h3>Süreç:</h3>
+<ol>
+<li><strong>İşlem gerçekleşir</strong>  </li>
+<li><strong>Veri saklanır</strong>  </li>
+<li><strong>Zaman geldiğinde analiz yapılır</strong></li>
+</ol>
+<h3>Örnekler:</h3>
+<ul>
+<li>Fatura oluşturma  </li>
+<li>Gün sonu satış raporu  </li>
+<li>Excel dosyalarıyla yapılan analiz  </li>
+<li>Son 3 ayın ihracat verisi  </li>
+</ul>
+<h3>Avantajları:</h3>
+<ul>
+<li>Kolaydır  </li>
+<li>Geleneksel sistemlerle çalışır  </li>
+<li>Düşük işlem gücü yeterlidir  </li>
+</ul>
+<h3>Dezavantajları:</h3>
+<ul>
+<li>Yavaş yanıt verir  </li>
+<li>Geç kalmış bilgi verir  </li>
+<li>Stratejik kararlar için sınırlıdır  </li>
+</ul>
+<hr />
+<h2>Gerçek Zamanlı Veri Analizi – Real-Time Processing</h2>
+<p>Burada veri, akarken işlenir.<br />
+Oluştuğu anda analiz edilir.<br />
+Sonuçlar hemen çıkarılır.<br />
+Kararlar hızlı alınır.</p>
+<h3>Süreç:</h3>
+<ol>
+<li><strong>İşlem gerçekleşir</strong>  </li>
+<li><strong>Veri anında analiz edilir</strong>  </li>
+<li><strong>Sonuç hemen kullanılır</strong></li>
+</ol>
+<h3>Örnekler:</h3>
+<ul>
+<li>Radar sistemleri  </li>
+<li>E-ticaret sipariş işlemleri  </li>
+<li>ATM işlemlerinin izlenmesi  </li>
+<li>Anlık dashboard’lar  </li>
+</ul>
+<h3>Avantajları:</h3>
+<ul>
+<li>Anlık tepki verebilir  </li>
+<li>Operasyonları optimize eder  </li>
+<li>Müşteri deneyimini geliştirir  </li>
+</ul>
+<h3>Dezavantajları:</h3>
+<ul>
+<li>Daha karmaşık yapı gerekir  </li>
+<li>Yüksek işlem gücü gerektirir  </li>
+<li>Altyapı maliyeti yüksektir  </li>
+</ul>
+<hr />
+<h2>Gerçek Zamanlı Analizin Gücü Nerede?</h2>
+<p>Gerçek zamanlı analiz, birçok sektörde hayati öneme sahiptir:</p>
+<h3>Finans</h3>
+<p>Borsa fiyatları saniyede değişir.<br />
+Gerçek zamanlı analiz, yatırım kararlarını şekillendirir.</p>
+<h3>Sağlık</h3>
+<p>Hasta monitörlerinden gelen veriler anlık analiz edilir.<br />
+Kalp ritmi, kan basıncı gibi değerler hemen değerlendirilir.</p>
+<h3>Lojistik</h3>
+<p>Kargo araçlarının konumu sürekli takip edilir.<br />
+Yeni rotalar dinamik olarak belirlenir.</p>
+<h3>E-Ticaret</h3>
+<p>Müşteri sayfada duruyor mu?<br />
+Ürünü beğendi mi?<br />
+Tıklama anında analiz yapılır.<br />
+Reklam önerisi hemen gösterilir.</p>
+<hr />
+<h2>Batch mi, Real-Time mı?</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Batch (Toplu)</strong></th>
+<th><strong>Real-Time (Gerçek Zamanlı)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Veri Tipi</strong></td>
+<td>Duran veri</td>
+<td>Akışkan veri</td>
+</tr>
+<tr>
+<td><strong>İşlem Zamanı</strong></td>
+<td>Planlanmış</td>
+<td>Olay bazlı</td>
+</tr>
+<tr>
+<td><strong>Analiz Süresi</strong></td>
+<td>Geçmişe dönük</td>
+<td>Anlık</td>
+</tr>
+<tr>
+<td><strong>Uygulama Alanı</strong></td>
+<td>Raporlama, fatura</td>
+<td>Gözlemleme, yönlendirme</td>
+</tr>
+<tr>
+<td><strong>Altyapı Maliyeti</strong></td>
+<td>Düşük</td>
+<td>Yüksek</td>
+</tr>
+<tr>
+<td><strong>Karar Süresi</strong></td>
+<td>Uzun</td>
+<td>Çok kısa</td>
+</tr>
+</tbody>
+</table>
+<h3>Batch (Toplu) İşleme vs Gerçek Zamanlı İşleme</h3>
+<p><strong>Batch İşleme Özellikleri:</strong><br />
+- <strong>Zamanlama</strong>: Belirli aralıklarla (saatlik/günlük/haftalık)<br />
+- <strong>Veri Akışı</strong>: Depolanmış statik veri kümeleri<br />
+- <strong>Kullanım Alanları</strong>:<br />
+  - Fatura oluşturma<br />
+  - Dönemsel raporlar<br />
+  - Tarihsel veri analizleri<br />
+  - Excel/CSV tabanlı raporlamalar</p>
+<p><strong>Gerçek Zamanlı İşleme Özellikleri:</strong><br />
+- <strong>Zamanlama</strong>: Sürekli ve anlık<br />
+- <strong>Veri Akışı</strong>: Canlı veri akışları<br />
+- <strong>Kullanım Alanları</strong>:<br />
+  - Anlık dolandırıcılık tespiti<br />
+  - Canlı dashboardlar<br />
+  - IoT sensör izleme<br />
+  - Borsa takip sistemleri</p>
+<hr />
+<h2>Gerçek Zamanlı Analiz Nasıl Çalışır?</h2>
+<p>Gerçek zamanlı analiz, verilerin biriktirilmeden işlenmesiyle yapılır.<br />
+Veri akışı başlar.<br />
+Algoritma devreye girer.<br />
+Sonuçlar hemen çıkarılır.</p>
+<p>Ex:<br />
+E-ticaret sitesine yeni bir müşteri girdi.<br />
+Ne aradığını anlar.<br />
+Ona özel öneri yapar.<br />
+Bu öneri birkaç saniye içinde yapılır.</p>
+<p>Ex:<br />
+ATM&rsquo;de kart okutuldu.<br />
+Geçersiz kart mı?<br />
+Hesapta yeterli para var mı?<br />
+Cevap birkaç milisaniye içinde gelir.</p>
+<h2>Gerçek Zamanlı Analiz Mimarisi</h2>
+<ol>
+<li>
+<p><strong>Veri Kaynakları</strong>:<br />
+   - IoT cihazları<br />
+   - Web trafiği<br />
+   - Mobil uygulamalar<br />
+   - Finansal işlemler</p>
+</li>
+<li>
+<p><strong>Veri Toplama Katmanı</strong>:<br />
+   - Mesaj kuyruk sistemleri (Kafka, RabbitMQ)<br />
+   - API ağ geçitleri</p>
+</li>
+<li>
+<p><strong>Akış İşleme Motorları</strong>:<br />
+   - Apache Flink<br />
+   - Apache Spark Streaming<br />
+   - Amazon Kinesis</p>
+</li>
+<li>
+<p><strong>Analiz ve Karar Katmanı</strong>:<br />
+   - Kompleks olay işleme (CEP)<br />
+   - Makine öğrenmesi modelleri</p>
+</li>
+<li>
+<p><strong>Görselleştirme ve Eylem</strong>:<br />
+   - Gerçek zamanlı dashboardlar<br />
+   - Otomatik alarm sistemleri<br />
+   - Anında yanıt mekanizmaları</p>
+</li>
+</ol>
+<hr />
+<h2>Uygulama Senaryoları</h2>
+<h3>Finans Sektörü</h3>
+<ul>
+<li><strong>Anlık dolandırıcılık tespiti</strong>: Kredi kartı işlemlerinde anormal davranışların milisaniyeler içinde tespiti</li>
+<li><strong>Canlı borsa analizi</strong>: Hisse senedi fiyatlarının anlık tahmini</li>
+</ul>
+<h3>Perakende</h3>
+<ul>
+<li><strong>Kişiselleştirilmiş teklifler</strong>: Müşteri web sitesindeyken anlık öneri sistemleri</li>
+<li><strong>Stok optimizasyonu</strong>: Mağaza içi hareketlerin anlık analizi</li>
+</ul>
+<h3>Sağlık</h3>
+<ul>
+<li><strong>Hasta izleme</strong>: Yoğun bakım ünitelerinde vital verilerin sürekli takibi</li>
+<li><strong>Salgın haritalama</strong>: Hastalık yayılımının gerçek zamanlı takibi</li>
+</ul>
+<h3>Üretim</h3>
+<ul>
+<li><strong>Makine ömrü tahmini</strong>: Ekipman sensör verilerinin anlık analizi</li>
+<li><strong>Kalite kontrol</strong>: Üretim hattında anormallik tespiti</li>
+</ul>
+<h2>Teknolojik Zorluklar ve Çözümler</h2>
+<ol>
+<li>
+<p><strong>Gecikme (Latency) Problemi</strong>:<br />
+   - Çözüm: Bellek içi (in-memory) işleme sistemleri</p>
+</li>
+<li>
+<p><strong>Veri Tutarlılığı</strong>:<br />
+   - Çözüm: Exactly-once işleme semantiği</p>
+</li>
+<li>
+<p><strong>Sistem Dayanıklılığı</strong>:<br />
+   - Çözüm: Hata toleranslı dağıtık mimariler</p>
+</li>
+<li>
+<p><strong>Ölçeklenebilirlik</strong>:<br />
+   - Çözüm: Bulut tabanlı elastik altyapılar</p>
+</li>
+</ol>
+<h2>Gelecek Trendleri</h2>
+<ul>
+<li><strong>Edge Computing</strong>: Veri işleminin kaynağına yakın yapılması</li>
+<li><strong>Akıllı Otomasyon</strong>: Gerçek zamanlı analizle tetiklenen otomatik karar sistemleri</li>
+<li><strong>Karma Analiz</strong>: Batch ve stream işlemenin entegre kullanımı</li>
+</ul>
+<p>Gerçek zamanlı analiz, iş dünyasında rekabet avantajı sağlamak isteyen kuruluşlar için vazgeçilmez bir yetenek haline gelmiştir. Doğru uygulandığında operasyonel verimliliği artırır, müşteri deneyimini zenginleştirir ve yenilikçi iş modellerinin önünü açar.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri ikiye ayrılır:<br />
+Bekleyen veri → Batch<br />
+Akıp geçen veri → Streaming</p>
+<p>Batch analiz, geçmişe bakar.<br />
+Gerçek zamanlı analiz, şimdinin nabzını tutar.</p>
+<p>Her ikisi de önemlidir.<br />
+AMA her proje aynı değildir.</p>
+<p>Kimine göre sabah raporu yeterlidir.<br />
+Kimine göre saniye bile fazladır.</p>
+<p>Gerçek zamanlı veri analizi;<br />
+hızlı karar vermek,<br />
+kaybedilen fırsatları yakalamak,<br />
+ve geleceği tahmin etmek içindir.</p>
+<p>Sayılar akıyor.<br />
+Biz de onlarla yüzmeliyiz.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

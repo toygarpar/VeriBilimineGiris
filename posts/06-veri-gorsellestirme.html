@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Görselleştirme</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Görselleştirme</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-06</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>görselleştirme</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>grafik</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>matplotlib</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>seaborn</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Görselleştirme</h1>
+<p>Verileri grafiksel formatta sunarak, kullanıcıların bu verileri daha hızlı ve etkili bir şekilde anlamalarını sağlar.</p>
+<p>Anormal bir durumu görme, trendi takip etme veri ile ilgili daha fazla bilgi elde etme şansımız yükselir.</p>
+<p>Büyük veri kümelerini anlamlandırmak zor olabilir. Görselleştirmeler, verileri anlamlı ve erişebilir hale getirir, bu da daha iyi kararlar almamıza yardımcı olur.</p>
+<h2>Sayıların Anlatmak İstediği Hikâyeyi Görün</h2>
+<p>Veriler her zaman kolay anlaşılır değildir.<br />
+Sayılar karışık olabilir.<br />
+Tablolar uzun olabilir.<br />
+Ama görsellerle anlatılan veri, hemen anlaşılır.<br />
+Veriyi görmek. Hızlıca. Doğru bir şekilde.</p>
+<p>Veri Görselleştirme, verileri şekillere, renklere ve çizgilere dönüştürmek demektir.<br />
+Gözlerimizle görmek isteriz.<br />
+Zihnimiz görseli daha hızlı işler.</p>
+<p>Bir grafik, yüzlerce satırlık tabloya göre çok daha hızlı bilgi verir.<br />
+Karmaşık bir tabloyu tek bir grafiğe çevirirsin;<br />
+bir bakışta anormal bir durumu fark edersin,<br />
+trendleri yakalarsın,<br />
+&ldquo;Bu iş nereye gidiyor?&rdquo; sorusuna cevap bulursun.<br />
+Kısaca: karar alırken elin güçlenir.</p>
+<hr />
+<h2>Neden Görselleştirme Yaparız?</h2>
+<h3>1. Verileri Keşfetmek İçin</h3>
+<p>Veride ne var? Neye benziyor bu dağılım?<br />
+Nerede tuhaflık var, nerede örüntü var?<br />
+Görselleştirme, bu sorulara cevap ararken pusulan olur.</p>
+<p>Trendleri görürüz.<br />
+Anormal durumları fark ederiz.<br />
+İlişkileri çözeriz.</p>
+<h3>2. Hızlı Anlamak İçin</h3>
+<p>Bir tabloyu satır satır okumak yerine,<br />
+tek bir grafiğe bakarsın, anlam çıkar.<br />
+Zamandan kazanırsın, dikkatini doğru yere yönlendirirsin.</p>
+<p>Bir tabloyu incelemek zaman alır.<br />
+Ama bir grafikteki yükseliş ya da düşüş hemen dikkat çeker.</p>
+<h3>3. Karar Almak İçin</h3>
+<p>Özellikle iş dünyasında grafik, toplantının dili olur.<br />
+Satışlar neden düştü? Hangi ürün uçuşta?<br />
+Cevaplar genellikle grafiktedir — ama doğru grafikte.</p>
+<p>Satış raporlarında hangi ürün daha çok satıyor?<br />
+Hangi şehirde müşteri sayısı arttı?<br />
+Bu soruların cevaplarını grafiklerle daha net buluruz.</p>
+<hr />
+<h2>Veri Görselleştirmenin Temel İlkeleri</h2>
+<h3>1. Basitlik</h3>
+<p>Karmaşık grafiklerden kaçının.<br />
+Ne anlatmak istediğinizi açıkça gösterin.<br />
+Az detay, çok anlam.</p>
+<p>Ne anlatmak istiyorsun, onu göster.<br />
+Fazla süs, fazla detay, kafa karıştırır.<br />
+Az ama öz: en iyi grafikler sade olandır.</p>
+<h3>2. Doğruluk</h3>
+<p>Veriler doğru yansıtılmalı.<br />
+Ölçekler yanıltıcı olmamalı.<br />
+Sayılar çarpıtılmamalı.</p>
+<p>Grafiğin dili doğru konuşmalı.<br />
+Eksenler düzgün olmalı, ölçek dürüst olmalı.<br />
+Yoksa yanıltıcı olur — kasıtlı ya da değil.</p>
+<h3>3. Renk ve Tasarım</h3>
+<p>Renkler dikkatlice seçilmeli.<br />
+Renk körlüğü olanlar için uygun paletler tercih edilmeli.<br />
+Dikkat dağıtan öğeler kullanılmamalı.</p>
+<p>Renkler güzel olabilir ama anlamlı da olmalı.<br />
+Görme engellerini, dikkat dağıtıcı kontrastları hesaba kat.<br />
+Unutma, amaç dikkat çekmek değil, anlatmak.</p>
+<hr />
+<h2>Temel Veri Görselleştirme Yöntemleri</h2>
+<h3>1. Çubuk Grafik (Bar Chart)</h3>
+<p>Kategoriler arasında karşılaştırma yapmak için kullanılır.<br />
+Dikey ya da yatay olabilir.<br />
+Her çubuk bir kategoriye aittir.<br />
+Uzunluğu o kategorinin değerini gösterir.<br />
+Sıralama gösterilebilir, zamanla değişim anlatılabilir.</p>
+<h3>2. Çizgi Grafik (Line Chart)</h3>
+<p>Zaman içindeki değişimi göstermek için kullanılır.<br />
+Noktalar bir çizgiyle birleştirilir.<br />
+Trendleri görmek için en güçlü araçlardan biridir.<br />
+Zaman serisi verisinin dostu.</p>
+<h3>3. Pasta Grafiği (Pie Chart)</h3>
+<p>Bütünün parçalarını gösterir.<br />
+Yüzdelik dağılımları vurgular.<br />
+Küçük sayıdaki kategoriler için uygundur.<br />
+Hangi kategori yüzde kaç?<br />
+Anlatmanın basit ama sınırlı bir yolu.<br />
+Fazla dilim varsa kafa karışır.</p>
+<h3>4. Histogram</h3>
+<p>Sayısal verilerin aralıklara göre dağılımını gösterir.<br />
+Hangi aralıkta kaç veri var?<br />
+Frekansı bu şekilde öğreniriz.<br />
+Özellikle sürekli (sayısal) veriyle çalışırken işine yarar.</p>
+<h3>5. Dağılım Grafiği (Scatter Plot)</h3>
+<p>İki değişken arasındaki ilişkiyi gösterir.<br />
+Her nokta bir çift değeri temsil eder.<br />
+İlişki var mı yok mu, buradan görülür.</p>
+<h3>6. Huni Grafiği (Funnel Chart)</h3>
+<p>Bir sürecin aşamalarını ve her aşamada kalan/verilen değerleri gösterir. <br />
+Genellikle satış süreçleri, kampanya akışları için kullanılır.<br />
+Başlangıçta fazla, sonunda azalan veri ile çalışır.<br />
+Örneğin bir kampanyada: e-posta gönderildi → açıldı → tıklandı → satın alındı.<br />
+Azalan şekliyle sürecin daraldığını gösterir.</p>
+<h3>7. Box Plot</h3>
+<p>Verilerin dağılımını, ortalamasını, uç değerleri gösterir.<br />
+Aykırı değerleri tespit etmede faydalıdır.<br />
+Verinin ortalaması, çeyrekleri, uç değerleri…<br />
+Hepsi tek bir kutuda.<br />
+Özellikle dağılımı ve aykırı değerleri görmek için ideal.</p>
+<h3>8. Isı Haritası (Heatmap)</h3>
+<p>Verileri renklerle gösterir.<br />
+Yoğunlukları veya büyüklükleri renk yoğunluğuyla ifade eder.<br />
+Kalıpları ve ilişkileri görmek için kullanılır.<br />
+İki boyutlu verilerde yoğunluğu renklerle göster.<br />
+Nerede fazla, nerede az?<br />
+Renkler sayılardan önce konuşur.</p>
+<h3>9. Nokta Haritası (Pin/Dot Map)</h3>
+<p>Coğrafi verileri harita üzerinde gösterir.<br />
+Her nokta bir veri noktasını temsil eder.<br />
+Konum bazlı analizlerde kullanılır.<br />
+Harita görsel hafızayı devreye sokar.</p>
+<hr />
+<h2>Grafik Okuma ve Yorumlama Teknikleri</h2>
+<p>Grafiği çizmek kadar, okumak ve yorumlamak da mühim.</p>
+<p>Bir grafik bazen çok şey anlatır ama senin neyi aradığın önemlidir.</p>
+<h3>1. Ölçek Manipülasyonuna Dikkat</h3>
+<p>Eksenlerdeki ölçekler yanlışsa grafik yanıltıcı olabilir.<br />
+Örneğin: Satış artışı büyük görünür ama gerçek artış çok küçük olabilir.</p>
+<p>Eksenleri oynarsan, anlam değişir.<br />
+1 birim fark, 10 katmış gibi görünür.<br />
+Dürüst grafik, doğru eksen kullanır.</p>
+<h3>2. Renklerin Dilini Öğrenin</h3>
+<p>Doğru renk seçimleri, veriyi daha hızlı algılanmasını sağlar.<br />
+Kontrastlar doğru olmalı.<br />
+Renk körlüğüne uygun paletler tercih edilmeli.</p>
+<p>Renk sadece estetik değil, anlam da taşır.<br />
+Anlamlı kullan. Kırmızı tehlike mi, artış mı?<br />
+Ne anlatmak istediğine göre değişir.</p>
+<h3>3. Basit Kalın</h3>
+<p>Grafik karmaşıklaştıkça mesaj kaybolur.<br />
+Basit bir grafik, karmaşık bir tablodan daha etkilidir.</p>
+<p>Yine geldik sadeliğe.<br />
+Grafik, karmaşıklığı azaltmalı.<br />
+Fazla bilgi, az anlayış doğurur.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri Görselleştirme;<br />
+sayıların anlatmak istediği hikâyeyi<br />
+gözle görülebilir hale getirmektir.</p>
+<p>Görselleştirme olmadan veri sessiz kalır.<br />
+Ama onu şekillendirdiğinizde konuşur.<br />
+Size trendleri, ilişkileri, farkları anlatır.</p>
+<p>Veri bilimi, pazarlama, sağlık, finans…<br />
+Her alanda verilerle çalışan insanlar<br />
+verileri görselleştirerek karar alır.</p>
+<p>Ve iyi bir görselleştirme,<br />
+bir tablonun ötesine geçer.<br />
+Gerçekten <em>görmek</em> istersek,<br />
+veri görselleştirme bize yol gösterir.</p>
+<p>Veri görselleştirme, sadece “güzel grafik” çizmek değil;<br />
+gösterdiğinle düşündürmek, düşündürdüğünle yön vermektir.<br />
+Bir bakışta anlayabileceğin bir dünya kurmaktır.<br />
+Veri varsa göster, gösteriyorsan sade ol.<br />
+Anlatmak istiyorsan, grafik en güçlü dilindir.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

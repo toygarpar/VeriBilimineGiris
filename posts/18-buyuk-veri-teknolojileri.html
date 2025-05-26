@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Büyük Veri Teknolojileri</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Büyük Veri Teknolojileri</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-18</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Big Data</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Spark</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Hadoop</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>Databricks</span>
+        <div class='prose max-w-none mt-4'><h1>Büyük Veri Teknolojileri – Big Data</h1>
+<p>Geleneksel yöntemlerle işlenemeyecek kadar büyük, karmaşık ve hızlı veri kümeleridir. Dijital dönüşümün temel taşlarından biridir ve şirketler için yeni fırsatlar sunar.</p>
+<p>Tanım Ölçütleri:</p>
+<p>Tek bir sunucunun işleyemeyeceği boyutlarda veri</p>
+<p>Dağıtık sistemler gerektiren veri hacmi</p>
+<p>Geleneksel veritabanı yönetim araçlarıyla yönetilemeyen veriler</p>
+<h2>Büyük Veri ve Veri Bilimi İlişkisi</h2>
+<p><strong>Ortak Noktalar:</strong></p>
+<ul>
+<li>
+<p>Her ikisi de veri analizini temel alır</p>
+</li>
+<li>
+<p>Karar destek sistemlerinde kullanılır</p>
+</li>
+<li>
+<p>Yapay zeka ve makine öğrenmesi uygulamalarına destek verir</p>
+</li>
+</ul>
+<p><strong>Farklar:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Veri Bilimi</th>
+<th>Büyük Veri</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Veri Türü</td>
+<td>Çoğunlukla statik</td>
+<td>Statik + Gerçek zamanlı</td>
+</tr>
+<tr>
+<td>İşlem Tipi</td>
+<td>Batch işlemler</td>
+<td>Batch + Stream işlemler</td>
+</tr>
+<tr>
+<td>Odak</td>
+<td>Analiz ve modelleme</td>
+<td>Veri işleme ve depolama</td>
+</tr>
+</tbody>
+</table>
+<h2>Geleneksel Yollar Artık Yetmiyor</h2>
+<p>Geleneksel veri işleme yöntemleri, artık yetmiyor.<br />
+Çünkü veriler çok büyük oldu.<br />
+Çok hızlı üretildi.<br />
+Çok farklı biçimlerde geldi.</p>
+<p>Bu yüzden Büyük Veri (Big Data) ortaya çıktı.<br />
+Yeni teknolojiler, yeni sistemler, yeni yaklaşımlar getirdi.</p>
+<p>Büyük Veri;<br />
+hacimce büyük,<br />
+hızla üretilen,<br />
+çeşitli kaynaklardan gelen<br />
+verileri ifade eder.</p>
+<hr />
+<h2>Büyük Veri Ne Kadar Büyük?</h2>
+<p>Büyük veri, belirli bir boyutla tanımlanmaz.<br />
+10 GB mı? 1 TB mı?<br />
+Değil.  </p>
+<p>Eğer bir sunucu bu veriyi işleyemiyorsa,<br />
+ve birden fazla sunucuya ihtiyaç duyuluyorsa,<br />
+bu veri “büyük veri” kategorisine girer.</p>
+<p>Ve bu veriler dağıtık sistemlerle işlenir.</p>
+<hr />
+<h2>Dağıtık Sistem Nedir?</h2>
+<p>Dağıtık sistem, birkaç bilgisayarın tek bir sistem gibi çalıştığı yapıdır.<br />
+Her bilgisayar bağımsız çalışabilir ama birlikte daha büyük görevler yapar.  </p>
+<p>Ex: Bir işlem milyonlarca satır veri içeriyor.<br />
+Bu işlem tek bir makinede yıllar sürebilir.<br />
+Ama onu yüzlerce makineye bölüp yaptırırsanız saniyelerde biter.</p>
+<p>Bu sisteme cluster denir.<br />
+Standalone sistemler bir araya gelip cluster oluşturur.<br />
+İşlem kapasitesi artar.</p>
+<hr />
+<h2>Veri Bilimi ile Büyük Veri Arasında Bağ</h2>
+<p>Veri Bilimi, Büyük Veri’nin önemli parçasıdır.<br />
+Ancak farkları vardır.</p>
+<h3>Veri Bilimi:</h3>
+<ul>
+<li>Genellikle batch işlem kullanılır.  </li>
+<li>Veri statiktir.  </li>
+<li>Model kurulur.  </li>
+<li>Tahmin yapılır.</li>
+</ul>
+<h3>Büyük Veri:</h3>
+<ul>
+<li>Batch + streaming verilerle çalışır.  </li>
+<li>Gerçek zamanlı analiz yapılır.  </li>
+<li>Büyük hacimli veriler işlenir.  </li>
+<li>Veri bilimi süreçleri burada ölçeklenir.</li>
+</ul>
+<p>Ex:<br />
+Bir e-ticaret sitesinde milyarlarca işlem varsa,<br />
+bu veri büyük veridir.<br />
+Ve veri bilimi teknikleriyle müşteri davranışları tahmin edilir.</p>
+<hr />
+<h2>Büyük Verinin Oluşumu</h2>
+<p>Büyük veri birden fazla yerden gelir:</p>
+<h3>Sosyal Medya</h3>
+<p>Paylaşımlar, yorumlar, beğeni sayısı her gün milyonlarca satır veri üretir.</p>
+<h3>Mobil Uygulamalar</h3>
+<p>Konum, aktivite, harcama alışkanlıkları anlık olarak gönderilir.</p>
+<h3>Nesnelerin İnterneti (IoT)</h3>
+<p>Cihazlar sürekli konuşur.<br />
+Araba, saat, termostat…<br />
+Hepsi veri üretir.</p>
+<h3>Log Verileri</h3>
+<p>Sistemlerin ne yaptığını gösterir.<br />
+Kim hangi sayfayı açtı?<br />
+Hangi hata oluştu?<br />
+Loglar bunu çözer.</p>
+<h3>İşlemsel Veriler</h3>
+<p>Finansal işlemler, ödeme geçmişi, transferler<br />
+her saniye yeni veri üretir.</p>
+<h3>Multimedya Verileri</h3>
+<p>Resim, video, ses gibi yapılandırılmamış verilerdir.<br />
+Geleneksel veri tabanlarında saklamak zordur.</p>
+<hr />
+<h2>Büyük Verinin 5 V&rsquo;si</h2>
+<p>Big Data&rsquo;nın tanımı, sadece &ldquo;büyük veri&rdquo; demek değildir.<br />
+Beş temel özelliği vardır. Bu beş özellik, Büyük Veri’yi tanımlar.</p>
+<h3>1. Hacim (Volume)</h3>
+<p>Terabaytlardan petabaytlara kadar veri büyüklüğü<br />
+Depolama çözümleri: Data Lakes, Object Storage</p>
+<p>Verinin miktarı önemlidir.<br />
+Milyonlarca satır olmalı.<br />
+Bir sunucunun işlemesi zorlaşmalı.<br />
+O zaman veri “büyük” olur.</p>
+<p>Örnek: Netflix&rsquo;in günlük 1 milyar saatlik izleme verisi</p>
+<h3>2. Hız (Velocity)</h3>
+<p>Verinin oluşma ve değişme hızı<br />
+Gerçek zamanlı veri akışı gereksinimi</p>
+<p>Veri üretim hızı yüksektir.<br />
+Her milisaniye yeni veri oluşur.<br />
+Ve bu veri aynı hızla işlenmelidir.</p>
+<p>Örnek: Twitter&rsquo;da her dakika binlerce tweet atılır.<br />
+Onların analizi anında yapılmalıdır.<br />
+Canlı borsa verileri, anlık konum takibi</p>
+<h3>3. Çeşitlilik (Variety)</h3>
+<p>Yapılandırılmış, yarı yapılandırılmış ve yapılandırılmamış veri türleri<br />
+Veri formatları: Metin, görsel, video, JSON, CSV vb.</p>
+<p>Veriler farklı biçimlerde gelir.<br />
+Tablolardan metinlere,<br />
+görüntülerden ses dosyalarına kadar<br />
+her şey veri olabilir.</p>
+<p>Örnek: Hastane verileri (MR görüntüleri, hasta kayıtları, laboratuvar sonuçları)</p>
+<h3>4. Güvenilirlik/Doğruluk (Veracity)</h3>
+<p>Verinin güvenilirliği ve tutarlılığı<br />
+Veri kalite yönetimi gereksinimi<br />
+İstatistik: İş liderlerinin %33&rsquo;ü verilerine güvenmiyor</p>
+<p>Çözüm: Veri temizleme, doğrulama ve görselleştirme</p>
+<p>Veri doğru mu?<br />
+Gerçek mi?<br />
+Doğrulanmış mı?</p>
+<p>Veracity, verinin güvenilirliğini ölçer.<br />
+Düşük kaliteli veri kararları bozar.<br />
+Bu yüzden veri önce doğrulanmalıdır.</p>
+<h3>5. Değer (Value)</h3>
+<p>Ham veriden türetilen iş değeri<br />
+Karar destek sistemlerine katkı</p>
+<p>En önemli V budur.<br />
+Veri değerli değilse, büyük olması hiçbir şey ifade etmez.</p>
+<p>Eldeki veri,<br />
+karar almayı kolaylaştırıyor mu?<br />
+Stratejiye yön veriyor mu?<br />
+Yararı var mı?</p>
+<p>Evet ise, veri değerlidir.</p>
+<p>Örnek: Perakendeci için müşteri davranış tahminleri</p>
+<hr />
+<h2>Karşılaştırmalı Tablo:</h2>
+<h3>Büyük Veri vs Veri Bilimi</h3>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Veri Bilimi</strong></th>
+<th><strong>Büyük Veri</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Veri Boyutu</strong></td>
+<td>Küçük - Orta</td>
+<td>Çok Büyük</td>
+</tr>
+<tr>
+<td><strong>İşlem Türü</strong></td>
+<td>Batch</td>
+<td>Batch + Streaming</td>
+</tr>
+<tr>
+<td><strong>Veri Türü</strong></td>
+<td>Yapılandırılmış</td>
+<td>Yapılandırılmış, Yarı Yapılandırılmış, Yapılandırılmamış</td>
+</tr>
+<tr>
+<td><strong>Teknoloji</strong></td>
+<td>Excel, SQL, Python</td>
+<td>Hadoop, Spark, Kafka</td>
+</tr>
+<tr>
+<td><strong>Amacı</strong></td>
+<td>Tahmin ve analiz</td>
+<td>Depolama, işlem ve yönetim</td>
+</tr>
+<tr>
+<td><strong>Zamanlama</strong></td>
+<td>Statik veriyle çalışma</td>
+<td>Anlık veri ile çalışma</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Büyük Veri Teknolojileri</h2>
+<h3>Dağıtık Sistemler</h3>
+<ul>
+<li>
+<p><strong>Cluster Yapıları</strong>: Bağımsız sunucuların tek sistem gibi çalışması</p>
+</li>
+<li>
+<p><strong>Avantajlar</strong>: Yüksek erişilebilirlik, ölçeklenebilirlik</p>
+</li>
+<li>
+<p><strong>Kullanım Senaryoları</strong>: Hadoop, Spark kümeleri</p>
+</li>
+</ul>
+<h3>Büyük Veri Ekosistemi</h3>
+<ol>
+<li>
+<p><strong>Depolama</strong>: HDFS, Amazon S3</p>
+</li>
+<li>
+<p><strong>İşleme</strong>: Hadoop MapReduce, Spark</p>
+</li>
+<li>
+<p><strong>Veritabanları</strong>: NoSQL (MongoDB, Cassandra)</p>
+</li>
+<li>
+<p><strong>Stream İşleme</strong>: Kafka, Flink</p>
+</li>
+<li>
+<p><strong>Makine Öğrenmesi</strong>: TensorFlow, PyTorch</p>
+</li>
+</ol>
+<hr />
+<h2>Son Söz</h2>
+<p>Büyük Veri, sadece büyük sayılar değildir.<br />
+Sayıların arkasındaki gerçekliği gösterir.<br />
+Yeni fırsatları ortaya çıkarır.<br />
+Stratejileri şekillendirir.</p>
+<p>Veri Bilimi bu verilerle anlam üretir.<br />
+Büyük Veri ise bu verilerin taşınmasını,<br />
+işlenmesini,<br />
+ve yönetilmesini sağlar.</p>
+<p>İkisi birleştiğinde<br />
+sayılar konuşur.<br />
+ve biz dinleriz.</p>
+<h2>Büyük veri, doğru şekilde yönetildiğinde kurumlara rekabet avantajı sağlayan stratejik bir varlıktır. Veriden değer üretmek için uygun altyapı, yetenek ve analiz yöntemlerinin bir arada kullanılması gerekir.</h2></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+{
+  "site_title": "Veri Bilimine Giriş",
+  "author": "toygarpar",
+  "intro": "Veri Bilimine Giriş",
+  "posts": [
+    {
+      "title": "Veri Bilimine Giriş",
+      "date": "2025-06-01",
+      "summary": "Veri biliminin tanımı, kapsamı ve diğer alanlarla farkları.",
+      "post": "posts/01-veri-bilimine-giris.md",
+      "tags": ["veri bilimi", "giriş", "temel kavramlar"]
+    },
+    {
+      "title": "Veri Bilimi Proje Akışı",
+      "date": "2025-06-02",
+      "summary": "Veri bilimi projelerinin aşamaları ve iş akışı nasıl olur?",
+      "post": "posts/02-veri-bilimi-proje-akisi.md",
+      "tags": ["proje akışı", "veri bilimi süreci", "aşamalar"]
+    },
+    {
+      "title": "Veri Kavramları",
+      "date": "2025-06-03",
+      "summary": "Veri nedir? Gözlem birimi, değişken ve ölçek türleri nelerdir?",
+      "post": "posts/03-veri-kavramlari.md",
+      "tags": ["veri", "gözlem", "değişken", "ölçek"]
+    },
+    {
+      "title": "Veri Çeşitleri ve Yönetimi",
+      "date": "2025-06-04",
+      "summary": "Veri tipleri ve veri yaşam döngüsüne göre yönetimi.",
+      "post": "posts/04-veri-cesitleri-ve-yonetimi.md",
+      "tags": ["veri çeşitleri", "veri yönetimi", "veri yapısı"]
+    },
+    {
+      "title": "Veri Okuryazarlığı Nedir?",
+      "date": "2025-06-05",
+      "summary": "Verileri okuma, anlama ve yorumlama becerisi olan veri okuryazarlığına giriş.",
+      "post": "posts/05-veri-okuryazarligi.md",
+      "tags": ["veri okuryazarlığı", "anlam çıkarma", "bilgi"]
+    },
+    {
+      "title": "Veri Görselleştirme",
+      "date": "2025-06-06",
+      "summary": "Sayıları görselleştirmek: Neden önemli ve nasıl yapılır?",
+      "post": "posts/06-veri-gorsellestirme.md",
+      "tags": ["görselleştirme", "grafik", "matplotlib", "seaborn"]
+    },
+    {
+      "title": "Veri Bilimi ve Temel İstatistik İlişkisi",
+      "date": "2025-06-07",
+      "summary": "İstatistiğin veri bilimindeki rolü ve hangi adımlarda kullanıldığı.",
+      "post": "posts/07-veri-bilimi-ve-temel-istatistik-iliskisi.md",
+      "tags": ["veri bilimi", "istatistiksel yöntemler", "modelleme"]
+    },
+    {
+      "title": "Temel İstatistik Kavramları",
+      "date": "2025-06-08",
+      "summary": "Ortalama, medyan, mod gibi temel istatistik ölçüleri.",
+      "post": "posts/08-temel-istatistik-kavramlari.md",
+      "tags": ["ortalama", "medyan", "mod", "ölçüm"]
+    },
+    {
+      "title": "Merkezi Eğilim Ölçüleri",
+      "date": "2025-06-09",
+      "summary": "Verinin merkezini bulmak için kullanılan ortalama, medyan, mod gibi ölçüler.",
+      "post": "posts/09-merkezi-egilim-olcumleri.md",
+      "tags": ["ortalama", "medyan", "mod", "eğilim"]
+    },
+    {
+      "title": "Dağılım Ölçüleri",
+      "date": "2025-06-10",
+      "summary": "Varyans, standart sapma, ranj gibi yayılım ölçüleri.",
+      "post": "posts/10-dagilim-olculeri.md",
+      "tags": ["varyans", "standart sapma", "ranj", "yayılım"]
+    },
+    {
+      "title": "Olasılık Teorisi",
+      "date": "2025-06-11",
+      "summary": "Belirsizlik altında karar vermek için olasılık teorisine giriş.",
+      "post": "posts/11-olasilik-teorisi.md",
+      "tags": ["olasılık", "deney", "koşullu olasılık", "Bayes"]
+    },
+    {
+      "title": "Hipotez Testleri",
+      "date": "2025-06-12",
+      "summary": "İddiaları sayılarla sınamak: Hipotez testi nedir ve nasıl uygulanır?",
+      "post": "posts/12-hipotez-testleri.md",
+      "tags": ["hipotez", "H₀", "H₁", "p-değeri"]
+    },
+    {
+      "title": "Verinin Yaşam Döngüsü",
+      "date": "2025-06-13",
+      "summary": "Verinin toplanması, saklanması, dönüştürülmesi ve analizi süreci.",
+      "post": "posts/13-verinin-yasam-dongusu.md",
+      "tags": ["veri yaşam döngüsü", "data pipeline", "ETL"]
+    },
+    {
+      "title": "Veri Ön İşleme ve Depolama",
+      "date": "2025-06-14",
+      "summary": "Veri temizliği, eksik değerler, aykırı değerler ve veri depolama teknikleri.",
+      "post": "posts/14-veri-on-isleme-ve-depolama.md",
+      "tags": ["ön işleme", "eksik veri", "aykırı değer", "veri kalitesi"]
+    },
+    {
+      "title": "Veri Analizi Nedir?",
+      "date": "2025-06-15",
+      "summary": "Veri analizi süreçleri, amaçları ve türleri.",
+      "post": "posts/15-veri-analizi.md",
+      "tags": ["veri analizi", "tahmin", "kesifsel analiz"]
+    },
+    {
+      "title": "Keşifsel Veri Analizi",
+      "date": "2025-06-16",
+      "summary": "Veriye ilk bakışta ne ararsın? Keşifsel veri analizi süreci.",
+      "post": "posts/16-kesifsel-veri-analizi.md",
+      "tags": ["EDA", "betimsel istatistik", "görselleştirme"]
+    },
+    {
+      "title": "Veri Bilimi ve Popüler Teknolojiler",
+      "date": "2025-06-17",
+      "summary": "Veri biliminde kullanılan araçlar ve teknolojiler.",
+      "post": "posts/17-veri-bilimi-ve-populer-teknolojiler.md",
+      "tags": ["Python", "R", "SQL", "Jupyter", "toolset"]
+    },
+    {
+      "title": "Büyük Veri Teknolojileri",
+      "date": "2025-06-18",
+      "summary": "Büyük veri ortamlarında kullanılan teknolojiler.",
+      "post": "posts/18-buyuk-veri-teknolojileri.md",
+      "tags": ["Big Data", "Spark", "Hadoop", "Databricks"]
+    },
+    {
+      "title": "Gerçek Zamanlı Veri Analizi",
+      "date": "2025-06-19",
+      "summary": "Zaman serileri, straming data ve gerçek zamanlı analiz yöntemleri.",
+      "post": "posts/19-gercek-zamanli-veri-analizi.md",
+      "tags": ["real-time", "streaming", "analiz"]
+    },
+    {
+      "title": "Makine Öğrenmesi Bileşenleri ve Yöntemleri",
+      "date": "2025-06-20",
+      "summary": "Makine öğrenmesi nedir? Hangi bileşenler vardır?",
+      "post": "posts/20-makine-ogrenmesi-ve-bilesenleri-ve-yontemleri.md",
+      "tags": ["makine öğrenmesi", "supervised", "unsupervised"]
+    },
+    {
+      "title": "Makine Öğrenmesi Algoritmaları",
+      "date": "2025-06-21",
+      "summary": "En popüler makine öğrenmesi algoritmaları ve kullanım alanları.",
+      "post": "posts/21-makine-ogrenmesi-algoritmalari.md",
+      "tags": ["regresyon", "karar ağacı", "sınıflandırma", "clustering"]
+    },
+    {
+      "title": "MLOps Kavramı",
+      "date": "2025-06-22",
+      "summary": "Model üretim ortamına alınırken karşılaşılan zorluklar ve MLOps çözümleri.",
+      "post": "posts/22-mlops-kavrami.md",
+      "tags": ["MLOps", "CI/CD", "model deploy", "monitoring"]
+    },
+    {
+      "title": "Derin Öğrenme Teknolojileri ve Algoritmaları",
+      "date": "2025-06-23",
+      "summary": "Derin öğrenmeye giriş, CNN, RNN, GAN gibi temel teknolojiler.",
+      "post": "posts/23-derin-ogrenme-teknolojileri-ve-algoritmalari.md",
+      "tags": ["derin öğrenme", "CNN", "RNN", "GAN", "neural networks"]
+    },
+    {
+      "title": "Yapay Zeka Kavramları",
+      "date": "2025-06-24",
+      "summary": "Yapay zeka, makine öğrenmesi ve derin öğrenme arasındaki farklar.",
+      "post": "posts/24-yapay-zeka-kavramlari.md",
+      "tags": ["AI", "Yapay Zeka", "otomasyon", "etik"]
+    },
+    {
+      "title": "Veri Bilimi Araçları",
+      "date": "2025-06-25",
+      "summary": "Veri bilimcilerin kullandığı en popüler araçlar ve kütüphaneler.",
+      "post": "posts/25-veri-bilimi-araclari.md",
+      "tags": ["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "araçlar"]
+    },
+    {
+      "title": "Veri Biliminde Kariyer Yolculuğu",
+      "date": "2025-06-26",
+      "summary": "Veri bilimi yolunda hangi pozisyonlar var? Nasıl başlarsın?",
+      "post": "posts/26-veri-biliminde-kariyer.md",
+      "tags": ["kariyer", "veri bilimi işleri", "beceriler", "eğitim"]
+    }
+  ]
+}

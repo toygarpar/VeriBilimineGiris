@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Keşifsel Veri Analizi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Keşifsel Veri Analizi</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-16</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>EDA</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>betimsel istatistik</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>görselleştirme</span>
+        <div class='prose max-w-none mt-4'><h1>Keşifsel Veri Analizi (EDA)</h1>
+<h2>Veriyi Tanımaya Başlamak</h2>
+<p>Veri gelir.<br />
+Hamdır.<br />
+Düzensizdir.<br />
+Bazı satırlar eksiktir.<br />
+Bazı sütunlar anlamsızdır.  </p>
+<p>İlk adım: veriyi tanımak.<br />
+Sayıların içinde saklı olan hikâyeyi bulmak.<br />
+Bu yüzden EDA yapılır.</p>
+<p><strong>EDA – Exploratory Data Analysis</strong>,<br />
+verinin yapısını, dağılımını, ilişkilerini anlamak için yapılan ilk analizdir.</p>
+<h2>EDA Nedir ve Neden Önemlidir?</h2>
+<p>Keşifsel Veri Analizi (EDA), veri bilimi sürecinin en kritik aşamalarından biridir. Veri setinizin yapısını, özelliklerini ve altında yatan ilişkileri anlamanızı sağlayan bir dizi teknik ve yöntem içerir.</p>
+<p><strong>Temel Amaçlar:</strong><br />
+- Verinin genel yapısını ve içeriğini anlamak<br />
+- Potansiyel veri kalitesi sorunlarını tespit etmek<br />
+- Değişkenler arasındaki ilişkileri keşfetmek<br />
+- Analiz ve modelleme için hipotezler oluşturmak<br />
+- Uygun ön işleme tekniklerini belirlemek</p>
+<hr />
+<h2>Neden EDA Yapılır?</h2>
+<h3>1. Veriyi Derinlemesine Anlamak İçin</h3>
+<p>Veri setinde hangi sütunlar var?<br />
+Ne tür veriler taşıyorlar?<br />
+Sayı mı? Metin mi? Tarih mi?</p>
+<p>Her şey burada başlar.<br />
+Veriyle tanışma sürecidir EDA.</p>
+<h3>2. Sorunları Belirlemek İçin</h3>
+<p>Eksik değerler var mı?<br />
+Yanlış değerler yer alıyor mu?<br />
+Aykırı gözlemler var mı?</p>
+<p>EDA, verideki hastalıkları gösterir.<br />
+Onları görebilirsin.<br />
+Ve onları düzeltebilirsin.</p>
+<h3>3. Kaliteyi Artırmak İçin</h3>
+<p>Veri güvenilir mi?<br />
+Tutarlı mı?<br />
+Doğru mu?</p>
+<p>Kaliteli veri, kaliteli karar demektir.<br />
+EDA ile veriye kalite katarız.</p>
+<h3>4. Hipotez Üretmek İçin</h3>
+<p>Veri bir hikâye anlatır.<br />
+Desenleri vardır.<br />
+Eğilimleri vardır.<br />
+Bu desenleri kullanarak gelecek hakkında hipotez kurabiliriz.</p>
+<hr />
+<h2>EDA Adımları</h2>
+<p>EDA&rsquo;da işler sistemli ilerler.<br />
+Hiçbir adımı atlanmaz.<br />
+Her adımı önemli.</p>
+<h3>1. Veri Setine İlk Bakış</h3>
+<p><code>df.head()</code> ve <code>df.tail()</code> komutlarıyla veriyi görürüz.<br />
+İlk birkaç satırı inceleriz.<br />
+Son birkaç satırı da.</p>
+<p>Ne içeriyor bu veri?<br />
+Nasıl yapılandırılmış?<br />
+Bu soruların cevabı burada başlar.</p>
+<p>Veriye İlk Bakış:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># İlk 5 gözlem</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># Son 5 gözlem </span>
+<span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+
+<span class="c1"># Veri seti boyutları (satır, sütun)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Satır sayısı: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Sütun sayısı: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Veri yapısı hakkında bilgi</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</code></pre></div>
+
+<h3>2. Boyutu Kontrol Et</h3>
+<p>Kaç satır var?<br />
+Kaç sütun var?</p>
+<p><code>df.shape</code>, <code>df.ndim</code>, <code>df.size</code> ile boyutu öğreniriz.<br />
+Veri büyük mü? Küçük mü?<br />
+Hangi boyutta çalışacağımızı anlarız.</p>
+<h3>3. Sütun Bilgilerini Gözden Geçir</h3>
+<p>Her sütun ne ifade ediyor?<br />
+Veri tipi nedir?<br />
+Boş değerler nerede?</p>
+<p><code>df.info()</code> ile tüm bu bilgilere ulaşırız.<br />
+Veri setini tanımanın anahtarıdır bu.</p>
+<h3>4. Özet İstatistiklere Bak</h3>
+<p>Ortalama nedir?<br />
+Standart sapma kaçtır?<br />
+En küçük ve en büyük değerler neler?</p>
+<p><code>df.describe().T</code> ile merkezi eğilimleri ve yayılımı görürüz.</p>
+<p>Temel İstatistiklerin İncelenmesi:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Sayısal değişkenler için özet istatistikler</span>
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+
+<span class="c1"># Kategorik değişkenler için özet</span>
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<h3>5. Eksik Verileri, Aykırı Değerleri Tespit Et</h3>
+<p>Eksik hücre var mı?<br />
+Hangi sütun daha çok etkilenmiş?<br />
+Aykırı değerler/Outliers bulunuyor mu?</p>
+<p><code>df.isnull().sum()</code> ile eksiklikleri sayarız.<br />
+Ve gerekirse düzeltiriz.</p>
+<p>Eksik Veri Analizi: </p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Eksik değerlerin toplamı</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="c1"># Eksik değer yüzdeleri</span>
+<span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Eksik değer görselleştirme</span>
+<span class="kn">import</span> <span class="nn">missingno</span> <span class="k">as</span> <span class="nn">msno</span>
+<span class="n">msno</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Aykırı Değer Analizi:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Boxplot ile aykırı değerlerin tespiti</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;numeric_column&#39;</span><span class="p">)</span>
+
+<span class="c1"># Z-skoru ile aykırı değer tespiti</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="n">z_scores</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;numeric_column&#39;</span><span class="p">])</span>
+<span class="n">abs_z_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">z_scores</span><span class="p">)</span>
+<span class="n">outliers</span> <span class="o">=</span> <span class="p">(</span><span class="n">abs_z_scores</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>6. Gelişmiş Analizler</h3>
+<p>Dağılım Analizi:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Histogram</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;numeric_column&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># Yoğunluk grafiği</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;numeric_column&#39;</span><span class="p">])</span>
+
+<span class="c1"># Q-Q plot (normallik testi)</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="n">sm</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;numeric_column&#39;</span><span class="p">],</span> <span class="n">line</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Korelasyon Analizi:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Korelasyon matrisi</span>
+<span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="c1"># Isı haritası</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Scatter plot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;var1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;var2&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Zaman Serisi Analizi:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Zaman serisi görselleştirme</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;tarih_değişkeni&#39;</span><span class="p">)[</span><span class="s1">&#39;sayısal_değişken&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="c1"># Hareketli ortalama</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;moving_avg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sayısal_değişken&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Çok Değişkenli Analiz:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Pairplot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># FacetGrid</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;kategorik_değişken&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">,</span> <span class="s2">&quot;sayısal_değişken&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Kategorik Değişken Analizi:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Bar plot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;kategorik_değişken&#39;</span><span class="p">)</span>
+
+<span class="c1"># Cross tabulation</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;var1&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;var2&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<h3>7. Görselleştirme</h3>
+<p>Sayılar bazen sessiz kalır.<br />
+Görseller konuşur.</p>
+<p>Histogramlar çizeriz.<br />
+Çizgi grafikleri yaparız.<br />
+Dağılım grafikleriyle ilişki ararız.</p>
+<p>Veri görsel olunca anlaşılır olur.</p>
+<hr />
+<h2>EDA Sonrası Aksiyonlar</h2>
+<ol>
+<li>
+<p><strong>Eksik Veri Stratejisi Belirleme</strong>:<br />
+   - Silme<br />
+   - Doldurma (ortalama, medyan, mod)<br />
+   - Modelleme ile tahmin</p>
+</li>
+<li>
+<p><strong>Aykırı Değer Yönetimi</strong>:<br />
+   - Düzeltme<br />
+   - Dönüştürme<br />
+   - Kaldırma</p>
+</li>
+<li>
+<p><strong>Veri Dönüşümleri</strong>:<br />
+   - Normalizasyon<br />
+   - Standardizasyon<br />
+   - Log dönüşümü</p>
+</li>
+<li>
+<p><strong>Özellik Mühendisliği</strong>:<br />
+   - Yeni değişkenler türetme<br />
+   - Kategorik kodlama<br />
+   - Boyut azaltma</p>
+</li>
+</ol>
+<h2>Son Söz</h2>
+<p>EDA, veriyle tanışma partisidir.<br />
+Veriyi dinleyip onunla konuşmaktır.<br />
+Sayıların arasında yatan gerçekleri bulmaktır.</p>
+<p>Veri bilimi projelerinde EDA,<br />
+analiz sürecinin kapısıdır.<br />
+Model kurmadan önce yapılmalıdır.<br />
+Çünkü model, yanlış veriyle yanlış sonuç verir.</p>
+<p>EDA olmadan analiz,<br />
+yolculuk plan yapmadan gitmeye benzer.<br />
+Nereye gittiğini bilmezsin.<br />
+Neye dayandığını anlamazsın.</p>
+<p>Ama EDA ile yol belli olur.<br />
+Veriyle el ele yürünür.<br />
+Analizler daha tutarlı olur.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

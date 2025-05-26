@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Dağılım Ölçüleri</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Dağılım Ölçüleri</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-10</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>varyans</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>standart sapma</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ranj</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>yayılım</span>
+        <div class='prose max-w-none mt-4'><h1>Dağılım Ölçüleri</h1>
+<table>
+<thead>
+<tr>
+<th>Ölçü Türü</th>
+<th>Temsil Ettiği</th>
+<th>Yöntemler</th>
+<th>Özellikler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merkezi Eğilim</td>
+<td>Tipik Değer</td>
+<td>Ortalama, Medyan, Mod</td>
+<td>Verinin merkezi hakkında bilgi verir</td>
+</tr>
+<tr>
+<td>Dağılım (Varyans)</td>
+<td>Yayılım</td>
+<td>Range, Varyans, Std. Sapma</td>
+<td>Verinin nasıl dağıldığını gösterir</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">veriler</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ortalama:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">veriler</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Medyan:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">veriler</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Varyans:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">veriler</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standart Sapma:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">veriler</span><span class="p">))</span>
+</code></pre></div>
+
+<p>Bir veri kümesinin nasıl yayıldığını veya dağıldığını anlamak için kullanılan istatistiksel göstergelerdir. Yani, veriler birbirine yakın mı, yoksa uzak mı? Verilerin ne kadar çeşitlilik gösterdiğini veya ne kadar homojen olduğunu anlamaya yardımcı olur.</p>
+<h2>Sayıların Ne Kadar Yayıldığını Öğrenmek</h2>
+<p>Sayılar bazen bir arada durur.<br />
+Bazen çok uzaklaşır.<br />
+Bu fark önemlidir.<br />
+Çünkü verilerin nasıl dağıldığını bilmek, onları anlamamızı sağlar.</p>
+<p>Dağılım ölçüleri, verilerin ne kadar çeşitlendiğini ya da ne kadar benzer olduğunu gösterir.</p>
+<p>Üç temel dağılım ölçüsü vardır:<br />
+<strong>Değişim Aralığı (Range)</strong><br />
+<strong>Varyans</strong><br />
+<strong>Standart Sapma</strong></p>
+<p>Her biri farklı bir şey anlatır.<br />
+Ama hepsi aynı amaca hizmet eder:<br />
+Verilerin yayılımını görmek.</p>
+<hr />
+<h2>1. Değişim Aralığı – Range</h2>
+<p>En büyük değerle en küçük değer arasındaki farktır.<br />
+Basitçe:<br />
+Değişim Aralığı = En büyük değer - En küçük değer</p>
+<p>En basit dağılım ölçüsüdür.<br />
+Sadece en yüksek ve en düşük değere bakılır.<br />
+Aradaki fark alınır.<br />
+Bu fark bize verinin ne kadar geniş yayıldığını söyler.</p>
+<h3>Nasıl Hesaplanır?</h3>
+<ol>
+<li><strong>En yüksek değeri bul.</strong>  </li>
+<li><strong>En düşük değeri bul.</strong>  </li>
+<li><strong>İkisini çıkar.</strong></li>
+</ol>
+<h3>Örnek:</h3>
+<p>Notlar: 40, 50, 60, 70, 100<br />
+En yüksek = 100<br />
+En düşük = 40<br />
+<strong>Değişim Aralığı = 100 - 40 = 60</strong></p>
+<h3>Özellikleri:</h3>
+<ul>
+<li><strong>Basittir.</strong>  </li>
+<li><strong>Yalnızca iki değerle çalışır.</strong>  </li>
+<li><strong>Uç değerlere duyarlıdır.</strong></li>
+</ul>
+<hr />
+<h2>2. Varyans</h2>
+<p>Verilerin ortalamadan ne kadar saptığını gösterir.<br />
+Tüm değerlerin ortalamaya olan uzaklıklarının karelerinin ortalamasıdır.</p>
+<p>Daha derine iner.<br />
+Tüm sayıların ortalamaya göre sapmasını ölçer.<br />
+Sayılar ortalamanın etrafında nasıl dağılmış?<br />
+Bu sorunun cevabını verir.</p>
+<h3>Nasıl Hesaplanır?</h3>
+<ol>
+<li><strong>Ortalamayı hesapla.</strong>  </li>
+<li><strong>Her sayının ortalamadan farkını bul.</strong>  </li>
+<li><strong>Farkların karesini al.</strong>  </li>
+<li><strong>Karelerin toplamının ortalamasını al.</strong></li>
+<li><strong>Popülasyonsa, eleman sayısına böl. Örneklemse, (n-1)&rsquo;e böl.</strong></li>
+</ol>
+<h3>Formülü:</h3>
+<p><strong>Popülasyon Varyansı:</strong><br />
+σ² = Σ(xᵢ – μ)² / N  </p>
+<p><strong>Örneklem Varyansı:</strong><br />
+s² = Σ(xᵢ – x̄)² / (n – 1)</p>
+<p>Burada:<br />
+xᵢ = her bir veri noktası<br />
+μ = popülasyon ortalaması<br />
+x̄ = örneklem ortalaması<br />
+n = örneklem sayısı<br />
+Σ = toplam sembolü</p>
+<h3>Örnek:</h3>
+<p>Sayılar: 4, 8, 6, 2<br />
+Ortalama = 5<br />
+Farklar = -1, 3, 1, -3<br />
+Kareler = 1, 9, 1, 9<br />
+Toplam = 20<br />
+Varyans = 20 / 4 = 5</p>
+<h3>Özellikleri:</h3>
+<ul>
+<li><strong>Sayıların ortalamadan sapmasını gösterir.</strong>  </li>
+<li><strong>Yüksek varyans = geniş dağılım</strong>  </li>
+<li><strong>Düşük varyans = dar dağılım</strong></li>
+</ul>
+<hr />
+<h2>3. Standart Sapma</h2>
+<p>Verilerin ortalamadan ne kadar uzaklaştığını gösteren daha anlaşılır bir ölçüdür.<br />
+Birimi, verinin birimiyle aynıdır. Bu yüzden yorumlaması kolaydır.</p>
+<p>Varyansın kareköküdür.<br />
+Yani varyans gibi çalışır ama daha yorumlanabilir bir ölçüdür.<br />
+Çünkü orijinal verilerin birimleriyle ifade edilir.</p>
+<h3>Nasıl Hesaplanır?</h3>
+<ol>
+<li><strong>Varyansı hesapla.</strong>  </li>
+<li><strong>Karekökünü al.</strong></li>
+</ol>
+<h3>Formülü:</h3>
+<p><strong>Popülasyon Standart Sapması:</strong><br />
+σ = √[Σ(xᵢ – μ)² / N]</p>
+<p><strong>Örneklem Standart Sapması:</strong><br />
+s = √[Σ(xᵢ – x̄)² / (n – 1)]</p>
+<h3>Örnek:</h3>
+<p>Varyans = 5<br />
+<strong>Standart Sapma = √5 ≈ 2.24</strong></p>
+<h3>Özellikleri:</h3>
+<ul>
+<li><strong>Varyansın daha anlaşılır halidir.</strong>  </li>
+<li><strong>Verilerin ne kadar yayıldığını gösterir.</strong>  </li>
+<li><strong>Yüksek standart sapma = veriler çok değişken. Veriler ortalamadan uzak.</strong>  </li>
+<li><strong>Düşük standart sapma = veriler homojen. Veriler birbirine yakın, ortalamaya sadık.</strong></li>
+</ul>
+<hr />
+<h2>Hangi Ölçüyü Kullanmalı?</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Değişim Aralığı</th>
+<th>Varyans</th>
+<th>Standart Sapma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Karmaşıklık</strong></td>
+<td>En basit</td>
+<td>Orta</td>
+<td>Orta</td>
+</tr>
+<tr>
+<td><strong>Duyarlılık</strong></td>
+<td>Uç değerlere duyarlı</td>
+<td>Ortalamaya göre</td>
+<td>Ortalamaya göre</td>
+</tr>
+<tr>
+<td><strong>Kullanım Alanı</strong></td>
+<td>Temel analizler</td>
+<td>İstatistiksel testler</td>
+<td>Geniş kullanım alanı</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Son Söz</h2>
+<p>Sayılar sadece ortalama ile anlatılmaz.<br />
+Onların nasıl dağıldığını da bilmek gerekir.</p>
+<p><strong>Değişim Aralığı</strong> başlangıçtır.<br />
+<strong>Varyans</strong> daha derin bilgi verir.<br />
+<strong>Standart Sapma</strong> ise en güçlü araçtır.</p>
+<p>Bu üç ölçüyü birlikte kullanmak,<br />
+sayıların ne kadar değiştiğini,<br />
+ne kadar tutarlı olduğunu<br />
+ve ne kadar uç noktalar içerdiğini gösterir.</p>
+<p>Ve bu bilgiler olmadan<br />
+veri hakkında doğru karar veremezsin.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

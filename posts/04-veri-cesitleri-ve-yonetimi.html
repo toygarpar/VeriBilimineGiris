@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Veri Çeşitleri ve Yönetimi</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Veri Çeşitleri ve Yönetimi</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-04</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri çeşitleri</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri yönetimi</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>veri yapısı</span>
+        <div class='prose max-w-none mt-4'><h1>Veri Çeşitleri ve Veri Yönetimi</h1>
+<p>Veri her zaman aynı biçimde gelmez. Bazısı düzenlidir, bazısı karmaşık, bazısı başıboş.<br />
+Genel olarak üçe ayrılır:</p>
+<h2>Üç Ana Veri Türü</h2>
+<p>Veriler üç ana gruba ayrılır:<br />
+<strong>Yapılandırılmış (Structured)</strong><br />
+<strong>Yarı Yapılandırılmış (Semi-Structured)</strong><br />
+<strong>Yapılandırılmamış (Unstructured)</strong></p>
+<p>Her biri farklıdır.<br />
+Farklı şekillerde saklanır.<br />
+Farklı yöntemlerle işlenir.</p>
+<h3>1. Yapılandırılmış Veri (Structured Data)</h3>
+<p>Düzenlidir. Satır satır, sütun sütun ilerler.<br />
+Veritabanlarında, Excel dosyalarında görürüz.<br />
+İsim, soyisim, adres, sipariş bilgisi…<br />
+Ne olduğu bellidir, yerli yerindedir.</p>
+<p>Bu veriler belirli bir formata sahiptir.<br />
+Genellikle tablolarda saklanır.<br />
+Satır ve sütunlar halinde organize edilmiştir.  </p>
+<p>Bir müşteri veri tabanı düşünelim:<br />
+İsim, soyisim, adres, telefon numarası gibi alanlar vardır.<br />
+Her bilgi için ayrı bir yer vardır.<br />
+Her satır bir müşteriyi temsil eder.</p>
+<p>Excel dosyaları ya da veritabanları bu tür veriler için kullanılır.<br />
+Çünkü yapıları belli olduğu için kolayca analiz edilebilirler.</p>
+<h3>2. Yarı Yapılandırılmış Veri (Semi-Structured Data)</h3>
+<p>Ne tam düzenli, ne tamamen dağınık.<br />
+Etiketlenmiş, hiyerarşi içerir.</p>
+<p>Bu veriler tamamen serbest değildir.<br />
+Ancak tam anlamıyla tablo şeklinde de değildir.  </p>
+<p>XML veya JSON dosyalarını örnek verebiliriz.<br />
+Veriler etiketlenmiş durumdadır.<br />
+Hiyerarşik bir yapıya sahiptir.  </p>
+<p>Örneğin bir ürün katalogu olabilir.<br />
+Her ürünün özellikleri var.<br />
+Ancak her ürünün farklı sayıda özelliği olabilir.<br />
+Bu yüzden tam bir tabloya sığmaz.</p>
+<p>Bu veriler esnek yapılıdır.<br />
+Analiz edilebilir ama özel araçlar gerekir.</p>
+<p>Bazı şeyler belli, ama yine de işlemeye ihtiyaç duyar.</p>
+<h3>3. Yapılandırılmamış Veri (Unstructured Data)</h3>
+<p>Kuralsız, dağınık, başıboş…<br />
+Bu veriler belirli bir biçimde değildir. <br />
+Ne anlatmak istediğini anlamak için önce işlememiz gerekir. <br />
+Dokümanlar, e-postalar, ses kayıtları, resimler, videolar bu sınıfa girer.</p>
+<p>Yapısı yoktur.<br />
+Tabloya oturtulması zordur.<br />
+Anlam çıkarmak daha karmaşıktır.  </p>
+<p>Ancak günümüz teknolojisiyle bu veriler de işlenebiliyor.<br />
+Doğal dil işleme, görüntü tanıma, ses analizi gibi yöntemlerle anlamlı hale getiriliyorlar.</p>
+<hr />
+<h2>Veri Yönetimi Nedir?</h2>
+<p>Veriyi sadece toplamak yetmez.<br />
+Onu düzenlemek, korumak, işe yarar hale getirmek gerekir.<br />
+İşte bu sürecin adı: Veri Yönetimi.</p>
+<p>Veri Yönetimi;<br />
+verilerin toplanması,<br />
+düzenlenmesi,<br />
+saklanması,<br />
+güvenliğinin sağlanması,<br />
+kalitesinin kontrol edilmesi<br />
+ve doğru kişilerle paylaşılmasının planlandığı süreçtir.</p>
+<p>Veri yönetimi olmadan veri anlamsız kalır.<br />
+Şirketler kararlarını veriye dayandıramaz.<br />
+Kampanyalar rastgele olur.<br />
+Raporlar eksik kalır.</p>
+<p>Veri Yönetimi, veri biliminin temelidir.<br />
+Ham veriden başlayıp,<br />
+bilgiye ulaşmak için gereklidir.</p>
+<hr />
+<h2>Veri Yönetiminde Aşamalar</h2>
+<p><a href="obsidian://open?vault%3Ddatascience%26file%3DVeri%20Bilimine%20Giri%C5%9F%2FVeri%20Okuryazarl%C4%B1%C4%9F%C4%B1">text</a><br />
+Veri yönetimi, yalnızca bir iş değil, bir sistemdir.</p>
+<p>Veri Yönetimi on bir ana alan içerir.<br />
+Her bir alanın uzmanlığı, sorumluluğu ve yöntemi vardır.<br />
+Bu alanların ortasında ise <strong>Data Governance (Veri Yönetişimi)</strong> vardır.<br />
+Diğer alanları birbirine bağlayan odaktır.</p>
+<h3>1. <strong>Data Governance (Veri Yönetişimi)</strong></h3>
+<p>Her şeyin kurallarını koyan merkez. Kim neye erişir, ne zaman, nasıl?</p>
+<p>Veri ile ilgili kuralları ve standartları belirleyen aşamadır.<br />
+Kim hangi veriye erişebilir?<br />
+Ne zaman erişebilir?<br />
+Veri nasıl korunmalı?<br />
+Bu soruların cevapları burada verilir.</p>
+<p>Data Governance, diğer tüm alanları yönetir.<br />
+Onlar arasında bağlantı kurar.<br />
+Veri yönetimi sürecini düzenler.</p>
+<h3>2. <strong>Data Modeling and Design (Veri Modelleme ve Tasarım)</strong></h3>
+<p>Veriye nasıl bakacağız? Ne soracağız? Cevabı hangi modelle arayacağız?</p>
+<p>Verilerin nasıl yapılandırılacağını belirlediğimiz aşamadır.<br />
+Hangi tablolar olacak?<br />
+Alanlar ne olacak?<br />
+Veriler nasıl ilişkilendirilecek?</p>
+<p>Bu aşama, veri amacına uygun şekilde şekillenmesini sağlar.</p>
+<h3>3. <strong>Data Storage and Operations (Veri Saklama ve İşlemleri)</strong></h3>
+<p>Veri nerede duracak? Ne kadar süreyle? Nasıl yedeklenecek?</p>
+<p>Veriler nerede saklanacak?<br />
+Nasıl depolanacak?<br />
+Kaç yıl tutulacak?</p>
+<p>Bu aşamada veri yaşam döngüsü planlanır.<br />
+Verilerin güvenli bir şekilde saklanması sağlanır.</p>
+<h3>4. <strong>Data Security (Veri Güvenliği)</strong></h3>
+<p>Verilerin yalnızca yetkili kişiler tarafından erişilebilir olması için kurallar koyar.<br />
+Şifreleme, erişim kontrolleri, izleme sistemleri burada kullanılır.</p>
+<p>Veri güvenliği, şirketler için hayati öneme sahiptir.<br />
+Kaybedilen veri, maddi ve itibar kaybına yol açabilir.</p>
+<p>Veriye herkes erişemez. Güvenlik şart. Sadece doğru kişi, doğru zamanda, doğru şekilde.</p>
+<h3>5. <strong>Data Integration and Interoperability (Veri Bütünleştirme ve Uyum)</strong></h3>
+<p>Farklı kaynaklardan gelen verileri tek bir yerde toplamak için kullanılır.<br />
+Veri bütünlüğü sağlanır.<br />
+Tüm sistemler aynı dili konuşur hale gelir.</p>
+<h3>6. <strong>Documents and Content (Belge ve İçerik Yönetimi)</strong></h3>
+<p>Yapılandırılmış verileri sakladığımız alan. <br />
+Yapılandırılmış dokümanlar ve içerikler burada yönetilir.<br />
+PDF’ler, Word dosyaları, raporlar gibi içerikler saklanır, arşivlenir, erişilebilir hale getirilir.</p>
+<h3>7. <strong>Reference and Master Data (Referans ve Ana Veri Yönetimi)</strong></h3>
+<p>Şirketin temel verileri. Herkesin güvendiği, değişmeyen bilgiler.<br />
+Şirket içinde sürekli kullanılan temel veriler burada saklanır.<br />
+Örneğin ülke listesi, para birimi, departman adları gibi.</p>
+<p>Bu veriler her sistemde aynı şekilde kullanılır.<br />
+Tutarlılığı sağlar.</p>
+<h3>8. <strong>Data Warehousing and Business Intelligence (Veri Ambarı ve İş Zekası)</strong></h3>
+<p>Farklı kaynaklardan gelen veriler burada toplanır.<br />
+Veriler birikir, rapor olur. İş zekâsı araçları burada devreye girer.<br />
+Raporlar hazırlanır.<br />
+Dashboard’lar oluşturulur.</p>
+<p>Bu katmanda iş zekası araçları kullanılır.<br />
+Veriler karar almaya yardımcı olacak şekilde sunulur.</p>
+<h3>9. <strong>Meta Data (Üst Veri)</strong></h3>
+<p>Verinin verisi. Hangi veri nerede, kimin elinde, ne işe yarar? Hepsi burada tutulur.</p>
+<p>“Veri hakkında veri”dir.<br />
+Hangi veri nerede?<br />
+Hangi formatla saklandı?<br />
+Kim üretmiş?<br />
+Ne zaman değiştirildi?</p>
+<p>Meta veri, veri bulmayı ve anlamayı kolaylaştırır.</p>
+<h3>10. <strong>Data Quality (Veri Kalitesi)</strong></h3>
+<p>Toplanan verilerin doğru, eksiksiz ve güncel olduğundan emin olunur.<br />
+Toplanan veri işe yarıyor mu? Hatalı mı, eksik mi? Kontrol ederiz.<br />
+Hatalı veriler düzeltilir.<br />
+Eksik değerler tamamlanır.</p>
+<p>Kaliteli veri, doğru kararlar demektir.</p>
+<h3>11. <strong>Data Architecture (Veri Mimarisi)</strong></h3>
+<p>Verilerin genel yapısını ve akışını tanımlayan aşamadır.<br />
+Veri nasıl aktarılacak?<br />
+Hangi sistemler birbiriyle konuşacak?<br />
+Veri nerede nasıl saklanacak?</p>
+<p>Tablolar nasıl ilişkilendirilmiş? Veriler nasıl akıyor? Mimari burada kurulur.<br />
+Veri mimarisi, sistemin uzun vadeli çalışmasını sağlar.</p>
+<hr />
+<h2>DMBOK Piramidi</h2>
+<p>DMBOK: Data Management Body of Knowledge<br />
+Türkçesiyle: Veri Yönetimi Bilgi Birikimi</p>
+<p>Bu piramit, veri yönetimindeki tüm alanları görsel olarak gösterir.<br />
+Her katmanda farklı bir sorumluluk vardır.<br />
+Piramidin ortasında Data Governance bulunur.<br />
+Diğer tüm alanları birbirine bağlayan merkezdir.</p>
+<blockquote>
+<p><strong>Turuncu Katman:</strong> Genel veri mimarisi, veri kalitesi, meta veri süreçleri burada tanımlanır.<br />
+<strong>Yeşil Katman:</strong> Veri modelleme, veri saklama, güvenliği gibi uygulama katmanları burada yer alır.<br />
+<strong>Mavi Katman:</strong> Kurallar ve çizimler sayesinde raporların oluşturulduğu katmandır.<br />
+<strong>En Üst Katman:</strong> Veri bilimi, yapay zeka, büyük veri analizleri burada yapılır.</p>
+</blockquote>
+<hr />
+<h2>Son Söz</h2>
+<p>Veri çeşitleri farklıdır.<br />
+Yapıları farklıdır.<br />
+İşlenmeleri farklıdır.<br />
+Ama hepsi bir şey ortaya çıkarır:<br />
+<strong>Bilgi</strong></p>
+<p>Veri Yönetimi ise bu bilgiyi elde etmenin yollarını çizer.<br />
+On bir alanı vardır.<br />
+Her biri önemli.<br />
+Her biri birbirine bağlı.</p>
+<p>Veri bilimi, yapay zeka, büyük veri analizleri<br />
+bu temelin üzerinde inşa edilir.<br />
+Veri Yönetimi olmadan hiçbir proje sürdürülemez.</p>
+<p>Veriyle çalışmak, sadece rakamlarla değil, sistemle çalışmaktır.<br />
+Veri yönetimi olmazsa, veri kaosa dönüşür.<br />
+Ama doğru yönetilirse, yalnızca bilgiye değil, akıllı kararlara ulaşırız.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

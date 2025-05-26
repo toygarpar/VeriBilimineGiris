@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Merkezi Eğilim Ölçüleri</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>Merkezi Eğilim Ölçüleri</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-09</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>ortalama</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>medyan</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>mod</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>eğilim</span>
+        <div class='prose max-w-none mt-4'><h1>Merkezi Eğilim Ölçümleri</h1>
+<p>Merkezi eğilim ölçümleri, bir veri kümesinin genel eğilimini ya da ortalama davranışını belirlemeye yarayan istatistiksel göstergelerdir. Verilerin merkezi değerine dair fikir verirler.</p>
+<h2>Sayıların Ortası Nerede?</h2>
+<p>Bazen sayılar çok fazla olur.<br />
+Dağınık gibi görünür.<br />
+Ama hepsi bir merkeze doğru çeker.  </p>
+<p>İstatistikte bu merkeze ulaşmak için üç ana yol vardır:<br />
+<strong>Ortalama (Mean)</strong><br />
+<strong>Medyan (Median)</strong><br />
+<strong>Mod (Mode)</strong>  </p>
+<p>Her biri farklıdır.<br />
+Her biri farklı bir şey anlatır.<br />
+Ve her biri farklı durumlarda işe yarar.</p>
+<hr />
+<h2>1. Ortalama – Mean</h2>
+<p>Bir veri kümesindeki tüm değerlerin toplamının, değer sayısına bölünmesiyle elde edilir.</p>
+<p>Ortalama, en bilinen ölçüm türüdür.<br />
+Tüm sayıları toplarsın.<br />
+Kaç tane varsa ona bölersin.<br />
+Çıkan sayı, genelin ortalamasıdır.</p>
+<h3>Nasıl Hesaplanır?</h3>
+<ol>
+<li><strong>Sayıları topla.</strong>  </li>
+<li><strong>Eleman sayısına böl.</strong></li>
+</ol>
+<h3>Örnek:</h3>
+<p>Matematik sınav notları:<br />
+70, 80, 90, 60, 75  </p>
+<p>Toplam: 375<br />
+Sayı adedi: 5  </p>
+<p><strong>Ortalama = 375 / 5 = 75</strong></p>
+<h3>Formülü:</h3>
+<div class="codehilite"><pre><span></span><code>Ortalama = (x₁ + x₂ + x₃ + ... + xₙ) / n
+</code></pre></div>
+
+<p>Burada:<br />
+x = her bir veri noktası<br />
+n = toplam veri sayısı</p>
+<h3>Ne Zaman Kullanılır?</h3>
+<ul>
+<li>Veriler düzenliyse  </li>
+<li>Aşırı yüksek ya da düşük değer yoksa  </li>
+<li>Genel eğilimi görmek istiyorsak  </li>
+</ul>
+<h3>Dezavantajı Nedir?</h3>
+<p>Ortalama, aşırı büyük ya da küçük değerlere karşı hassastır.<br />
+Bir kişi çok yüksek maaş alıyorsa, ortalama gerçekliği yansıtmayabilir.</p>
+<hr />
+<h2>2. Medyan – Median</h2>
+<p>Medyan, sıralanmış bir veri listesindeki ortadaki sayıdır. Çift sayıda değer varsa, ortadaki değer aslında veri kümesinde olmayan, bunun yerine sıralanmış veriyi üst ve alt yarılara bölen iki değerin ortalamasıdır.</p>
+<p>Medyan, sayıların ortasındaki değerdir.<br />
+Sayıları sıralarsın.<br />
+Tam ortadaki sayı medyandır.</p>
+<h3>Nasıl Bulunur?</h3>
+<ol>
+<li><strong>Sayıları küçükten büyüğe sırala.</strong>  </li>
+<li><strong>Eğer tek sayı varsa, ortadaki sayı medyandır.</strong>  </li>
+<li><strong>Eğer çift sayı varsa, ortadaki iki sayının ortalaması alınır.</strong></li>
+</ol>
+<h3>Örnekler:</h3>
+<ul>
+<li><strong>Tek eleman:</strong> 2, 4, <strong>6</strong>, 8, 10 → Medyan: 6  </li>
+<li><strong>Çift eleman:</strong> 1, 3, <strong>5</strong>, <strong>7</strong>, 9, 11 → Medyan: (5 + 7) / 2 = 6</li>
+</ul>
+<h3>Ne Zaman Kullanılır?</h3>
+<ul>
+<li>Aşırı değerler varsa  </li>
+<li>Daha gerçekçi bir orta nokta isteniyorsa  </li>
+<li>Gelir dağılımı, ev fiyatları gibi alanlarda  </li>
+</ul>
+<h3>Özellikleri:</h3>
+<ul>
+<li><strong>Aşırı değerlere daha dayanıklıdır.</strong>  </li>
+<li><strong>Veriler sıralandığında daha güvenilirdir.</strong></li>
+</ul>
+<hr />
+<h2>3. Mod – Mode</h2>
+<p>Mod, en çok tekrar eden sayıdır.<br />
+En sık görülen değerdir.</p>
+<p>✔️ Özellik:<br />
+Birden fazla mod olabilir (çok modlu dağılım).</p>
+<p>Aritmetik ortalama ya da medyanın yeterli olmadığı durumlarda anlamlı olabilir.</p>
+<p>Özellikle kategorik veriler için kullanışlıdır.</p>
+<h3>Nasıl Bulunur?</h3>
+<p>Sayılara bak.<br />
+Hangisi en çok tekrar ediyor?<br />
+O sayı moddur.</p>
+<h3>Örnek:</h3>
+<p>Notlar: 70, 80, 70, 90, 70, 60<br />
+<strong>Mod = 70</strong> (3 kez tekrar ediyor)</p>
+<h3>Ne Zaman Kullanılır?</h3>
+<ul>
+<li>Kategorik verilerde (örneğin: favori renk, marka tercihi)  </li>
+<li>En popüler seçeneği bulmak istediğimizde  </li>
+<li>Bir dağılımın zirvesini görmek istediğimizde  </li>
+</ul>
+<h3>Özellikleri:</h3>
+<ul>
+<li><strong>Formülü yoktur.</strong>  </li>
+<li><strong>Algoritmik olarak bulunur.</strong>  </li>
+<li><strong>Birden fazla mod olabilir.</strong></li>
+</ul>
+<hr />
+<h2>Ortalama, Medyan, Mod – Hangisini Kullanmalı?</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Ortalama</th>
+<th>Medyan</th>
+<th>Mod</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hassasiyet</strong></td>
+<td>Aşırı değerlere duyarlı</td>
+<td>Daha dayanıklı</td>
+<td>Sadece tekrar edenleri gösterir</td>
+</tr>
+<tr>
+<td><strong>Veri Türü</strong></td>
+<td>Sayısal</td>
+<td>Sayısal</td>
+<td>Hem sayısal hem kategorik</td>
+</tr>
+<tr>
+<td><strong>Nasıl Hesaplanır?</strong></td>
+<td>Toplama ve bölme</td>
+<td>Sıralama ve orta değer</td>
+<td>En çok tekrar eden</td>
+</tr>
+<tr>
+<td><strong>Kullanım Alanı</strong></td>
+<td>Genel eğilim</td>
+<td>Uç değer varsa</td>
+<td>Popüler değerleri bulmak</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Son Söz</h2>
+<p>Sayılar bazen çok fazla olur.<br />
+Ne olduğunu anlamak zorlaşır.<br />
+Ama ortalama, medyan ve mod bize yardım eder.  </p>
+<p><strong>Ortalama</strong> geneli gösterir.<br />
+<strong>Medyan</strong> uç değerlerden korur.<br />
+<strong>Mod</strong> en popüler olanı vurgular.  </p>
+<p>Biri yeterli değilse, diğerine başvur.<br />
+Sayıların ortasını bulmak için üç yolun var.<br />
+Onları iyi tanı.</p>
+<hr /></div>
+    </div>
+</body>
+</html>

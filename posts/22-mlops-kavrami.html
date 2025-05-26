@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>MLOps Kavramı</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose {
+            color: #f9fafb;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #60a5fa;
+        }
+        pre code {
+            background-color: #1f2937;
+            color: #f9fafb;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 0.5rem;
+        }
+        code {
+            background-color: #374151;
+            padding: 0.2em 0.4em;
+            border-radius: 0.25rem;
+        }
+        a {
+            color: #93c5fd;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class='font-sans p-6'>
+    <div class='max-w-3xl mx-auto'>
+        <a href='../index.html' class='block mb-4'>← Eğitim Listesine Geri Dön</a>
+        <h1 class='text-3xl font-bold mt-4'>MLOps Kavramı</h1>
+        <p class='text-sm text-gray-400 mb-4'>2025-06-22</p>
+        <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>MLOps</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>CI/CD</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>model deploy</span> <span class='inline-block bg-blue-200 text-blue-900 text-xs px-2 py-1 rounded mr-1'>monitoring</span>
+        <div class='prose max-w-none mt-4'><h1>MLOps Kavramı</h1>
+<h2>MLOps Nedir?</h2>
+<p>MLOps (Machine Learning Operations), makine öğrenmesi modellerinin geliştirilmesinden üretim ortamına dağıtımına ve yönetimine kadar olan tüm yaşam döngüsünü kapsayan bir disiplindir. DevOps prensiplerini makine öğrenmesi süreçlerine uyarlayarak:</p>
+<ul>
+<li><strong>Geliştirme süreçlerini hızlandırır</strong></li>
+<li><strong>Dağıtım risklerini azaltır</strong></li>
+<li><strong>Model performansını sürekli izler</strong></li>
+<li><strong>Yönetim maliyetlerini düşürür</strong></li>
+</ul>
+<h2>MLOps&rsquo;un Temel Bileşenleri</h2>
+<h3>1. Veri Yönetimi</h3>
+<ul>
+<li><strong>Veri Kalitesi</strong>: Eksik veri, aykırı değer yönetimi</li>
+<li><strong>Veri Sürümleme</strong>: DVC (Data Version Control) gibi araçlarla</li>
+<li><strong>Veri Pipeline&rsquo;ları</strong>: Otomatik veri akış sistemleri</li>
+</ul>
+<h3>2. Model Geliştirme</h3>
+<ul>
+<li><strong>Deney Takibi</strong>: MLflow, Weights &amp; Biases</li>
+<li><strong>Hiperparametre Optimizasyonu</strong>: Optuna, Ray Tune</li>
+<li><strong>Model Kayıt Defteri</strong>: Model depolama ve sürümleme</li>
+</ul>
+<h3>3. Model Dağıtımı</h3>
+<ul>
+<li><strong>CI/CD Pipeline&rsquo;ları</strong>: GitLab CI/CD, GitHub Actions</li>
+<li><strong>Konteynerleştirme</strong>: Docker, Kubernetes</li>
+<li><strong>Canlıya Alma Stratejileri</strong>: A/B testi, Canary dağıtım</li>
+</ul>
+<h3>4. Model İzleme</h3>
+<ul>
+<li><strong>Performans Metrikleri</strong>: Accuracy, Precision, Recall drift</li>
+<li><strong>Veri Drift</strong>: Evrimleşen veri dağılımlarının tespiti</li>
+<li><strong>Altyapı İzleme</strong>: CPU/GPU kullanımı, gecikme süreleri</li>
+</ul>
+<h2>Makine Öğrenmesi Modelini Üretime Göndermek</h2>
+<p>Makine öğrenmesi modeli eğitmek kolaydır.<br />
+AMA onu gerçek hayatta çalıştırmak zordur.<br />
+İnsanlar etkileşim kurar.<br />
+Veriler değişir.<br />
+Model eskir.<br />
+Yeni verilere göre yenilenmelidir.</p>
+<p>Bunu yapmak için MLOps vardır.</p>
+<p><strong>MLOps – Machine Learning Operations</strong>,<br />
+makine öğrenmesi modellerinin geliştirilmesi, dağıtılması<br />
+ve üretim ortamında yönetilmesi sürecidir.</p>
+<hr />
+<h2>Neden MLOps?</h2>
+<p>Bazı modeller laboratuvarda iyi çalışır.<br />
+AMA üretimde başarısı düşebilir.<br />
+Çünkü üretim ortamı dinamiktir.<br />
+Veriler sürekli değişir.<br />
+İş süreçleri farklıdır.</p>
+<p>MLOps ile her şey daha düzenli olur.<br />
+Modeller hızlıca güncellenir.<br />
+Doğru çalışan model tekrar eder.<br />
+Bozulan model fark edilir.<br />
+Ve yenisiyle değiştirilir.</p>
+<hr />
+<h2>MLOps Ne Amaçlı?</h2>
+<h3>1. Geliştirme ve Dağıtımı Otomatikleştirmek</h3>
+<p>Manuel süreçlerden kaçın.<br />
+Modeller otomatik olarak hazırlanıp gönderilir.</p>
+<h3>2. Versiyon Kontrolü</h3>
+<p>Hangi model hangi sürümde?<br />
+Ne zaman güncellendi?<br />
+Hangi veriyle eğitildi?<br />
+Versiyon kontrolü sayesinde hepsi bilinir.</p>
+<h3>3. Model İzleme</h3>
+<p>Model canlı ortamda çalışmaya başladı.<br />
+Nasıl çalışıyor?<br />
+Hata yapıyor mu?<br />
+Performansı düşüyor mu?</p>
+<p>Gözlemlediğinizde fark edersiniz.<br />
+Düşüş varsa müdahale edebilirsiniz.</p>
+<h3>4. Güvenlik ve Uyumluluk</h3>
+<p>Model kimin erişebileceğini bilir mi?<br />
+Gizlilik politikalarına uyuyor mu?</p>
+<p>MLOps ile tüm bu sorulara cevap verilir.</p>
+<hr />
+<h2>MLOps Süreçleri</h2>
+<h3>1. Veri Yönetimi</h3>
+<p>Veri toplama, temizleme, dönüştürme ve sürüm kontrolü yapılır.<br />
+Modelin kalitesi, veri kalitesine bağlıdır.<br />
+Bu yüzden veri her zaman güncel ve tutarlı olmalıdır.</p>
+<p>Ex:<br />
+E-ticaret sitesi verisinde yeni bir ürün kategorisi çıktı.<br />
+Bu değişiklik veri yönetim sisteminde yer almalı.<br />
+Yoksa model eskiye dayalı tahmin yapar.</p>
+<h3>2. Model Geliştirme</h3>
+<p>Model oluşturulur. Eğitilir. Test edilir.<br />
+Doğrulama yapılır. Sonra dağıtım aşamasına geçilir.<br />
+Bu süreçte hiperparametre optimizasyonu yapılır.<br />
+En iyi performans için doğru seçim yapılır.</p>
+<h3>3. Model Dağıtımı</h3>
+<p>Eğitim bitince sıra geldi modeli kullanmaya.<br />
+Model canlıya alınır.<br />
+API’ye bağlanır.<br />
+Her müşteri isteğine yanıt verir.</p>
+<p>Yeni bir model çıksa bile<br />
+eski model hâlâ çalışırken<br />
+geçiş düzgün yapılmalı.<br />
+Bu iş MLOps’in görev alanıdır.</p>
+<h3>4. Model İzleme ve Yönetim</h3>
+<p>Model çalışmaya başlayınca izlenmelidir.<br />
+Zamanla veri değişir.<br />
+Modelin performansı bozulabilir.<br />
+Bu durum “model drift” olarak bilinir.<br />
+Model yeniden eğitilmelidir.</p>
+<p>MLOps, modeli takip eder.<br />
+Uyarı verir.<br />
+Otomatik eğitimi başlatır.<br />
+Yeni modeli güvenli şekilde devreye alır.</p>
+<hr />
+<h2>MLOps Seviyeleri</h2>
+<p>Bir şirketin MLOps olgunluğunu ölçmek için üç ana seviye tanımlanmıştır.<br />
+Bu seviyeler, otomasyon düzeyini ve entegrasyonu gösterir.</p>
+<h2>MLOps Olgunluk Seviyeleri</h2>
+<h3>Seviye 0: Manuel Süreçler</h3>
+<ul>
+<li><strong>Özellikler</strong>:</li>
+<li>Tüm işlemler elle yapılır</li>
+<li>Veri setleri statik ve güncellenmez</li>
+<li>Model dağıtımı manuel</li>
+<li>Performans izleme yok</li>
+<li><strong>Kullanım</strong>: Küçük POC&rsquo;ler ve başlangıç projeleri</li>
+</ul>
+<h3>Seviye 1: ML Pipeline Otomasyonu</h3>
+<ul>
+<li><strong>Gelişmeler</strong>:</li>
+<li>Veri ve model sürümleme</li>
+<li>Otomatik eğitim pipeline&rsquo;ları</li>
+<li>Temel CI/CD entegrasyonu</li>
+<li>Basit performans izleme</li>
+<li><strong>Faydalar</strong>: Hata oranlarında %40-60 azalma</li>
+</ul>
+<h3>Seviye 2: CI/CD Pipeline ile Sürekli Öğrenme</h3>
+<ul>
+<li><strong>Gelişmiş Özellikler</strong>:</li>
+<li>Otomatik yeniden eğitim (retraining)</li>
+<li>Çoklu model A/B testi</li>
+<li>Gelişmiş drift tespiti</li>
+<li>Self-healing sistemler</li>
+<li><strong>Örnekler</strong>: Netflix öneri sistemi, Tesla otonom sürüş</li>
+</ul>
+<hr />
+<h3>🔹 MLOps Seviyesi 0 – Manuel Süreç</h3>
+<p>Her şey elle yapılır.<br />
+Model elle eğitilir.<br />
+Elle test edilir.<br />
+Elle dağıtılır.</p>
+<ul>
+<li>CI/CD yoktur.  </li>
+<li>Otomasyon yoktur.  </li>
+<li>Yeni sürümler nadiren çıkar.  </li>
+<li>Performans takibi yapılmaz.</li>
+</ul>
+<p>Bu seviye, sadece deneme projeleri içindir.<br />
+Gerçek hayatta uygulanması risklidir.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Bir kişinin masa başında tek tek yaptığı işlemleri gösteren basit bir diyagram.</p>
+</blockquote>
+<hr />
+<h3>🔹 MLOps Seviyesi 1 – ML Pipeline</h3>
+<p>Modeller artık otomasyonla işler.<br />
+Data pipeline ile veri akışı sağlanır.<br />
+Model eğitimi yeniden üretilebilir olur.</p>
+<h4>Hangi Özellikler Var?</h4>
+<ul>
+<li>Otomatik veri toplama  </li>
+<li>Model versiyonlaması  </li>
+<li>CI/CD kısmen uygulanmış  </li>
+<li>Model performansı izleniyor  </li>
+<li>Geribildirim mekanizması kurulmuş  </li>
+</ul>
+<p>Modelin kötüleştiğini anladığınızda<br />
+yeniden eğitebilirsiniz.<br />
+Yeni sürümü üretime gönderebilirsiniz.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Veri girişinden model çıktısına kadar olan işlem hattını gösteren bir pipeline diyagramı.</p>
+</blockquote>
+<hr />
+<h3>🔹 MLOps Seviyesi 2 – Tam Otomasyon + Ölçeklenebilirlik</h3>
+<p>Burada her şey tamamen otomatik çalışır.<br />
+Model yeniden eğitilir.<br />
+Dağıtılır.<br />
+Binlerce sunucuda çalıştırılır.<br />
+Saatlik olarak güncellenir.</p>
+<p>Bu seviye, büyük şirketler için gereklidir.<br />
+Çünkü veri hızla değişir.<br />
+Modelin güncel kalması şarttır.</p>
+<h4>Hangi Özellikler Var?</h4>
+<ul>
+<li>Gerçek zamanlı veri beslemesi  </li>
+<li>Tam otomatik CI/CD  </li>
+<li>Dinamik model izleme  </li>
+<li>Otomatik yeniden eğitim (retraining)  </li>
+<li>Yüksek ölçeklenebilirlik  </li>
+</ul>
+<p>Modelin performansı saatlik olarak kontrol edilir.<br />
+Drift tespit edilirse,<br />
+otomatik olarak yeni model eğitilir ve yayına alınır.</p>
+<blockquote>
+<p>Grafik Açıklaması:<br />
+Birden fazla sunucu, veri akışı, model izleme sistemleriyle bağlantılı bir sistem diyagramı.</p>
+</blockquote>
+<hr />
+<h2>Karşılaştırmalı Tablo: MLOps Seviyeleri</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Level 0 – Manuel</strong></th>
+<th><strong>Level 1 – Pipeline</strong></th>
+<th><strong>Level 2 – Otomatik / Ölçeklenebilir</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Veri Yönetimi</strong></td>
+<td>Manuel</td>
+<td>Kısmen otomatik</td>
+<td>Tamamen otomatik</td>
+</tr>
+<tr>
+<td><strong>Model Geliştirme</strong></td>
+<td>Elle</td>
+<td>Scriptlerle</td>
+<td>Otomatik</td>
+</tr>
+<tr>
+<td><strong>Model Dağıtımı</strong></td>
+<td>El ile</td>
+<td>Kısmi CD</td>
+<td>Otomatik CI/CD</td>
+</tr>
+<tr>
+<td><strong>Model İzleme</strong></td>
+<td>Yok</td>
+<td>Temel izleme</td>
+<td>Gelişmiş izleme + uyarı</td>
+</tr>
+<tr>
+<td><strong>Model Güncellemesi</strong></td>
+<td>Nadiren</td>
+<td>Planlı</td>
+<td>Sürekli ve otomatik</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>MLOps Araç Ekosistemi</h2>
+<table>
+<thead>
+<tr>
+<th>Kategori</th>
+<th>Popüler Araçlar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Veri Yönetimi</td>
+<td>DVC, Pachyderm, Delta Lake</td>
+</tr>
+<tr>
+<td>Deney Takibi</td>
+<td>MLflow, Weights &amp; Biases, Neptune</td>
+</tr>
+<tr>
+<td>Model Dağıtım</td>
+<td>Seldon, BentoML, TorchServe</td>
+</tr>
+<tr>
+<td>İzleme</td>
+<td>Evidently, WhyLabs, Prometheus</td>
+</tr>
+<tr>
+<td>Orkestrasyon</td>
+<td>Kubeflow, Metaflow, Airflow</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>MLOps Uygulama Örnekleri</h2>
+<ol>
+<li><strong>Finans Sektörü</strong>: Kredi skorlama modellerinin günlük güncellenmesi</li>
+<li><strong>E-ticaret</strong>: Kişiselleştirilmiş önerilerin saatlik yeniden eğitimi</li>
+<li><strong>Sağlık</strong>: Tıbbi görüntü analiz modellerinin FDA uyumlu dağıtımı</li>
+<li><strong>Üretim</strong>: Ekipman arıza tahmin sistemlerinin edge cihazlara dağıtımı</li>
+</ol>
+<p>MLOps, makine öğrenmesi modellerinin gerçek dünyada değer üretebilmesi için kritik bir disiplindir. Kuruluşların MLOps olgunluk seviyelerini artırması, AI yatırımlarından elde edilen getiriyi doğrudan etkilemektedir.</p>
+<hr />
+<h2>Son Söz</h2>
+<p>MLOps;<br />
+makine öğrenmesi modellerinin hayat bulduğu süreçtir.<br />
+Eğitilen model, sadece bir dosya değildir.<br />
+Onu bir ürün haline getiren süreç budur.</p>
+<p>Modelin başarılı olması için<br />
+doğru veri,<br />
+doğru dağıtım,<br />
+ve doğru izleme şarttır.</p>
+<p>MLOps olmadan,<br />
+modeller kapalı dünyada kalır.<br />
+AMA MLOps ile<br />
+modeller hayat bulur.<br />
+Ürün olur.<br />
+Gerçek hayatta iş yapar.</p>
+<p>Veri seti sessizken,<br />
+MLOps, onları konuşmaya öğretir.</p>
+<hr /></div>
+    </div>
+</body>
+</html>
