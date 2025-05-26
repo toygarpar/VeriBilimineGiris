@@ -15,5 +15,5 @@ Bu eğitim programında aşağıdaki konular ele alınmıştır:
 - **Veri Toplama ve Temizleme**: Veri kaynakları, veri toplama yöntemleri ve gerçek dünya verilerinde sıkça karşılaşılan sorunları nasıl temizleyeceğiniz ve dönüştüreceğiniz.
 - **Keşifçi Veri Analizi (EDA)**: Veri setlerinizi anlamak, içgörüler elde etmek ve potansiyel sorunları tespit etmek için kullanılan görselleştirme ve istatistiksel teknikler.
 - **Temel Makine Öğrenmesi Kavramları**: Denetimli ve denetimsiz öğrenme, regresyon, sınıflandırma gibi temel makine öğrenmesi algoritmalarına giriş.
-- **Veri Biliminde Kullanılan Araçlar**: Python ve R gibi programlama dilleri, Jupyter Notebook, Google Colab gibi geliştirme ortamları ve temel kütüphanelere (NumPy, Pandas, Matplotlib, Seaborn) giriş.
+- **Proje Örnekleri**: Veri bilimi ile ilgili pratik projeler ve bu projelerin nasıl planlanacağı, yürütüleceği ve analiz edileceği.
 
